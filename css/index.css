@@ -1,0 +1,101 @@
+html, body {
+  font-family: Helvetica, Arial, "pingFangTC", "Microsoft JhengHei", sans-serif;
+  font-size: 20px; }
+
+.t-bold {
+  font-weight: bold; }
+
+.t-lighter {
+  font-weight: lighter; }
+
+.t-grey {
+  color: #717071; }
+
+.t-lightgrey {
+  color: #b4b4b5; }
+
+body {
+  line-height: 1.8;
+  background-color: #f1f1f1; }
+
+.page_container {
+  position: relative;
+  max-width: 1024px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2rem 4rem; }
+
+.g-avatar {
+  position: absolute;
+  top: 3rem;
+  right: 2rem; }
+  .g-avatar::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e95513; }
+  .g-avatar .picture {
+    margin-right: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden; }
+    .g-avatar .picture img {
+      width: 100%; }
+
+.g-header .primary_name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e95513; }
+
+.g-part {
+  margin-top: 2.5rem; }
+  .g-part .part_title {
+    color: #e95513;
+    font-weight: light;
+    font-style: oblique; }
+  .g-part .part_content {
+    position: relative;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    padding-left: 1.25rem; }
+    .g-part .part_content::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 4rem;
+      left: 0;
+      top: 0;
+      border-left: 1px dashed #e95513; }
+  .g-part .part_item:not(:last-child) {
+    margin-bottom: 1rem; }
+  .g-part .row .row_inline {
+    display: inline-block; }
+    .g-part .row .row_inline:not(:last-child) {
+      margin-right: 0.25rem; }
+  .g-part p {
+    margin-top: 0; }
+
+.g-skill .sk_name {
+  margin-bottom: 5px; }
+
+.g-skill .sk_tags {
+  margin-bottom: 10px;
+  font-size: 0; }
+
+.g-skill .sk_tag {
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0.75em 1em;
+  background-color: #dcdcdc;
+  font-size: 16px;
+  color: #666;
+  line-height: 1;
+  margin-bottom: 10px; }
+  .g-skill .sk_tag:not(:last-child) {
+    margin-right: 10px; }

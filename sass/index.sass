@@ -1,0 +1,88 @@
+@import base.sass
+
+body
+  line-height: 1.8
+  background-color: $background-grey
+
+.page_container
+  position: relative
+  max-width: 1024px
+  width: 100%
+  box-sizing: border-box
+  padding: 2rem 4rem
+
+.g-avatar
+  position: absolute
+  top: 3rem
+  right: 2rem
+  &::after
+    content: ""
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    background-color: $orange
+  .picture
+    margin-right: 20px
+    width: 300px
+    height: 300px
+    border-radius: 50%
+    overflow: hidden
+    img
+      width: 100%
+
+.g-header
+  .primary_name
+    font-size: 2rem
+    font-weight: 700
+    color: $orange
+
+.g-part
+  margin-top: 2.5rem
+  .part_title
+    color: $orange
+    font-weight: light
+    font-style: oblique
+  .part_content
+    position: relative
+    margin-top: 0.25rem
+    margin-left: 0.25rem
+    padding-left: 1.25rem
+    &::before
+      content: ""
+      position: absolute
+      width: 0
+      height: 4rem
+      left: 0
+      top: 0
+      border-left: 1px dashed $orange
+  .part_item
+    &:not(:last-child)
+      margin-bottom: 1rem
+  .row
+    .row_inline
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 0.25rem
+  p
+    margin-top: 0
+
+.g-skill
+  .sk_name
+    margin-bottom: 5px
+  .sk_tags
+    margin-bottom: 10px
+    font-size: 0
+  .sk_tag
+    display: inline-block
+    border-radius: 2px
+    padding: 0.75em 1em
+    background-color: #dcdcdc
+    font-size: 16px
+    color: #666
+    line-height: 1
+    margin-bottom: 10px
+    &:not(:last-child)
+      margin-right: 10px

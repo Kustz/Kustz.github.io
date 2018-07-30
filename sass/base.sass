@@ -1,0 +1,25 @@
+$orange: #e95513
+$background-grey: #f1f1f1
+
+$text-grey: #717071
+$text-lightgrey: #b4b4b5
+$text-black: #3e3a39
+
+@function rem($px, $base: 20)
+    @return ($px / $base) * 1rem
+
+html, body
+  font-family: Helvetica, Arial, "pingFangTC", "Microsoft JhengHei", sans-serif
+  font-size: 20px
+
+.t-bold
+  font-weight: bold
+
+.t-lighter
+  font-weight: lighter
+
+.t-grey
+  color: $text-grey
+
+.t-lightgrey
+  color: $text-lightgrey
