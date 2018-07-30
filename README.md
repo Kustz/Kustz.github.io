@@ -1,4 +1,3 @@
-aboutMe
+Hello!
 =======
-
-My personal website
+This is my resume.
