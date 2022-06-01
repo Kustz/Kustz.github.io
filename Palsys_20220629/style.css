@@ -116,8 +116,8 @@ a {
 }
 .kv .date {
   position: absolute;
-  left: 68.75%;
-  top: 82.2916666667%;
+  left: 69.2708333333%;
+  top: 81.25%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -126,7 +126,7 @@ a {
           align-items: center;
   font-size: 0.875em;
   font-weight: 500;
-  font-size: 1.25vw;
+  font-size: 1.3vw;
 }
 .kv .date div {
   font-size: 4em;
@@ -137,14 +137,20 @@ a {
 }
 .kv .date .d2 {
   font-size: 2em;
-  line-height: 1;
+  line-height: 1.2;
   color: #fff;
 }
 .kv .date .d2 span {
   margin-left: 0.5em;
   display: block;
 }
+.kv .date .d2 span:first-child {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
 .kv .date .d2 span:last-child {
+  font-size: 0.95em;
+  margin-top: 0.125em;
+  font-weight: 700;
   color: #000;
 }
 
