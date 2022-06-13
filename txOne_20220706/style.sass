@@ -1,0 +1,582 @@
+$c0: #B5B0D6
+$c1: #3E6EE5
+$c2: #222042
+$c3: #141433
+$c4: #CA1E22
+
+$white: #fff
+$black: #000
+
+$pink: #c543a4
+$blue: #2f9ff5
+$dblue: #2d2b46
+$gold: #faab63
+
+$gradient: linear-gradient(120deg, $c3, $c3)
+
+$font_family: 'Noto Sans TC', 'Microsoft Jhenghei', sans-serif
+
+html
+	font-size: 16px
+
+body
+	font-family: $font_family
+
+a
+	color: inherit
+
+.fix_aside
+	position: fixed
+	z-index: 99
+	right: 1rem
+	bottom: 1rem
+	transform: translateX(150%)
+	transition: transform 600ms
+
+	&.is_active
+		transform: translateX(0%)
+
+	.fx_item
+		position: relative
+		display: block
+		border-radius: 1em
+		margin: .5em 0
+		width: 4em
+		height: 4em
+		background: #fff linear-gradient(120deg, #fff, #ddd)
+		font-size: 0.95rem
+		cursor: pointer
+		box-shadow: 0 1px 3px 0 rgba(#000, 0.19)
+		transition: transform 240ms, box-shadow 240ms
+		transform: translate3d(0,0,0)
+
+		&.is_primary
+			background: linear-gradient(135deg, $c1, $c2)
+			color: #fff
+
+		&:hover
+			transform: translate3d(0,-3px,0)
+			box-shadow: 0 4px 5px 0 rgba(#000, 0.19)
+
+		.in_wrap
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate3d(-50%, -50%, 0)
+
+			&.txt
+				text-align: center
+				line-height: 1.2
+				font-weight: 700
+
+			&.ic_top
+				width: 100%
+				height: 100%
+				padding: .5em 0
+				.ic
+					width: 100%
+					height: 100%
+					background: url("img/ui/arrow_top.png") center/contain no-repeat
+
+			&.ic_linkedin
+				width: 100%
+				height: 100%
+				padding: .5em 0
+				.ic
+					width: 100%
+					height: 100%
+					background: url("img/ui/linkedin.svg") center/contain no-repeat
+
+.g_header
+	width: 100%
+	text-align: center
+	background-color: $c2
+
+	.header_wrap
+		position: relative
+
+	.nav_area
+		display: inline-block
+		position: relative
+		z-index: 3
+
+	.nav_cnt
+		display: flex
+		justify-content: center
+		padding: 0 1rem
+
+	.nav_item
+		line-height: 1
+		font-weight: normal
+
+	.nav_link
+		display: block
+		padding: 1em 1.25rem
+		font-size: 1.125em
+		color: #fff
+		&:hover
+			background-color: rgba($c1, .5)
+			text-decoration: none
+
+.primary_cta
+	display: inline-block
+	border-radius: 3rem
+	padding: .25em 1.5em .6em
+	background: linear-gradient(90deg, $c2, $c3)
+	color: #fff
+	font-weight: 700
+	font-size: 2em
+	text-shadow: 3px 3px 0 rgba($blue, .5)
+	transform: translate3d(0, 0, 0)
+	transition: transform 300ms
+	&:hover
+		text-decoration: none
+		transform: translate3d(10px, 0, 0)
+		color: #fff
+	span,
+	img
+		display: inline-block
+		vertical-align: middle
+	span
+		color: inherit
+	img
+		margin-top: .25rem
+		margin-left: .5em
+		width: 1em
+
+.g_kv
+	position: relative
+	.desktop
+		max-height: 100vh
+		background: url('img/bg.jpg') center bottom/cover
+		.bg
+			padding-top: 56.25%
+		.content
+			position: absolute
+			left: 8%
+			top: 8%
+			width: 84%
+			font-size: (16/3840)*100vw
+		.logo
+			width: 42%
+		.t1
+			color: #fff
+			font-weight: 700
+			margin-top: 16em
+			.t1a
+				font-size: 8.5em
+		.t2
+			margin-top: .2em
+			margin-bottom: 2em
+			color: $c1
+			font-size: 7em
+			font-weight: 700
+			line-height: 1.2
+		.date
+			width: (1310/3840)*100%
+		.slogan
+			margin-top: 16em
+			width: (564/3840)*100%
+
+.sc_intro
+	background-color: #fff
+
+.intr_cnt
+	margin: 0 auto
+	max-width: 50em
+	font-size: 1.25em
+	line-height: 1.67
+	color: $c2
+	b
+		color: $c3
+	ul
+		list-style: none
+		padding-left: 0
+		li 
+			position: relative
+			border-bottom: 1px solid $c1
+			padding: 1em 1.8em
+			line-height: 1
+			color: $c1
+			&::after
+				content: ''
+				position: absolute
+				left: .7em
+				top: calc(50% - .1em)
+				height: .4em
+				width: .4em
+				border-radius: 50%
+				background: linear-gradient(45deg, $c1, $c3)
+
+.cta_wrap
+	margin-top: 40px
+	text-align: center
+	.cta_text
+		margin-bottom: 15px
+		font-size: 1.125rem
+		line-height: 1.2
+		color: $c1
+
+.main_sc
+	padding-top: 60px
+	padding-bottom: 60px
+
+.g_main
+	position: relative
+	z-index: 2
+	.sc_title
+		position: relative
+		z-index: 2
+		line-height: 1
+		margin-bottom: 30px
+		text-align: center
+		.tit
+			display: inline-block
+			font-size: 2rem
+			padding-bottom: .5em
+			font-weight: 500
+			line-height: 1
+			background: linear-gradient(90deg, $c2, $blue) center bottom/90% 3px no-repeat
+			color: $blue
+
+.patten
+	background: radial-gradient($c0 1px, transparent 2px) 0 0/24px 24px
+	opacity: .2
+
+.sc_agenda
+	position: relative
+	background-color: $c2
+	overflow: hidden
+	.patten
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 20vw
+		height: 20vw
+		transform-origin: right bottom
+		transform: rotate(45deg)
+
+.ag_table
+	font-size: 1.2em
+	.tr
+		display: flex
+		align-items: center
+		padding: 0 15px
+		border-bottom: 1px solid $c1
+		color: #fff
+		&:first-child
+			border-bottom: 0
+			border-radius: 1em
+			margin-bottom: 6px
+		&:last-child
+			margin-top: 6px
+			border-bottom: 0
+			border-radius: 1em
+	.tr_soft
+		background-color: rgba($c1, .1)
+	.td
+		padding: 15px
+	.td_time
+		flex: 0 0 auto
+	.time
+		color: $blue
+	.td_topic
+		flex: 1 1 100%
+		display: inline-flex
+		align-items: center
+	.tpc
+		flex: 1 1 100%
+		padding-right: 1em
+	.toggle
+		flex: 0 0 auto
+		background-color: $c1
+		padding: .4em .8em .5em
+		color: #fff
+		border-radius: 4px
+		font-size: 0.9em
+		cursor: pointer
+		&:hover
+			background-color: $c4
+	.td_speaker
+		flex: 0 0 33%
+		.k
+			font-size: .8em
+			color: $pink
+		.line2
+			margin-top: .75em
+	.spk
+		padding: .25em 0
+		line-height: 1.3
+		.n
+			font-weight: 500
+		.j
+			font-size: .8em
+			color: $blue
+.sc_speaker
+	background-color: $c3
+.spk_cnt
+	.items
+		border-radius: 30px
+		overflow: hidden
+		display: flex
+		flex-wrap: wrap
+	.spk_item
+		flex: 0 0 25%
+		position: relative
+		overflow: hidden
+		padding: 0 15px 30px
+	.wrap
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 15px
+			top: 15px
+			z-index: 2
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			background: linear-gradient(-45deg, $c1, rgba($c1, 0))
+	.pic
+		position: relative
+		z-index: 1
+		border-radius: 50%
+		overflow: hidden
+		background-color: $c2
+	.word
+		padding: 15px 0 0
+		text-align: center
+		color: $blue
+		.n
+			font-size: 1.2em
+			color: #fff
+			font-weight: 500
+.sc_gift
+	background-color: $c2
+.gift_cnt
+	justify-content: center
+	.gift_item
+		flex: 0 0 420px
+		margin: 20px 0
+		text-align: center
+		color: #fff
+		.pic
+			max-width: 50vw
+			margin: 0 auto
+			img
+				max-width: 100%
+				width: 320px
+		.word
+			padding: 1em 2em
+		.tit
+			font-size: 1.5em
+			font-weight: 700
+			color: $blue
+		.text
+			margin-top: .5em
+			font-size: 1.1em
+			color: $c0
+			b
+				color: #fff
+
+	
+.sc_company
+	overflow: hidden
+	background-color: #fff
+.cpy_cnt
+	text-align: center
+	.cpy_item
+		&+.cpy_item
+			margin-top: 3em
+		.t
+			font-size: 1.25em
+			line-height: 1
+			color: $c1
+		img
+			margin: 15px
+			height: 60px
+			&.i1
+				height: 96px
+
+.g_footer
+	padding: 60px 0
+	background-color: $c2
+	color: #fff
+	overflow: hidden
+	ul
+		margin-bottom: 0
+		li
+			padding: .3em 0
+			line-height: 1.4
+		a
+			color: $c0
+			&:hover
+				color: $blue
+
+.modal-content
+	border-width: 0
+
+.modal-header
+	border-bottom-width: 0
+	padding-left: 2rem
+	line-height: 1
+	.h5
+		color: $c1
+		font-weight: 700
+	button.close
+		font-size: 1.5rem
+		color: #000
+		opacity: 1
+
+.modal-body
+	padding: 1.25rem 2rem 1.75rem
+	border-top: 1px solid rgba(#000, 0.2)
+	font-size: 1rem
+	line-height: 1.5
+	ul,
+	ol
+		padding-left: 1.7rem
+		margin-bottom: 0
+		padding-top: .2rem
+		padding-bottom: .2rem
+	li
+		padding: .2rem 0
+
+@media (min-width: 768px)
+
+@media (max-width: 767px)
+	.fix_aside
+		right: .5rem
+		display: flex
+		.fx_item
+			margin: 0 .25em
+
+	.g_header
+		width: 100%
+		background-color: $c3
+		.header_wrap
+			padding: 10px
+			display: flex
+			justify-content: space-between
+		.menu_trigger
+			flex: 0 0 auto
+			.menu_btn
+				position: relative
+				width: 48px
+				height: 48px
+				text-align: center
+				border-radius: 6px
+				border: 1px solid #fff
+				background-color: rgba(#fff, 0)
+				.icon
+					display: inline-block
+					position: absolute
+					left: 20%
+					top: 50%
+					width: 60%
+					height: 4px
+					margin-top: -2px
+					background-color: #fff
+
+					&::before,
+					&::after
+						content: ''
+						position: absolute
+						left: 0
+						width: 100%
+						height: 100%
+						background-color: #fff
+
+					&::before
+						top: -200%
+
+					&::after
+						bottom: -200%
+
+				&.sty_white
+					border-color: #fff
+
+					.icon
+						&,
+						&::before,
+						&::after
+							background-color: #fff
+		.nav_area
+			flex: 1 1 100%
+			padding-right: 48px
+			display: none
+		.nav_cnt
+			display: block
+
+		.nav_item
+		.nav_link
+	
+	.main_sc
+		padding: 30px 20px 45px
+
+	.sc_intro
+		.intr_cnt
+			font-size: 1rem
+		.gift_cnt
+			margin-top: 2em
+			flex-wrap: wrap
+			.pic
+				order: 2
+				flex: 0 0 50%
+			.word
+				margin-top: 1em
+				order: 1
+				text-align: center
+				.tit
+					border-width: 0 0 4px 0
+				.text
+					margin-top: .5em
+
+	.sc_agenda
+	.ag_table
+		font-size: 1em
+		.tr
+			display: block
+			padding: 10px 20px
+		.td
+			padding: 0
+		.tpc
+			padding-right: 0
+		.td_topic
+			padding: 5px 0
+			display: block
+			font-size: 1.2em
+			line-height: 1.3
+		.toggle
+			display: inline-block
+			margin-top: 4px
+	.sc_speaker
+
+	.spk_cnt
+		.items
+			max-width: 320px
+			margin: 0 auto
+			display: block
+		.spk_item
+			overflow: visible
+			margin-bottom: 10px
+	.sc_company
+		.items
+			display: block
+		.cpy_item
+			margin-bottom: 10px
+	.sc_location
+		padding-bottom: 80px
+		.map_tit
+			display: block
+			font-size: 1rem
+			line-height: 1.3
+			text-align: center
+		.map_wrap
+			width: 100%
+			padding-top: 300px
+	.modal-header
+		padding-left: 1.5rem
+	.modal-body
+		padding: 1.5rem
+		font-size: 1rem
