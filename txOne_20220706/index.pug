@@ -243,6 +243,11 @@ html(lang="zh-Hant-TW")
 							,"j": "國立陽明交通大學教授"
 						}
 						,{
+							"s": "spk9"
+							,"n": "吳明璋"
+							,"j": "韋萊韜悅 企業風險管理與經紀服務資深協理"
+						}
+						,{
 							"s": ""
 							,"n": ""
 							,"j": "工業局（邀約中）"
@@ -257,11 +262,6 @@ html(lang="zh-Hant-TW")
 							,"n": ""
 							,"j": "力積電（邀約中）"
 						}
-						,{
-							"s": "spk9"
-							,"n": "吳明璋"
-							,"j": "韋萊韜悅 企業風險管理與經紀服務資深協理"
-						}
 					]
 			section.sc_speaker(id= secAr[2][0])
 				.container.main_sc
@@ -272,7 +272,7 @@ html(lang="zh-Hant-TW")
 							each x,i in spkAr
 								if x.s != ""
 									.spk_item
-										.wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay=""+(200*(i+1)), data-aos-anchor="#aos4")
+										.wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay=""+(200*i), data-aos-anchor="#aos4")
 											.pic
 												img.img-fluid(src=`img/spk/${x.s}.jpg`)
 											.word
