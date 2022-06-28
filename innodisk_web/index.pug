@@ -1,0 +1,789 @@
+doctype html
+html(lang="zh-Hant-TW")
+	-
+		const varOj = {
+				"title": "Innovation Day - AI X Innovation 物聯創新，進化AI",
+				"name": "innodisk_20220823",
+				"sign": "https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AB0823-0",
+				"sign2": "https://www.digitimes.com.tw/OnLine/query.asp?ProdGroup=053AB0823-0",
+				"description": "8/23 Innovation Day 宜鼎國際攜手子公司安提國際、巽晨、安捷科、維新應用以及華碩、微軟、Intel、Nvidia，將以AI X Innovation「物聯創新，進化AI」為論壇主軸，圍繞「趨勢創新」、「技術創新」、「應用創新」、「商業創新」四大主題，分享全球最新的產業科技趨勢與案例，一窺全球智慧應用佈局發展！邀請各界專家蒞臨齊聚。"
+			},
+			secAr = [
+				["active", "活動介紹"],
+				["agenda", "議程內容"],
+				["speaker", "講師陣容"],
+				["company", "主辦單位"],
+				["position", "會場位置"]
+			]
+
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(property="og:title", content= varOj.title)
+		meta(property="og:type", content="article")
+		meta(property="og:url", content= "https://www.digitimes.com.tw/seminar/"+varOj.name+"/")
+		meta(property="og:image", content= "https://www.digitimes.com.tw/seminar/"+varOj.name+"/img/webtitle.jpg")
+		meta(property="og:site_name", content="DIGITIMES")
+		meta(property="og:description", content=varOj.description)
+		//[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]
+		
+		title= varOj.title
+
+		//- link(rel="shortcut icon", href="favicon.ico")
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+		link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+		- const d = new Date(), _date = ""+(d.getMonth()+1)+d.getDate()+d.getHours()+d.getMinutes();
+
+		link(rel='stylesheet' href='style.css?v='+_date)
+
+		// Google Analytics
+		script.
+
+	body
+		#particles-js
+		.g_fixed.fix_aside
+			a.fx_item.is_primary(href=varOj.sign, target="_blank")
+				.in_wrap.txt
+					span 立即報名
+			.fx_item.js_scroll_top
+				.in_wrap.ic
+					.ic_top
+
+		.g_header.sticky-top
+			.header_wrap
+				.menu_trigger.d-lg-none
+					span.icon
+
+				.nav_area
+					.nav_list
+						each a in secAr
+							.nav_item
+								a.nav_link.js_page_scroll(href=`#${a[0]}`)= a[1]
+						.nav_item
+							a.nav_link(href=varOj.sign, target="_blank") 立即報名
+						.nav_item
+							a.nav_link(href=varOj.sign2, target="_blank") 報名查詢
+
+		.g_kv
+			.desktop.d-none.d-lg-block
+				.cover#aos0(data-aos="fade", data-aos-duration="0")
+				.bg
+					.bg1(data-aos="fade-up", data-aos-duration="1200", data-aos-delay="200", data-aos-anchor="#aos0")
+						img(src="img/bg1.png")
+					.bg2(data-aos="fade-up", data-aos-duration="1200", data-aos-delay="400", data-aos-anchor="#aos0")
+						img(src="img/bg2.png")
+				.content
+					.word
+						.tit
+							.t1(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1200", data-aos-anchor="#aos0")
+								img(src="img/t1.png")
+							.t2(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1400", data-aos-anchor="#aos0")
+								img(src="img/t2.png")
+							.t3(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1600", data-aos-anchor="#aos0")
+								img(src="img/t3.png")
+						.date
+							.d1(data-aos="fade-up", data-aos-duration="800", data-aos-delay="2000", data-aos-anchor="#aos0")
+								img(src="img/d1.png")
+							.d2(data-aos="fade-up", data-aos-duration="800", data-aos-delay="2200", data-aos-anchor="#aos0")
+								img(src="img/d2.png")
+					.logo(data-aos="fade-up", data-aos-duration="1000", data-aos-delay="800", data-aos-anchor="#aos0")
+						img.logo(src="img/logo.png")
+	
+					.timer(data-aos="fade-up", data-aos-duration="1000", data-aos-delay="2600", data-aos-anchor="#aos0")
+						.tb.d
+							span 00
+						.tb.h
+							span 00
+						.tb.m
+							span 00
+						.tb.s
+							span 00
+				
+			.mobile.d-lg-none
+				.kv
+					img.img-fluid(src="img/mkv2.png")
+				.timer_wrap
+					.timer
+						.tb.d
+							span 00
+						.tb.h
+							span 00
+						.tb.m
+							span 00
+						.tb.s
+							span 00
+
+		.g_main
+			section.sc_intro(id= secAr[0][0])
+				.container.main_sc
+					.intr_cnt
+						p#aos1(data-aos="fade-up", data-aos-duration="800")
+							|宜鼎國際十數年來將創新思維深植於工控產業，並以技術、品質領先業界，不斷為全球客戶創造高附加價值產品與技術。在智慧物聯逐漸朝向AI化發展趨勢下，建構產業共生的思維將化為重要基礎，宜鼎國際在累積龐大AIoT落地能量後，持續思考未來產業發展，透過創新的思維共享，在快速創新變革的過程中持續聚焦，投入AI邊緣運算整合，並以「物聯創新，進化AI」 (AI X Innovation) 的觀點出發，帶動產業本質的創新與變革，加速跨域科技創新進化。
+
+						p(data-aos="fade-up", data-aos-duration="800", data-aos-delay="400", data-aos-anchor="#aos1") 
+							|8/23 Innovation Day宜鼎國際攜手子公司安提國際、巽晨、安捷科、維新應用以及華碩、微軟、Intel、Nvidia，將以AI X Innovation「物聯創新，進化AI」為論壇主軸，圍繞「趨勢創新」、「技術創新」、「應用創新」、「商業創新」四大主題，分享全球最新的產業科技趨勢與案例，一窺全球智慧應用佈局發展！邀請各界專家蒞臨齊聚。
+					
+					.cta_wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="800", data-aos-anchor="#aos1")
+						a.primary_cta(href=varOj.sign, target="_blank")
+							span 立即報名
+
+				.four_primary
+					.container.main_sc
+						.primary_tit#aos2(data-aos="fade-up", data-aos-duration="800") 
+							|AI創新 (AI X Innovation) 四大主題
+						.primary_list.d-block.d-lg-flex
+							.primary_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="0", data-aos-anchor="#aos2")
+								.item_in
+									.t 
+										b 趨勢創新 
+										div product/trend innovation
+									.p AI產品創新將不再侷限於規格進化，從跳躍式產品創新進而引領的創新大趨勢，將為AI開啟無限可能。
+							.primary_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="300", data-aos-anchor="#aos2")
+								.item_in
+									.t 
+										b 技術創新 
+										div technology innovation
+									.p 在講求即時、高效、智能化與最大化的目標下，時時驅動技術創新，才能取得競爭優勢，我們持續整合，不斷發揮創新科技與技術優勢，引領AI前行。
+							.primary_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="600", data-aos-anchor="#aos2")
+								.item_in
+									.t 
+										b 應用創新 
+										div application innovation
+									.p 隨著智能化技術演進，傳統應用市場加速智能化，未來想像逐漸化為可能，智慧工廠、無人車、智慧建築等創新領域，也紛紛成為全新應用。一窺我們的精采案例分享，以及深入的關鍵市場需求解析。
+							.primary_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="900", data-aos-anchor="#aos2")
+								.item_in
+									.t 
+										b 商業創新 
+										div business innovation
+									.p 以智能化趨勢佈局前瞻思維，如何透過創新思維與生態圈合作，打造AI從端到雲高附加價值鏈，並共同架構出前所未有的創新AI未來藍圖。
+
+				.three_spot
+					.spot_list
+						.spot_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1200", data-aos-anchor="#aos2") 
+							.container.d-block.d-lg-flex
+								.pic
+									.scene
+										.cube 
+											.front
+												img(src="img/icon_ai.png")
+											.back
+											.top
+											.bottom
+											.left
+											.right
+								.word
+									.t 
+										.d-inline-block 首次聚焦AI物聯各種工業應用 
+										.d-inline-block 接軌未來創新趨勢
+									.p 圍繞AI產業趨勢、技術與服務、應用、商業模式等創新主題，邀請各界產業領袖現身說法，帶入全球宏觀視野，幫助產業擴大AI創新迅速有型、共創共好。
+						.spot_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1600", data-aos-anchor="#aos2") 
+							.container.d-block.d-lg-flex
+								.pic
+									.scene
+										.cube 
+											.front
+												img(src="img/icon_badge.png")
+											.back
+											.top
+											.bottom
+											.left
+											.right
+								.word
+									.t 各界菁英領袖共襄盛舉
+									.p 邀請重量級講師主題演講，探索關鍵概念、分享實際案例和最佳經驗。
+						.spot_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="2000", data-aos-anchor="#aos2") 
+							.container.d-block.d-lg-flex
+								.pic
+									.scene
+										.cube 
+											.front
+												img(src="img/icon_event.png")
+											.back
+											.top
+											.bottom
+											.left
+											.right
+								.word
+									.t 年度盛會互動交流
+									.p 現場展示創新技術與現場展現整合應用之成果，加速實現創新應用，廣邀各界關鍵人士參與交流，僅此一場不可錯過。
+		
+			-
+				const spkAr = {
+					"randy": {
+						"s": "randy"
+						,"n": "簡川勝"
+						,"j": "宜鼎國際董事長"
+					}
+					,"innodisk": {
+						"s": "innodisk"
+						,"n": "吳志清"
+						,"j": "<span>宜鼎國際智能周邊應用事業處</span><span>資深經理</span>"
+					}
+					,"aetina": {
+						"s": "aetina"
+						,"n": "羅智榮"
+						,"j": "安提國際總經理"
+					}
+					,"intel": {
+						"s": "intel"
+						,"n": "施敬修"
+						,"j": "<span>英特爾物聯網事業群</span> <span>平台應用資深總監</span>"
+					}
+					,"millitronic": {
+						"s": "millitronic"
+						,"n": "林志敏"
+						,"j": "巽晨國際總經理"
+					}
+					,"microsoft": {
+						"s": "microsoft"
+						,"n": "林孟洲"
+						,"j": "<span>微軟物聯網方案</span><span>大中華及亞太區技術負責人</span>"
+					}
+					,"sysinno":{
+						"s": "sysinno"
+						,"n": "林春輝"
+						,"j": "維新應用科技總經理"
+					}
+					,"asus": {
+						"s": "asus"
+						,"n": "張雲洋"
+						,"j": "<span>華碩物聯網事業部</span><span>技術副處長</span>"
+					}
+					,"antzer": {
+						"s": "antzer"
+						,"n": "魏廷晃"
+						,"j": "安捷科執行長"
+					}
+					,"nvidia": {
+						"s": "nvidia"
+						,"n": "林敬祖"
+						,"j": "<span>NVIDIA</span> <span>台灣業務副總經理</span>"
+					}
+				}
+
+				const agdAr = [
+					{
+						"id": "soft"
+						,"t": "12:30-13:10"
+						,"tpc": "Registration"
+					}
+					,{
+						"id": "randy"
+						,"t": "13:10-13:20"
+						,"tpc": "引言人開場"
+						,"spk": spkAr.randy
+					}
+					,{
+						"id": "innodisk"
+						,"t": "13:20-13:40"
+						,"tpc": "創新智能應用 - 加速落地轉型"
+						,"tpc2": "Innovative & Intelligent Application to Accelerate Transformation"
+						,"spk": spkAr.innodisk
+					}
+					,{
+						"id": "antzer"
+						,"t": "13:40-14:00"
+						,"tpc": "安提國際AI專業化服務：新一代邊緣智慧化商業架構"
+						,"tpc2": "Aetina Pro-AI Service: The Next Level Edge AI Business Structure"
+						,"spk": spkAr.antzer
+					}
+					,{
+						"id": "intel"
+						,"t": "14:00-14:20"
+						,"tpc": "TBC"
+						,"tpc2": ""
+						,"spk": spkAr.intel
+					}
+					,{
+						"id": "soft"
+						,"t": "14:20-14:40"
+						,"tpc": "Break"
+					}
+					,{
+						"id": "millitronic"
+						,"t": "14:40-15:00"
+						,"tpc": "WiFi 6 技術加速創新互動式無線通訊應用"
+						,"tpc2": "On Leveraging WiFi 6 Technology to Innovate Wireless Interactive Comminution in Diverse Scenario"
+						,"spk": spkAr.millitronic
+					}
+					,{
+						"id": "microsoft"
+						,"t": "15:00-15:20"
+						,"tpc": "物聯網的安全防護服務 - 從終端到雲端"
+						,"tpc2": "IoT Edge to Cloud Cybersecurity Trends & Services"
+						,"spk": spkAr.microsoft
+					}
+					,{
+						"id": "sysinno"
+						,"t": "15:20-15:40"
+						,"tpc": "無所不在的氣體感測商機"
+						,"tpc2": "Gas Sensing Opportunities"
+						,"spk": spkAr.sysinno
+					}
+					,{
+						"id": "soft"
+						,"t": "15:40-16:00"
+						,"tpc": "Break"
+					}
+					,{
+						"id": "asus"
+						,"t": "16:00-16:20"
+						,"tpc": "ASUS IoT實現智慧零售的未來"
+						,"tpc2": "ASUS IoT Realizing the Future of Smart Retail"
+						,"spk": spkAr.asus
+					}
+					,{
+						"id": "aetina"
+						,"t": "16:20-16:40"
+						,"tpc": "AIoT雲端食材保存與冷鍊運輸管理"
+						,"tpc2": "Food control and cold-chain logistic management using AIoT and cloud technology"
+						,"spk": spkAr.aetina
+					}
+					,{
+						"id": "nvidia"
+						,"t": "16:40-17:00"
+						,"tpc": "TBC"
+						,"tpc2": ""
+						,"spk": spkAr.nvidia
+					}
+					,{
+						"id": "soft"
+						,"t": "17:00-17:10"
+						,"tpc": "Lucky Draw"
+					}
+				]
+			section.sc_agenda(id= secAr[1][0])
+				.patten
+				.container.main_sc
+					.sc_title#aos3(data-aos="fade-up", data-aos-duration="800")
+						.tit
+							div= secAr[1][1]
+							.scene
+								.cube 
+									.front
+									.back
+									.top
+									.bottom
+									.left
+									.right
+					.agd_cnt
+						.ag_table(data-aos="fade-up", data-aos-duration="800" data-aos-delay="600", data-aos-anchor="#aos3")
+							each x,i in agdAr
+								if x.id=="soft"
+									.tr.tr_soft
+										.td.td_time
+											.time= x.t
+										.td.td_topic
+											.tpc= x.tpc
+								else
+									.tr
+										.td.td_time
+											.time= x.t
+										.td.td_topic
+											.tpc= x.tpc
+											if x.id != "randy"
+												.tpc_outline(data-toggle="modal", data-target="#agd_"+x.id)
+													div 演講內容
+										.td.td_speaker
+											.spk(data-toggle="modal", data-target="#spk_"+x.spk.s)
+												.n= x.spk.n
+												.j!= x.spk.j
+
+					.cta_wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1000", data-aos-anchor="#aos3")
+						a.primary_cta(href=varOj.sign, target="_blank")
+							span 立即報名
+
+			
+			section.sc_speaker(id= secAr[2][0])
+				.container.main_sc
+					.sc_title#aos4(data-aos="fade-up", data-aos-duration="800")
+						.tit
+							div= secAr[2][1]
+							.scene
+								.cube 
+									.front
+									.back
+									.top
+									.bottom
+									.left
+									.right
+					.spk_cnt
+						.items.d-block.d-lg-flex
+							each x,k in spkAr
+								- let i = 1;
+								if x.s != "randy"
+									.spk_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay=""+(200*i), data-aos-anchor="#aos4")
+										.wrap(data-toggle="modal" data-target="#spk_"+k)
+											.pic
+												img.img-fluid(src=`img/spk/${x.s}.jpg`)
+											.word
+												.n= x.n
+												.j!= x.j
+									- i++;
+								
+			section.sc_gift
+				.container.main_sc
+					.sc_title#aos5(data-aos="fade-up", data-aos-duration="800")
+						.tit
+							div 活動好禮
+							.scene
+								.cube 
+									.front
+									.back
+									.top
+									.bottom
+									.left
+									.right
+					.gift_cnt.d-block.d-lg-flex
+						.wrap.wp1
+							.gift_title(data-aos="fade-up", data-aos-duration="800", data-aos-delay="400", data-aos-anchor="#aos5")
+								.tit 早鳥禮
+							.items
+								.gift_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="400", data-aos-anchor="#aos5")
+									.pic
+										img(src="img/gift_card.jpg")
+									.n 7-ELEVEN 100元禮卷
+									.c 100名
+						.wrap.wp2
+							.gift_title(data-aos="fade-up", data-aos-duration="800", data-aos-delay="800", data-aos-anchor="#aos5")
+								.tit 抽獎禮
+							.items.d-block.d-lg-flex
+								.gift_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="800", data-aos-anchor="#aos5")
+									.pic
+										img(src="img/gift_watch.jpg")
+										.t 頭獎
+									.n Apple Watch Series 7
+									.c 1名
+								.gift_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1200", data-aos-anchor="#aos5")
+									.pic
+										img(src="img/gift_airpod.jpg")
+										.t 貳獎
+									.n Air Pods Pro
+									.c 1名
+								.gift_item(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1600", data-aos-anchor="#aos5")
+									.pic
+										img(src="img/gift_mi.jpg")
+										.t 參獎
+									.n 米家無線吸塵器 mini
+									.c 20名
+
+			section.sc_company(id= secAr[3][0])
+				.container.main_sc
+					.sc_title.d-none.d-md-block#aos6(data-aos="fade-up", data-aos-duration="800")
+						.tit
+							div= secAr[3][1]
+							.scene
+								.cube 
+									.front
+									.back
+									.top
+									.bottom
+									.left
+									.right
+					.company_cnt.d-block.d-lg-flex
+						.wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="600", data-aos-anchor="#aos6")
+							.cpy_title
+								.tit 主辦單位
+							.items.d-block.d-lg-flex
+								.cpy_item
+									a.pic(href="https://www.innodisk.com", target="_blank")
+										img(src="img/cpy/innodisk.png" alt="Innodisk")
+						.wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1000", data-aos-anchor="#aos6")
+							.cpy_title
+								.tit 合作夥伴
+							.items.d-block.d-lg-flex
+								.cpy_item
+									a.pic(href="https://www.aetina.com/", target="_blank")
+										img(src="img/cpy/aetina.png" alt="Aetina")
+								.cpy_item
+									a.pic(href="https://www.antzer-tech.com/", target="_blank")
+										img(src="img/cpy/antzer.png" alt="Antzer")
+								.cpy_item
+									a.pic(href="https://iot.asus.com/ ", target="_blank")
+										img(src="img/cpy/asusiot.png" alt="ASUS IoT")
+								.cpy_item
+									a.pic(href="https://www.intel.com/", target="_blank")
+										img(src="img/cpy/intel.png" alt="intel")
+								.cpy_item
+									a.pic(href="#", target="_blank")
+										img(src="img/cpy/microsoft.png" alt="Microsoft")
+								.cpy_item
+									a.pic(href="https://millitronic.com.tw/", target="_blank")
+										img(src="img/cpy/millitronic.png" alt="Millitronic")
+								.cpy_item
+									a.pic(href="https://www.nvidia.com.tw/", target="_blank")
+										img(src="img/cpy/nvidia.png" alt="nvidia")
+								.cpy_item
+									a.pic(href="https://www.sysinnotec.com", target="_blank")
+										img(src="img/cpy/sysinno.png" alt="sysinno")
+
+					.cta_wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1400", data-aos-anchor="#aos6")
+						a.primary_cta(href=varOj.sign, target="_blank")
+							span 立即報名
+
+
+			section.sc_location(id= secAr[4][0])
+				.container.main_sc
+					.sc_title#aos7(data-aos="fade-up", data-aos-duration="800")
+						.tit.c_white
+							div= secAr[4][1]
+							.scene
+								.cube 
+									.front
+									.back
+									.top
+									.bottom
+									.left
+									.right
+					.location_cnt.d-block.d-lg-flex
+						.position(data-aos="fade-up", data-aos-duration="800", data-aos-delay="600", data-aos-anchor="#aos7")
+							.loc_top
+								.loc 香格里拉台南遠東國際大飯店 B2宴會AB廳
+								.addr 台南市東區大學路西段89號
+							.loc_map
+								iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.745520749159!2d120.21223186535391!3d22.99638352307621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768d07bfe807%3A0x9915b499a80653f7!2z6aaZ5qC86YeM5ouJ5Y-w5Y2X6YGg5p2x5ZyL6Zqb5aSn6aOv5bqX!5e0!3m2!1szh-TW!2stw!4v1643277549054!5m2!1szh-TW!2stw' style='border:0;' allowfullscreen loading='lazy')
+						.covid(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1000", data-aos-anchor="#aos7")
+							.wrap
+								.t 新冠肺炎疫情下的活動規範
+								.p 守護與會者的健康是最重要的事！Innovation Day AI X Innovation「物聯創新，進化AI」論壇將遵守台灣疾病控制中心（CDC）的最新更新，並相應地及時修改我們的活動協議，這些協議也會在我們的官方網站上更新。Innodisk (宜鼎國際)鼓勵大家遵守這些規程，定期洗手，保持呼吸道衛生，保持社交距離，以及其他良好的個人衛生習慣。我們期待在活動中見到您，並感謝您的合作。
+			section.sc_detail
+				.container.main_sc
+					.detail_cnt(data-aos="fade-up", data-aos-duration="800")
+						ul.list
+							li 本活動報名截止日為8月18日(四)。主辦單位將視報名狀況提前或延後線上報名時間。
+							li 參加方式：線上活動。完成報名後，另行寄發收視連結；活動當天請於議程開始前登入。
+							li 本活動採預先線上報名並完成登錄手續，請勿偽造他人身份資料進行報名以免觸犯法律，主辦單位保留報名資格之最後審核權利。
+							li 本活動將由主辦單位進行出席資格審核，與主題及屬性符合者為優先考量。
+							li 通過審核者，系統將於活動前一天以電子郵件方式寄您專屬連結的「收視通知」至您的電子信箱，以示您的出席資格，未通過審核者，亦會收到一封婉拒通知信。若您未收到任何通知信件，請上網站查詢。
+							li 凡參加本次活動所舉辦之贈品或抽獎，因有登錄資料不實或冒用他人身份，主辦單位有權取消其得獎資格。
+							li DIGITIMES保留修改本活動規則之權利，毋須另行作出解釋或通知。
+							li 若因不可預測之突發因素，主辦單位得保留研討會課程及講師之變更權利。
+							li 如對於本活動有任何疑問，請來信洽詢活動小組：<a href="mailto:seminar@digitimes.com">seminar@digitimes.com</a>。
+					
+
+		mixin tpcModal(id)
+			if id=="innodisk"
+				p 在AI與數位轉型趨勢下，產業整合新科技功能愈來愈廣，使得設備運行和維護服務的負擔急遽增加，宜鼎在強調創新技術與產品打造從端到雲的智慧生態系。協助客戶在未來智慧化產業能夠進行平台數據可視化、設備管理、商業邏輯等相關應用，繼而利用平台內建的AI平台執行推論工作. 
+
+			else if id=="antzer"
+				ul
+					li 市場趨勢概述
+					li AIOT技術驅動市場新需求
+					li 應用情境
+					li 安捷科解決方案
+					li ELSA藍芽溫度計規格功能與特點
+					li 食材保存期限自動監控與通知
+					li RIFA-G LTE閘道器介紹
+					li RIFA-G車載定位閘道器介紹
+					li B-Fresh必鮮雲端管理系統介紹與展示
+			
+			else if id=="intel"
+				
+			else if id=="millitronic"
+				p ASUS IoT如何透過整合零售場景的AI、邊緣計算與雲端解決方案，打造新零售科技生態圈，實現更好的客戶體驗旅程。
+
+			else if id=="microsoft"
+				p In this speech, I will talk about Industrial Cybersecurity Trends and Microsoft security practices. The key topic will be zero trust policy from edge to cloud. I will also present the best practices of cybersecurity for connected electronic vehicles and Internet of Things in general.
+
+			else if id=="sysinno"
+				ul
+					li 氣體感測應用隱藏在各式環境中，由生活空間、工作環境、工業、農業，到城市治理，都可以看到它的身影
+					li 感測數據作為設備連動和決策依據，你知道感測數值是否精確可靠？
+					li 維新應用的精準感測優勢，由設計、演算法開始，到生產校正的品質把關，提供可靠的感測數值
+					li 結合影像、噪音、氣象等數據，全方位提供AI軟體分析決策"
+
+			else if id=="asus"
+				p 無線發展至 WiFi6 / 6E 頻寬帶來更多創新物聯網應用，巽晨將無線頻寬結合 SDN，打造高速雙向低延遲無線USB host
+				ul
+					li 智慧零售:虛擬化 kiosk & digital signage應用整合WiFi 6 無線傳輸
+					li 智慧醫療:  無線門診報到機
+					li 智慧會議室:  無線 USB camera"
+
+			else if id=="aetina"
+				ul
+					li 
+						.m 邊緣AI技術的概念與優勢簡介
+					li 
+						.m 邊緣AI系統開發上的挑戰
+					li 
+						.m 安提國際AI專業化服務與全新商業模式
+						.p 作為AI生態圈內的組織、協調、統籌角色，攜手全球AI企業打造多元解決方案，為夥伴與客戶創造商業共贏
+						.p 透過NVIDIA Fleet Command、NVIDIA TAO、NVIDIA Triton Inference Server為AI系統整合商帶來更加全方位的AI模型開發服務
+					li 
+						.m 安提國際的前沿邊緣AI軟硬體
+					li
+						.m 成功應用案例
+
+			else if id=="nvidia"
+				p NVIDIA Corporation, NVIDIA® (Nasdaq: NVDA) 為全球視覺運算技術領導廠牌。NVIDIA 發明的 GPU，是現今電腦的視覺中樞，也是我們產品和服務的核心。GPU 這個成果開闢了全新疆界，讓迷人的創意及探索得以實現，讓一度只存在於科幻小說中的人工智慧、自動駕駛汽車化作現實。NVIDIA 創立時只是一家標準 PC 繪圖晶片公司，爾後逐步轉型為專門化平台公司，將目光放在遊戲、企業繪圖、資料中心以及汽車，視覺運算對這四個龐大的市場來說不可或缺，因而備受重視。我們格外注重視覺運算領域，並透過 PC、行動裝置和雲端架構展現價值的能力。我們至此垂直整合並將 GPU、系統軟體、演算法、系統與服務攜至我們服務的市場，創造獨特的價值。NVIDIA正在建立世界上最偉大的人工智慧公司之一。 我們源自於在電腦繪圖起家，演變至今我們將GPU加速運算應用在虛擬實境，深度學習，專業視覺和自動駕駛汽車等領域，並為遊戲玩家，設計師和科學家帶來不可思議的體驗。
+				
+		mixin spkModal(s)
+			if s=="innodisk"
+				p 吳志清在宜鼎主負責智能週邊應用處，負責工業I/O模組與FPGA產品開發與設計，同時也負責宜鼎軟體部門開發物聯網端與雲端軟體。
+				p 在加入宜鼎前曾任全達國際擔任FAE主管，負責微軟嵌入式作業系統技術服務，同時亦是Microsoft MVP微軟最有價值專家。
+
+			else if s=="aetina"
+				p 安提國際股份有限公司總經理 羅智榮 致力於AIoT領域的AI技術推廣，並帶領安提國際積極開發前沿邊緣AI運算軟硬體產品、服務，打造專業化人工智慧（Pro-AI Service）服務，幫助AI系統整合商與開發商實現不同領域的智慧化應用落地。此外，透過在繪圖加速卡與圖形處理器領域深耕多年而建立出的紮實產品開發知識與經驗，安提國際股份有限公司總經理 羅智榮 以精準的產業視野，針對市場上的邊緣AI應用挑戰與痛點，指導安提國際開發團隊以技術為本，客戶為上，創造出多元解決方案，助力全球夥伴共同打造出「更智慧」的世界。
+
+			else if s=="antzer"
+				ul
+					li 研華公司產品經理、事業部協理、事業群副總
+					li 友通資訊總經理
+					li 安捷科董事長
+
+			else if s=="asus"
+				p 長期專注於協助零售產業借助物聯網應用服務來提升營運績效，15年以上的客戶現場第一線服務實戰經驗，擅長以客戶場景需求帶動技術方案導入的服務設計思維。
+			
+			else if s=="intel"
+				p 現任職於Intel，主要負責物聯網及人工智慧新技術的導入與推廣，過去也曾在台灣負責平板以及嵌入式的技術開發。在加入Intel之前，曾在美國加州高科技公司擔任資深工程師。
+				p 畢業於成大電機系，南加大(USC)電腦資訊碩士，和台大EMBA。
+
+			else if s=="microsoft"
+				p Dr. Lin leads a team of talented IoT and cloud solution architects in Greater China and Asia Pacific Region for Microsoft. He accelerates developing of repeatable vertical IoT and cloud solutions with IoT Device and Solution partners. The team focuses on verticals including manufacture, retails, building/city, energy, finance, healthcare, and agriculture. His expertise includes large cloud architecture, IoT device engineering, data mining, AI modelling, and media streaming. Prior Microsoft, Dr. Lin was in various technical and business leadership roles for global and startup companies including Quanta Computer, Streaming21, and Apple. 
+
+			else if s=="millitronic"
+				ul
+					li 現任 巽晨國際總經理 
+					li 十年毫米波高頻領域研究經驗，鑽研晶片封裝、射頻客製化等整合方案，並與 Tensorcom、Peraso等國際大廠合
+
+			else if s=="nvidia"
+				p 林敬祖為NVIDIA台灣業務副總經理，與許多產業界重要的生態夥伴共同領導最新科技應用，並攜手將NVIDIA最先進科技平台推廣至全世界，包含人工智慧、深度學習訓練、雲端資料中心、智慧影像分析系統、智慧物聯網裝置、遊戲以及專業可視化筆電等領域。林敬祖加入NVIDIA已超過15年，成功建立NVIDIA亞太區筆電市場。
+				p 在加入NVIDIA之前，林敬祖身為台灣IT產業資深專業人士，曾於宏碁、AMD、美國國家半導體擔任產品經理及客戶經理，負責產品行銷、部門銷售以及業務發展。
+				p 林敬祖擁有國立中山大學電機工程學士學位。
+
+			else if s=="sysinno"
+				ul
+					li 台灣大學機械研究所 碩士
+					li 工研院機械所 副研究員
+					li 鴻海精密 資深經理
+
+		.ag_modals
+			each x in agdAr
+				if x.id != "soft" && x.id != "randy"
+					.ag_modal.modal.fade(id="agd_"+x.id, tabindex='-1' role='dialog' aria-labelledby='SpeakerTitle' aria-hidden='true')
+						.modal-dialog.modal-lg.modal-dialog-centered(role='document')
+							.modal-content
+								.modal-header
+									.h5.m-0= x.tpc
+									button.close(type='button' data-dismiss='modal' aria-label='Close')
+										span(aria-hidden='true') ×
+								.modal-body
+									+tpcModal(x.id)
+			
+			each y,k in spkAr
+				.ag_modal.modal.fade(id="spk_"+y.s, tabindex='-1' role='dialog' aria-labelledby='SpeakerTitle' aria-hidden='true')
+					.modal-dialog.modal-dialog-centered(role='document')
+						.modal-content
+							.modal-header
+								.h5.m-0= y.n
+								button.close(type='button' data-dismiss='modal' aria-label='Close')
+									span(aria-hidden='true') ×
+							.modal-body
+								+spkModal(y.s)
+
+		script(src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T' crossorigin='anonymous')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js")
+		script.
+			AOS.init({
+				once: true
+			});
+
+			particlesJS.load('particles-js', 'dist/particles.json', function() {});
+
+			$(function(){
+
+				let scrollVal = $(this).scrollTop();
+
+				let checkScroll = ()=>{
+					if(scrollVal>$(window).height()) {
+						$('.fix_aside').addClass('is_active');
+						$('.fix_top').addClass('is_active');
+					}else{
+						$('.fix_aside').removeClass('is_active');
+						$('.fix_top').removeClass('is_active');
+					}
+				};
+
+				checkScroll();
+
+				$(window).scroll(()=>{
+					scrollVal = $(this).scrollTop()
+					checkScroll();
+				})
+
+				var $scrollTopNow = 0,
+					$body = $("html, body");
+
+				function bScroll(tarTop, aniDuration) {
+					$body.animate({
+						scrollTop: tarTop
+					}, aniDuration);
+				}
+
+				$('.menu_trigger').click(function(){
+					$('.nav_area').toggle();
+				})
+	
+				$('.js_page_scroll').on('click', function(e) {
+					
+					$scrollTopNow = $('html, body').scrollTop();
+			
+					var $tar = $(this),
+						$tarTop = $($tar.attr('href')).offset().top-60,
+						$aniDuration = Math.abs($tarTop-$scrollTopNow)*.6 > 1200 ? 1200 : (Math.abs($tarTop-$scrollTopNow)*.6);
+			
+					bScroll($tarTop, $aniDuration);
+			
+					e.preventDefault();
+
+					if($(window).width()<=768){
+						$('.nav_area').hide();
+						console.log($tarTop, $aniDuration)
+					}
+				});
+
+				$('.js_scroll_top').on('click', ()=>{
+					bScroll(0, 800);
+				});
+
+				setInterval(function() {
+					// 設置倒數計時: 結束時間 - 當前時間
+					// 當前時間
+					let nowTime = new Date();
+					// 設置結束時間
+					//- var endTime = new Date();
+					//- endTime.setFullYear(2021); // 設定 年，4位數字
+					//- endTime.setMonth(11); // 月，陣列索引值 0-11
+					//- endTime.setDate(16); // 日，正負整數
+					//- endTime.setHours(13); // 時 0-23
+					//- endTime.setMinutes(0); // 分
+					//- endTime.setSeconds(0); // 秒
+					//- var endTime2 = new Date(2021,11,16,13,0,0); // 西元年，月(0-11)，日，時，分，秒
+					var endTime3 = new Date("2022-08-23T12:30:00.000+08:00"); // "西元年-月-日T時:分:秒.毫秒 時區(+/-)"
+					// 倒數計時: 差值
+					var offsetTime = (endTime3 - nowTime) / 1000; // ** 以秒為單位
+					var sec = parseInt(offsetTime % 60); // 秒
+					var min = parseInt((offsetTime / 60) % 60); // 分 ex: 90秒
+					var hr = parseInt((offsetTime / 60 / 60) % 24); // 時
+					var day = parseInt(offsetTime / 24 / 60 / 60); // 時
+					if(endTime3 > nowTime) {
+						if(sec<10) {
+							sec = "0"+sec;
+						}
+						//- console.log(day, hr, min, sec);
+						$('.tb.d span').text(day);
+						$('.tb.h span').text(hr);
+						$('.tb.m span').text(min);
+						$('.tb.s span').text(sec);
+					}
+				}, 1000);
+
+			})
