@@ -171,7 +171,7 @@ body {
 			background-color: transparent;
 			transition: all 300ms;
 			&:hover {
-				background-color: $main3;
+				background-color: $main2;
 				text-decoration: none;
 			}
 		}
@@ -426,13 +426,16 @@ body {
 		position: relative;
 		z-index: 2;
 		display: block;
-		border: 1px solid $sub;
-		padding: 1em 3em;
-		background-color: $main;
-		font-size: 1.2em;
+		border-radius: 4em;
+		border: 1px solid $main3;
+		padding: .9em 2.7em;
+		background: transparent;
+		font-size: 1.5em;
+		font-weight: 500;
 		line-height: 1;
 		color: #fff;
 		transition: all 300ms;
+		text-shadow: 3px 3px 0 rgba(#000, .2);
 	}
 	&::after {
 		content: '';
@@ -442,14 +445,21 @@ body {
 		z-index: 1;
 		width: 100%;
 		height: 100%;
-		background-color: $main;
+		border-radius: 4em;
+		background: linear-gradient($main, $main2 8%, $main, $main3 92%, $main);
+		transition: all 300ms;
 	}
 	&:hover {
 		text-decoration: none;
 		span {
+			border-color: $sub;
 			background-color: #fff;
 			color: $sub;
-			transform: translate(-15px, -15px);
+			transform: translate(-10px, -10px);
+			text-shadow: 3px 3px 0 rgba(#fff, .2);
+		}
+		&::after {
+			background: linear-gradient($main2, $main, $main3);
 		}
 	}
 }
@@ -467,25 +477,26 @@ body {
 	}
 }
 .four_primary {
-	padding-bottom: 60px;
-	background: linear-gradient($sub, rgba($sub, .9));
+	background: linear-gradient($sub2, rgba($sub2, .9));
 	color: #fff;
+	.container {
+		max-width: 1200px;
+	}
 	.primary_tit {
 		position: relative;
 		text-align: center;
-		margin-bottom: 1.5em;
+		margin-bottom: 1em;
 		font-size: 2em;
-		font-weight: 700;
-		line-height: 1.2;
-		&::after {
-			content: '';
-			display: block;
-			width: 8em;
-			height: 1px;
-			background-color: darken($orange, 6);
-			margin: .5em auto;
-
+		div {
+			display: inline-block;
+			border-bottom: 1px double $orange;
+			padding-bottom: .5em;
+			font-weight: 700;
+			line-height: 1.2;
+			color: #fff;
+			text-shadow: 0 3px 3px rgba(darken($orange, 18), .9);
 		}
+		
 	}
 	.primary_list {
 		align-items: stretch;
@@ -495,18 +506,30 @@ body {
 		z-index: 1;
 		flex: 0 0 25%;
 		background-color: rgba(#000, .25);
-		box-shadow: inset 0 10px 20px 10px $sub;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+			width: 1px;
+			height: 100%;
+			background-color: rgba(#5c7184, .25);
+		}
 		&:nth-child(2n) {
 			.item_in {
-				background-color: #f4fbff;
+				background-color: lighten($grey, 2);
 			}
 		}
 		.item_in {
+			position: relative;
+			z-index: 0;
 			height: 100%;
-			padding: 1.5em;
+			padding: 1.5em 1.25em;
+			border-radius: 0;
 			background-color: #fff;
-			transition: all 300ms;
-			transform-origin: center bottom;
+			transition: transform 300ms, box-shadow 300ms, border-radius 300ms;
+			box-shadow: 0 10px 20px 0 rgba(#000, 0);
 		}
 		.t {
 			text-align: center;
@@ -522,23 +545,41 @@ body {
 		}
 		.p {
 			margin-top: 1em;
-			color: $sub;
+			color: $sub2;
 		}
 		&:hover {
 			z-index: 2;
 			.item_in {
-				transform: translateY(-4%) scale(1.1);
+				z-index: 2;
+				border-radius: 10px;
+				transform: scale(1.05);
+				box-shadow: 0 10px 20px 0 rgba(#000, .2);
 			}
 		}
 	}
 }
 
 .three_spot {
-	padding-top: 40px;
-	padding-bottom: 60px;
-	background: linear-gradient(rgba($sub, .9), rgba($sub, .6));
+	padding-bottom: 100px;
+	background: linear-gradient(rgba($sub2, .9), rgba($sub2, .6));
+	.spot_tit {
+		position: relative;
+		text-align: center;
+		margin-bottom: 1.5em;
+		font-size: 2em;
+		div {
+			display: inline-block;
+			border-bottom: 1px dashed $orange;
+			padding-bottom: .5em;
+			font-weight: 300;
+			line-height: 1.2;
+			color: darken($orange, 6);
+			// text-shadow: 0 3px 3px rgba(darken($orange, 18), .9);
+		}
+		
+	}
 	.spot_list {
-		padding-bottom: 40px;
+
 	}
 	
 	.spot_item {
@@ -589,7 +630,7 @@ body {
 				color: white;
 				text-align: center;
 				backface-visibility: visible;
-				background-color: $sub;
+				background-color: $sub2;
 			}
 			.front {
 				transform: translateZ(100px);
@@ -603,19 +644,19 @@ body {
 				transform: rotateY(180deg) translateZ(100px);
 			}
 			.top {
-				background-color: darken($sub, 2);
+				background-color: darken($sub2, 2);
 				transform: rotateX(90deg) translateZ(100px);
 			}
 			.bottom {
-				background-color: darken($sub, 12);
+				background-color: darken($sub2, 12);
 				transform: rotateX(-90deg) translateZ(100px);
 			}
 			.left {
-				background-color: darken($sub, 6);
+				background-color: darken($sub2, 6);
 				transform: rotateY(-90deg) translateZ(100px);
 			}
 			.right {
-				background-color: darken($sub, 6);
+				background-color: darken($sub2, 6);
 				transform: rotateY(90deg) translateZ(100px);
 			}
 		}
@@ -639,7 +680,7 @@ body {
 				padding-right: 60px;
 			}
 			.cube {
-				transform: rotateX(10deg) rotateY(12deg) rotateZ(8deg);
+				transform: rotateX(8deg) rotateY(9deg) rotateZ(8deg);
 			}
 			.container:hover {
 				.cube {
@@ -649,7 +690,7 @@ body {
 		}
 		&:nth-child(3) {
 			.cube {
-				transform: rotateX(-10deg) rotateY(-16deg) rotateZ(4deg);
+				transform: rotateX(-8deg) rotateY(-4deg) rotateZ(4deg);
 			}
 			.container:hover {
 				.cube {
@@ -668,7 +709,9 @@ body {
 	color: $sub;
 }
 .ag_table {
-	border: 1px solid rgba($sub, .5);
+	border-radius: 1em;
+	overflow: hidden;
+	// border: 1px solid rgba($sub, .5);
 	.tr {
 		display: flex;
 		align-items: center;
@@ -676,7 +719,7 @@ body {
 		padding: 0 1em;
 		background-color: #fff;
 		&.tr_soft {
-			background-color: $sub2;
+			background: linear-gradient(90deg, $sub2 50%, $sub3);
 			color: #fff;
 			.tpc {
 				color: #fff;
@@ -702,9 +745,16 @@ body {
 	.tpc {
 		flex: 1 1 auto;
 		margin-right: 1em;
-		font-size: 1.25em;
-		color: $sub2;
-		font-weight: 700;
+		.zh {
+			font-size: 1.25em;
+			color: $sub2;
+			font-weight: 500;
+		}
+		.en {
+			color: $blue;
+			font-weight: 300;
+			line-height: 1.4;
+		}
 	}
 	.tpc_outline {
 		cursor: pointer;
@@ -726,6 +776,7 @@ body {
 		flex: 0 0 22em;
 		line-height: 1.35;
 		.spk {
+			display: inline-block;
 			.n,
 			.j {
 				cursor: pointer;
@@ -950,7 +1001,7 @@ body {
 }
 .location_cnt {
 	.position {
-		flex: 0 0 70%;
+		flex: 0 0 69%;
 		border: 1px solid $orange;
 		background: linear-gradient($sub, rgba($sub, .67));
 	}
@@ -978,7 +1029,7 @@ body {
 	}
 	.covid {
 		position: relative;
-		flex: 0 0 33%;
+		flex: 0 0 31%;
 		padding-left: 15px;
 		&::before,
 		&::after {
@@ -1037,6 +1088,72 @@ body {
 	}
 }
 
+.ag_modal {
+	.modal-header {
+		.h5 {
+			color: $sub;
+		}
+	}
+}
+.modal_bd {
+	.zh {
+		color: $sub2;
+		font-weight: 500;
+	}
+	.en {
+		margin-top: 1em;
+		color: $blue;
+	}
+	p {
+		margin-bottom: .5em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		+ul,
+		+ol {
+			margin-top: .5em;
+		}
+	}
+	ul {
+		padding-left: 1.65em;
+	}
+	ol {
+		padding-left: 1.5em;
+	}
+	ul,
+	ol {
+		margin-bottom: .5em;
+		li {
+			padding: .25em 0;
+			line-height: 1.2;
+			ul,
+			ol {
+				padding-left: 1em;
+				margin-top: .5em;
+			}
+		}
+	}
+	p,
+	ul,
+	ol {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.agd_md {
+	.modal-header,
+	.modal-body {
+		padding: 1.5rem;
+	}
+}
+.spk_md {
+	.modal-header,
+	.modal-body {
+		padding: 1rem 1.5rem;
+	}
+}
+
 
 @media (min-width: 769px) {
 	.ag_table {
@@ -1052,7 +1169,8 @@ body {
 @media (max-width: 768px) {
 
 	body {
-		padding-bottom: 100px;
+		padding-top: 64px;
+		padding-bottom: 90px;
 	}
 	.fix_aside {
 		right: 0;
@@ -1069,6 +1187,7 @@ body {
 		}
 	}
     .g_header {
+		position: fixed;
 		.menu_trigger {
 			padding: 0 24px;
 		}
@@ -1139,8 +1258,12 @@ body {
 	}
 
 	.three_spot {
-		background: linear-gradient($sub 50%, rgba($sub, .67));
 		padding-top: 0;
+		background: linear-gradient(rgba($sub2, .9) 67%, rgba($sub2, .7));
+		.spot_tit {
+			padding: 0 1em;
+			font-size: 1.5em;
+		}
 		.spot_item {
 			.scene {
 				margin: 0 auto;
@@ -1168,6 +1291,11 @@ body {
 		.tr {
 			position: relative;
 			display: block;
+			&.tr_soft {
+				.td_topic {
+					margin-top: 0;
+				}
+			}
 		}
 		.td {
 			padding: .2em .5em;
@@ -1229,11 +1357,15 @@ body {
 		padding: 0 0 30px;
 		.pic {
 			margin: 0 auto;
+			width: 248px;
 		}
 	}
 
 	.sc_company {}
 	.company_cnt {
+		.wrap+.wrap {
+			margin-top: 40px;
+		}
 		.cpy_title {
 			margin-bottom: 0;
 		}
