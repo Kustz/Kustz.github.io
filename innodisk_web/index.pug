@@ -103,7 +103,9 @@ html(lang="zh-Hant-TW")
 							span 00
 						.tb.s
 							span 00
-				
+				.logos(data-aos="fade-up", data-aos-duration="1200", data-aos-delay="3000", data-aos-anchor="#aos0")
+					img.img-fluid(src="img/kv_logos.png")
+
 			.mobile.d-lg-none
 				.kv
 					img.img-fluid(src="img/mkv2.png")
@@ -286,21 +288,21 @@ html(lang="zh-Hant-TW")
 					}
 					,{
 						"id": "intel"
-						,"t": "13:40-14:00"
+						,"t": "13:20-13:40"
 						,"tpc": "TBC"
 						,"tpc2": ""
 						,"spk": spkAr.intel
 					}
 					,{
 						"id": "millitronic"
-						,"t": "14:00-14:20"
+						,"t": "13:40-14:00"
 						,"tpc": "WiFi 6 技術加速創新互動式無線通訊應用"
 						,"tpc2": "On Leveraging WiFi 6 Technology to Innovate Wireless Interactive Comminution in Diverse Scenario"
 						,"spk": spkAr.millitronic
 					}
 					,{
 						"id": "innodisk"
-						,"t": "14:20-14:40"
+						,"t": "14:00-14:20"
 						,"tpc": "創新智能應用 - 加速落地轉型"
 						,"tpc2": "Innovative & Intelligent Application to Accelerate Transformation"
 						,"spk": spkAr.innodisk
@@ -365,7 +367,7 @@ html(lang="zh-Hant-TW")
 					,{
 						"id": "soft"
 						,"t": "17:00-17:10"
-						,"tpc": "Lucky Draw"
+						,"tpc": "Lucky Draw/ Demo"
 					}
 				]
 			section.sc_agenda(id= secAr[1][0])
@@ -403,9 +405,14 @@ html(lang="zh-Hant-TW")
 												.tpc_outline(data-toggle="modal", data-target="#agd_"+x.id)
 													div 演講內容
 										.td.td_speaker
-											.spk(data-toggle="modal", data-target="#spk_"+x.spk.s)
-												.n= x.spk.n
-												.j!= x.spk.j
+											if x.id != "randy"
+												.spk(data-toggle="modal", data-target="#spk_"+x.spk.s)
+													.n= x.spk.n
+													.j!= x.spk.j
+											else if x.id == "randy"
+												.spk
+													.n= x.spk.n
+													.j!= x.spk.j
 
 					.cta_wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1000", data-aos-anchor="#aos3")
 						a.primary_cta(href=varOj.sign, target="_blank")
@@ -523,7 +530,7 @@ html(lang="zh-Hant-TW")
 									a.pic(href="https://www.intel.com/", target="_blank")
 										img(src="img/cpy/intel.png" alt="intel")
 								.cpy_item
-									a.pic(href="#", target="_blank")
+									a.pic(href="https://www.microsoft.com/zh-tw/", target="_blank")
 										img(src="img/cpy/microsoft.png" alt="Microsoft")
 								.cpy_item
 									a.pic(href="https://millitronic.com.tw/", target="_blank")
@@ -648,7 +655,12 @@ html(lang="zh-Hant-TW")
 
 			else if id=="nvidia"
 				.zh
+					p NVIDIA Omniverse™ 是一個易於擴展的平台，可進行 3D 設計協作和多 GPU 可擴充模擬，以及即時真實模擬。NVIDIA TAO 工具套件促進人工智慧模型的訓練和微調。讓您可以使用自己的資料，套用預先訓練的神經模型， 自訂專用。
+					p NVIDIA Fleet Command™ 是一款雲端服務，可在分散式邊緣基礎架構上安全地部署、管理和擴充人工智慧應用程式。
 				.en
+					p NVIDIA Omniverse™ is an easily extensible platform for 3D design collaboration and scalable multi-GPU, real-time, true-to-reality simulation.
+					p NVIDIA Fleet Command™ is a cloud service that securely deploys, manages, and scales AI applications across distributed edge infrastructure.
+					p NVIDIA TAO : Create highly accurate, customized, and production-ready AI models to power your speech and computer vision AI applications.
 
 			else if id=="aetina"
 				.zh
@@ -678,7 +690,10 @@ html(lang="zh-Hant-TW")
 						
 			else if id=="microsoft"
 				.zh
-
+					ol
+						li 工控網絡安全趨勢及微軟安全實踐。
+						li 從終端到雲端端到雲的零信任政策。
+						li 網絡安全實例分享: 聯網電動車及物聯網。
 				.en
 					p In this speech, I will talk about Industrial Cybersecurity Trends and Microsoft security practices. The key topic will be zero trust policy from edge to cloud. I will also present the best practices of cybersecurity for connected electronic vehicles and Internet of Things in general.
 				
@@ -722,8 +737,7 @@ html(lang="zh-Hant-TW")
 				p 安提國際股份有限公司總經理 羅智榮 致力於AIoT領域的AI技術推廣，並帶領安提國際積極開發前沿邊緣AI運算軟硬體產品、服務，打造專業化人工智慧（Pro-AI Service）服務，幫助AI系統整合商與開發商實現不同領域的智慧化應用落地。此外，透過在繪圖加速卡與圖形處理器領域深耕多年而建立出的紮實產品開發知識與經驗，安提國際股份有限公司總經理 羅智榮 以精準的產業視野，針對市場上的邊緣AI應用挑戰與痛點，指導安提國際開發團隊以技術為本，客戶為上，創造出多元解決方案，助力全球夥伴共同打造出「更智慧」的世界。
 
 			else if s=="microsoft"
-				p Dr. Lin leads a team of talented IoT and cloud solution architects in Greater China and Asia Pacific Region for Microsoft. He accelerates developing of repeatable vertical IoT and cloud solutions with IoT Device and Solution partners. The team focuses on verticals including manufacture, retails, building/city, energy, finance, healthcare, and agriculture. His expertise includes large cloud architecture, IoT device engineering, data mining, AI modelling, and media streaming. Prior Microsoft, Dr. Lin was in various technical and business leadership roles for global and startup companies including Quanta Computer, Streaming21, and Apple. 
-
+				p 林孟洲在微軟物聯網方案中擔任大中華及亞太區技術負責人。他與物聯網設備和解決方案合作夥伴一起加速開發可重複的垂直物聯網和雲解決方案。其團隊主要負責的垂直市場包括製造、零售、建築/城市、能源、金融、醫療保健及農業。林博士專精於大型雲架構、物聯網設備工程、數據挖掘、人工智能建模和串流媒體。在加入微軟之前，林博士曾在包含廣達電腦、Streaming21 和 Apple 在內等多個全球及新創公司中擔任技術和業務領導職務。
 
 		.ag_modals
 			each x in agdAr

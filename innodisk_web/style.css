@@ -250,7 +250,7 @@ body {
 .g_kv .desktop .content {
   position: relative;
   margin: 0 auto;
-  top: 29.6296296296%;
+  top: 22.2222222222%;
   max-width: 1600px;
   width: 84%;
 }
@@ -273,6 +273,15 @@ body {
   position: absolute;
   left: 0.5vw;
   bottom: calc(-60px - 3vw);
+}
+.g_kv .desktop .logos {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  padding: 40px 0;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(241, 239, 237, 0)), color-stop(20%, #F1EFED), color-stop(80%, #F1EFED), to(rgba(241, 239, 237, 0)));
+  background: linear-gradient(rgba(241, 239, 237, 0), #F1EFED 20%, #F1EFED 80%, rgba(241, 239, 237, 0));
 }
 .g_kv .timer {
   color: #fff;
@@ -870,11 +879,10 @@ body {
 .ag_table .td_speaker .spk {
   display: inline-block;
 }
-.ag_table .td_speaker .spk .n,
-.ag_table .td_speaker .spk .j {
+.ag_table .td_speaker .spk[data-toggle=modal] {
   cursor: pointer;
 }
-.ag_table .td_speaker .spk:hover {
+.ag_table .td_speaker .spk[data-toggle=modal]:hover {
   text-decoration: underline;
 }
 .ag_table .td_speaker .n {
@@ -1124,8 +1132,8 @@ body {
 }
 
 .sc_location {
-  background: -webkit-gradient(linear, left top, left bottom, from(#16272E), to(rgba(22, 39, 46, 0.67)));
-  background: linear-gradient(#16272E, rgba(22, 39, 46, 0.67));
+  background: -webkit-gradient(linear, left top, left bottom, from(#14334f), to(rgba(20, 51, 79, 0.67)));
+  background: linear-gradient(#14334f, rgba(20, 51, 79, 0.67));
 }
 
 .location_cnt .position {
@@ -1133,8 +1141,8 @@ body {
       -ms-flex: 0 0 69%;
           flex: 0 0 69%;
   border: 1px solid #fe9c5f;
-  background: -webkit-gradient(linear, left top, left bottom, from(#16272E), to(rgba(22, 39, 46, 0.67)));
-  background: linear-gradient(#16272E, rgba(22, 39, 46, 0.67));
+  background: -webkit-gradient(linear, left top, left bottom, from(#14334f), to(rgba(20, 51, 79, 0.67)));
+  background: linear-gradient(#14334f, rgba(20, 51, 79, 0.67));
 }
 .location_cnt .loc_top {
   padding: 15px 30px;
@@ -1195,8 +1203,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#16272E), to(rgba(22, 39, 46, 0.67)));
-  background: linear-gradient(#16272E, rgba(22, 39, 46, 0.67));
+  background: -webkit-gradient(linear, left top, left bottom, from(#14334f), to(rgba(20, 51, 79, 0.67)));
+  background: linear-gradient(#14334f, rgba(20, 51, 79, 0.67));
 }
 .location_cnt .covid .t {
   margin-bottom: 1em;
