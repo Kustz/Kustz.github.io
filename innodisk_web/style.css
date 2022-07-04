@@ -527,6 +527,12 @@ body {
 .intr_cnt {
   font-size: 1.25em;
 }
+.intr_cnt .p_tit {
+  padding: 0.5em 0 0.25em;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-align: center;
+}
 .intr_cnt p {
   line-height: 1.8;
 }
@@ -811,6 +817,8 @@ body {
 .ag_table .tr.tr_soft .tpc {
   color: #fff;
   font-weight: 400;
+  margin-right: 0;
+  text-align: center;
 }
 .ag_table .tr:last-child {
   border-bottom: 0;
@@ -818,10 +826,11 @@ body {
 .ag_table .td {
   padding: 1em;
 }
-.ag_table .td_time {
+.ag_table .td_time,
+.ag_table .td_holder {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+      -ms-flex: 0 0 8em;
+          flex: 0 0 8em;
   text-align: center;
 }
 .ag_table .td_topic {
@@ -1112,10 +1121,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 10px;
 }
 .company_cnt .cpy_item a {
   display: block;
-  padding: 0 10px;
+  border-radius: 6px;
   background-color: rgba(255, 255, 255, 0);
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0);
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0);
@@ -1281,7 +1291,7 @@ body {
 .modal_bd p:last-child,
 .modal_bd ul:last-child,
 .modal_bd ol:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
 }
 
 .agd_md .modal-header,
