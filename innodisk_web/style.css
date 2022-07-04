@@ -172,43 +172,43 @@ body {
 
 @-webkit-keyframes kvbg-fast {
   0% {
-    -webkit-transform: translateY(-5%) rotate(1deg);
-            transform: translateY(-5%) rotate(1deg);
+    -webkit-transform: translateY(-7%) rotate(1deg);
+            transform: translateY(-7%) rotate(1deg);
   }
   100% {
-    -webkit-transform: translateY(5%) rotate(-1deg);
-            transform: translateY(5%) rotate(-1deg);
+    -webkit-transform: translateY(3%) rotate(-1deg);
+            transform: translateY(3%) rotate(-1deg);
   }
 }
 
 @keyframes kvbg-fast {
   0% {
-    -webkit-transform: translateY(-5%) rotate(1deg);
-            transform: translateY(-5%) rotate(1deg);
+    -webkit-transform: translateY(-7%) rotate(1deg);
+            transform: translateY(-7%) rotate(1deg);
   }
   100% {
-    -webkit-transform: translateY(5%) rotate(-1deg);
-            transform: translateY(5%) rotate(-1deg);
+    -webkit-transform: translateY(3%) rotate(-1deg);
+            transform: translateY(3%) rotate(-1deg);
   }
 }
 @-webkit-keyframes kvbg-slow {
   0% {
-    -webkit-transform: translateY(-2.5%) rotate(-2deg);
-            transform: translateY(-2.5%) rotate(-2deg);
+    -webkit-transform: translateY(-4%) rotate(-2deg);
+            transform: translateY(-4%) rotate(-2deg);
   }
   100% {
-    -webkit-transform: translateY(2.5%) rotate(2deg);
-            transform: translateY(2.5%) rotate(2deg);
+    -webkit-transform: translateY(1%) rotate(2deg);
+            transform: translateY(1%) rotate(2deg);
   }
 }
 @keyframes kvbg-slow {
   0% {
-    -webkit-transform: translateY(-2.5%) rotate(-2deg);
-            transform: translateY(-2.5%) rotate(-2deg);
+    -webkit-transform: translateY(-4%) rotate(-2deg);
+            transform: translateY(-4%) rotate(-2deg);
   }
   100% {
-    -webkit-transform: translateY(2.5%) rotate(2deg);
-            transform: translateY(2.5%) rotate(2deg);
+    -webkit-transform: translateY(1%) rotate(2deg);
+            transform: translateY(1%) rotate(2deg);
   }
 }
 .g_kv {
@@ -618,6 +618,7 @@ body {
 .four_primary .primary_item .p {
   margin-top: 1em;
   color: #14334f;
+  text-align: justify;
 }
 .four_primary .primary_item:hover {
   z-index: 2;
@@ -675,8 +676,8 @@ body {
 .three_spot .spot_item .word {
   padding-left: 60px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 66%;
-          flex: 0 1 66%;
+      -ms-flex: 0 1 68%;
+          flex: 0 1 68%;
   font-size: 1.25em;
 }
 .three_spot .spot_item .word .t {
