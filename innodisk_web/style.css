@@ -829,8 +829,8 @@ body {
 .ag_table .td_time,
 .ag_table .td_holder {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 8em;
-          flex: 0 0 8em;
+      -ms-flex: 0 0 7.5em;
+          flex: 0 0 7.5em;
   text-align: center;
 }
 .ag_table .td_topic {
