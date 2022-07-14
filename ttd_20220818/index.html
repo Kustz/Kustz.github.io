@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="style.css?v=714185">
+    <link rel="stylesheet" href="style.css?v=7141917">
     <!-- Google Analytics-->
     <!-- script.
     var _gaq = _gaq || [];
@@ -55,7 +55,7 @@
             <div class="nav_item"><a class="nav_link js_page_scroll" href="#agenda">議程內容</a></div>
             <div class="nav_item"><a class="nav_link js_page_scroll" href="#speaker">講師陣容</a></div>
             <div class="nav_item"><a class="nav_link js_page_scroll" href="#position">交通資訊</a></div>
-            <div class="nav_item"><a class="nav_link" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AB0818-0" target="_blank">立即報名</a></div>
+            <div class="nav_item highlight"><a class="nav_link" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AB0818-0" target="_blank">立即報名</a></div>
             <div class="nav_item"><a class="nav_link" href="https://www.digitimes.com.tw/OnLine/query.asp?ProdGroup=053AB0818-0" target="_blank">報名查詢</a></div>
           </div>
         </div>
@@ -87,8 +87,6 @@
             <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-anchor="#aos2">
                有鑑於此，DIGITIMES偕同全球廣告科技領導廠商The Trade Desk，以及B2B行銷專家正平(AccessUs)，欲透過此研討會與台灣B2B製造業分享，如何在瞬息萬變的國際市場中，以硬體技術優勢為基底，加乘「品牌營運力」及「B2B策略行銷攻略」，為品牌重新定位，開創新興市場大商機！</p>
           </div>
-          <div class="cta_wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200" data-aos-anchor="#aos2"><a class="primary_cta" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AB0818-0" target="_blank">
-              <div><span>立即報名</span><img src="img/ui/right.svg"></div></a></div>
         </div>
       </section>
       <section class="sc_agenda" id="agenda">
@@ -190,6 +188,7 @@
                   <div class="time">16:10-16:45</div>
                 </div>
                 <div class="td td_topic">
+                  <div class="toggle">專家對談</div>
                   <div class="tpc">台灣品牌決勝海外的機遇與戰略</div>
                 </div>
                 <div class="td td_speaker">
@@ -216,6 +215,8 @@
                 </div>
               </div>
             </div>
+            <div class="cta_wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000" data-aos-anchor="#aos3"><a class="primary_cta" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AB0818-0" target="_blank">
+                <div><span>立即報名</span><img src="img/ui/right.svg"></div></a></div>
           </div>
         </div>
       </section>
@@ -285,12 +286,12 @@
             <div class="addr">台北市信義區忠孝東路五段10號</div>
           </div>
           <div class="timer">
-            <div class="tit">活動時間</div>
+            <div class="tit">活動倒數</div>
             <div class="wrap">
-              <div class="tb d"><span>00</span></div>
-              <div class="tb h"><span>00</span></div>
-              <div class="tb m"><span>00</span></div>
-              <div class="tb s"><span>00</span></div>
+              <div class="tb d"><span>--</span></div>
+              <div class="tb h"><span>--</span></div>
+              <div class="tb m"><span>--</span></div>
+              <div class="tb s"><span>--</span></div>
             </div>
           </div>
         </div>
@@ -376,7 +377,7 @@
       		$scrollTopNow = $('html, body').scrollTop();
       
       		var $tar = $(this),
-      			$tarTop = $($tar.attr('href')).offset().top-20,
+      			$tarTop = $($tar.attr('href')).offset().top-68,
       			$aniDuration = Math.abs($tarTop-$scrollTopNow)*.6 > 1200 ? 1200 : (Math.abs($tarTop-$scrollTopNow)*.6);
       
       		bScroll($tarTop, $aniDuration);

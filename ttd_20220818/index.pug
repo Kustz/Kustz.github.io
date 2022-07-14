@@ -72,7 +72,7 @@ html(lang="zh-Hant-TW")
 						each a in secAr
 							.nav_item
 								a.nav_link.js_page_scroll(href=`#${a[0]}`)= a[1]
-						.nav_item
+						.nav_item.highlight
 							a.nav_link(href=varOj.sign, target="_blank") 立即報名
 						.nav_item
 							a.nav_link(href=varOj.sign2, target="_blank") 報名查詢
@@ -115,34 +115,28 @@ html(lang="zh-Hant-TW")
 						p(data-aos="fade-up", data-aos-duration="800", data-aos-delay="800", data-aos-anchor="#aos2") 
 							|有鑑於此，DIGITIMES偕同全球廣告科技領導廠商The Trade Desk，以及B2B行銷專家正平(AccessUs)，欲透過此研討會與台灣B2B製造業分享，如何在瞬息萬變的國際市場中，以硬體技術優勢為基底，加乘「品牌營運力」及「B2B策略行銷攻略」，為品牌重新定位，開創新興市場大商機！
 
-					.cta_wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1200", data-aos-anchor="#aos2")
-						a.primary_cta(href=varOj.sign, target="_blank")
-							div
-								span 立即報名
-								img(src="img/ui/right.svg")
-
 			-
 				const spkAr = {
 					"Eric": {
-						"s": "Eric"
+						"s": "eric"
 						,"n": "黃逸平 Eric Huang"
 						,"j": "事業發展中心副總經理"
 						,"c": "DIGITIMES"
 					}
 					,"Chris": {
-						"s": "Chris"
+						"s": "chris"
 						,"n": "顏任廷 Chris Ngan"
 						,"j": "香港與台灣總經理"
 						,"c": "The Trade Desk"
 					}
 					,"Vera": {
-						"s": "Vera"
+						"s": "vera"
 						,"n": "曹淑娟 Vera Tsao"
 						,"j": "總經理"
 						,"c": "正平整合行銷"
 					}
 					,"Ralph": {
-						"s": "Ralph"
+						"s": "ralph"
 						,"n": "吳俊葳 Ralph Wu"
 						,"j": "副總監"
 						,"c": "正平整合行銷"
@@ -210,6 +204,8 @@ html(lang="zh-Hant-TW")
 										.td.td_time
 											.time= x.t
 										.td.td_topic
+											if x.mark
+												.toggle 專家對談
 											.tpc= x.tpc
 										.td.td_speaker
 											each y in x.spk
@@ -223,6 +219,12 @@ html(lang="zh-Hant-TW")
 											.time= x.t
 										.td.td_topic
 											.tpc= x.tpc
+
+						.cta_wrap(data-aos="fade-up", data-aos-duration="800", data-aos-delay="1000", data-aos-anchor="#aos3")
+							a.primary_cta(href=varOj.sign, target="_blank")
+								div
+									span 立即報名
+									img(src="img/ui/right.svg")
 				
 			section.sc_speaker.pattenbg(id= secAr[2][0])
 				.container.main_sc
@@ -272,16 +274,16 @@ html(lang="zh-Hant-TW")
 						.pos 台北W飯店 8F 綺麗廳
 						.addr 台北市信義區忠孝東路五段10號
 					.timer
-						.tit 活動時間
+						.tit 活動倒數
 						.wrap
 							.tb.d
-								span 00
+								span --
 							.tb.h
-								span 00
+								span --
 							.tb.m
-								span 00
+								span --
 							.tb.s
-								span 00
+								span --
 
 			section.sc_company
 				.container.main_sc
@@ -376,7 +378,7 @@ html(lang="zh-Hant-TW")
 					$scrollTopNow = $('html, body').scrollTop();
 			
 					var $tar = $(this),
-						$tarTop = $($tar.attr('href')).offset().top-20,
+						$tarTop = $($tar.attr('href')).offset().top-68,
 						$aniDuration = Math.abs($tarTop-$scrollTopNow)*.6 > 1200 ? 1200 : (Math.abs($tarTop-$scrollTopNow)*.6);
 			
 					bScroll($tarTop, $aniDuration);

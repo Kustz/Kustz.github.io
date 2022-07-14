@@ -89,11 +89,34 @@ a {
   background: url("img/ui/linkedin.svg") center/contain no-repeat;
 }
 
+@-webkit-keyframes highlightAni {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes highlightAni {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
 .g_header {
   width: 100%;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(#5cb3ff), to(#0099fa));
-  background: linear-gradient(90deg, #5cb3ff, #0099fa);
+  background: -webkit-gradient(linear, left top, right top, from(#5cb3ff), color-stop(#0099fa), to(#0071bc));
+  background: linear-gradient(90deg, #5cb3ff, #0099fa, #0071bc);
 }
 .g_header .header_wrap {
   position: relative;
@@ -113,8 +136,30 @@ a {
   padding: 0 1rem;
 }
 .g_header .nav_item {
+  border: 1px solid transparent;
+  border-width: 0 1px;
   line-height: 1;
   font-weight: normal;
+}
+.g_header .nav_item.highlight {
+  position: relative;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0071bc), to(rgba(0, 153, 250, 0)));
+  background: linear-gradient(0deg, #0071bc, rgba(0, 153, 250, 0));
+  border: 1px solid rgba(0, 113, 188, 0.2);
+  border-width: 0 1px;
+}
+.g_header .nav_item.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 300%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#f9a326), color-stop(#f7d031), color-stop(#fc5d1f), color-stop(#f7d031), to(#f9a326));
+  background: linear-gradient(90deg, #f9a326, #f7d031, #fc5d1f, #f7d031, #f9a326);
+  -webkit-animation: highlightAni 3s linear infinite;
+          animation: highlightAni 3s linear infinite;
 }
 .g_header .nav_link {
   display: block;
@@ -123,13 +168,13 @@ a {
   color: #fff;
 }
 .g_header .nav_link:hover {
-  background-color: rgba(92, 179, 255, 0.5);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), color-stop(10%, #0071bc), to(rgba(0, 153, 250, 0)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), #0071bc 10%, rgba(0, 153, 250, 0));
   text-decoration: none;
 }
 
 .cta_wrap {
   border-radius: 3rem;
-  overflow: hidden;
 }
 
 .primary_cta {
@@ -140,8 +185,8 @@ a {
   position: relative;
   z-index: 3;
   border-radius: 3rem;
-  padding: 0.25em 1.5em 0.6em;
-  background: linear-gradient(110deg, rgba(92, 179, 255, 0), #5cb3ff, #0099fa, #0071bc 60%, #0071bc 73%, #fc5d1f 73%, #f9a326 80%, #f7d031 90%, #fff);
+  padding: 0.25em 2em 0.6em;
+  background: linear-gradient(110deg, rgba(92, 179, 255, 0), #5cb3ff, #0099fa, #0071bc 60%, #0071bc 70%, #fc5d1f 70%, #f9a326 80%, #f7d031 90%, #fff);
   color: #fff;
   font-weight: 700;
   font-size: 2em;
@@ -156,6 +201,7 @@ a {
   z-index: 0;
   top: 0;
   left: 0;
+  border-radius: 3rem;
   width: 40%;
   height: 100%;
   background: linear-gradient(120deg, rgba(92, 179, 255, 0), #5cb3ff);
@@ -274,9 +320,6 @@ a {
 .intr_cnt b {
   color: #0071bc;
 }
-.intr_cnt + .cta_wrap {
-  margin-top: 30px;
-}
 
 .sc_agenda {
   position: relative;
@@ -284,16 +327,10 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(#dff0ff), to(rgba(223, 240, 255, 0.8))), url("img/bg.png") center bottom/contain no-repeat fixed;
   background: linear-gradient(#dff0ff, rgba(223, 240, 255, 0.8)), url("img/bg.png") center bottom/contain no-repeat fixed;
 }
-.sc_agenda .patten {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 20vw;
-  height: 20vw;
-  -webkit-transform-origin: right bottom;
-          transform-origin: right bottom;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.sc_agenda .cta_wrap {
+  max-width: 304px;
+  margin: 10px auto 0;
+  overflow: visible;
 }
 
 .ag_table {
@@ -334,32 +371,15 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.ag_table .tpc {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  padding-right: 1em;
 }
 .ag_table .toggle {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  background-color: #5cb3ff;
-  padding: 0.4em 0.8em 0.5em;
+  display: inline-block;
+  margin-bottom: 6px;
+  background-color: #0071bc;
+  padding: 0.2em 0.6em;
   color: #fff;
   border-radius: 4px;
   font-size: 0.9em;
-  cursor: pointer;
-}
-.ag_table .toggle:hover {
-  background-color: #0e305b;
 }
 .ag_table .td_speaker {
   -webkit-box-flex: 0;
@@ -533,9 +553,14 @@ a {
       -ms-flex: 1;
           flex: 1;
 }
+.pos_cnt .map {
+  padding: 20px;
+  padding-right: 0;
+  background-color: #f7d031;
+}
 .pos_cnt .map .wrap {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 66.67%;
 }
 .pos_cnt .map .wrap iframe {
   position: absolute;
@@ -543,8 +568,10 @@ a {
   top: 0;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 .pos_cnt .wording {
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,12 +591,12 @@ a {
   font-size: 1.25em;
 }
 .pos_cnt .wording .pos {
-  font-size: 2.5em;
+  font-size: 2.25vw;
   font-weight: 700;
   color: #0e305b;
 }
 .pos_cnt .wording .addr {
-  font-size: 1.75em;
+  font-size: 1.8vw;
   color: #0071bc;
   line-height: 1.1;
 }
@@ -593,13 +620,13 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(#0e305b), to(rgba(14, 48, 91, 0.8))), url("img/positionbg.jpg") center;
   background: linear-gradient(#0e305b, rgba(14, 48, 91, 0.8)), url("img/positionbg.jpg") center;
 }
-.pos_cnt .timer .wrap {
-  font-size: 1.5em;
-  letter-spacing: -4px;
-}
 .pos_cnt .timer .tit {
   margin-bottom: 10px;
   font-size: 1.25em;
+}
+.pos_cnt .timer .wrap {
+  font-size: 1.5vw;
+  letter-spacing: -4px;
 }
 .pos_cnt .timer .tb {
   position: relative;
@@ -696,43 +723,29 @@ a {
   height: 60px;
 }
 
-.modal-content {
-  border-width: 0;
-}
-
-.modal-header {
-  border-bottom-width: 0;
-  padding-left: 2rem;
-  line-height: 1;
-}
-.modal-header .h5 {
-  color: #5cb3ff;
-  font-weight: 700;
-}
-.modal-header button.close {
-  font-size: 1.5rem;
-  color: #000;
-  opacity: 1;
-}
-
-.modal-body {
-  padding: 1.25rem 2rem 1.75rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 1rem;
-  line-height: 1.5;
-}
-.modal-body ul,
-.modal-body ol {
-  padding-left: 1.7rem;
-  margin-bottom: 0;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-}
-.modal-body li {
-  padding: 0.2rem 0;
-}
-
 @media (max-width: 767px) {
+  @-webkit-keyframes highlightAni {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: -200%;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+  @keyframes highlightAni {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: -200%;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
   .fix_aside {
     right: 0.5rem;
     display: -webkit-box;
@@ -813,6 +826,23 @@ a {
   .g_header .nav_cnt {
     display: block;
   }
+  .g_header .nav_item.highlight {
+    border-width: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#0071bc), to(rgba(0, 153, 250, 0)));
+    background: linear-gradient(90deg, #0071bc, rgba(0, 153, 250, 0));
+  }
+  .g_header .nav_item.highlight::after {
+    bottom: 0;
+    width: 3px;
+    height: 300%;
+    background: -webkit-gradient(linear, left bottom, left top, from(#f9a326), color-stop(#f7d031), color-stop(#fc5d1f), color-stop(#f7d031), to(#f9a326));
+    background: linear-gradient(0deg, #f9a326, #f7d031, #fc5d1f, #f7d031, #f9a326);
+  }
+  .g_header .nav_link:hover {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), color-stop(10%, #0071bc), to(rgba(0, 153, 250, 0)));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), #0071bc 10%, rgba(0, 153, 250, 0));
+  }
+
   .g_kv {
     margin-top: 68px;
   }
@@ -827,9 +857,14 @@ a {
   .intr_cnt {
     font-size: 1rem;
   }
-  .intr_cnt + .cta_wrap {
-    margin: 30px auto 0;
-    max-width: 272px;
+
+  .sc_agenda .cta_wrap {
+    text-align: center;
+    max-width: 304px;
+    margin-top: 20px;
+  }
+  .sc_agenda .cta_wrap div {
+    font-size: 1.75em;
   }
 
   .ag_table {
@@ -866,11 +901,16 @@ a {
     margin-bottom: 10px;
   }
 
+  .pos_cnt .map {
+    padding: 20px;
+    padding-bottom: 15px;
+  }
   .pos_cnt .map .wrap {
     padding-top: 90%;
   }
   .pos_cnt .wording {
-    padding: 30px;
+    padding: 20px;
+    padding-top: 0;
   }
   .pos_cnt .wording .pos {
     font-size: 2em;

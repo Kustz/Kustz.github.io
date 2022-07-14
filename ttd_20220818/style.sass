@@ -91,10 +91,18 @@ a
 					height: 100%
 					background: url("img/ui/linkedin.svg") center/contain no-repeat
 
+@keyframes highlightAni
+	0%
+		left: 0
+	50%
+		left: -200%
+	100%
+		left: 0
+
 .g_header
 	width: 100%
 	text-align: center
-	background: linear-gradient(90deg, $c1, $c2)
+	background: linear-gradient(90deg, $c1, $c2, $c3)
 
 	.header_wrap
 		position: relative
@@ -110,8 +118,25 @@ a
 		padding: 0 1rem
 
 	.nav_item
+		border: 1px solid transparent
+		border-width: 0 1px
 		line-height: 1
 		font-weight: normal
+		&.highlight
+			position: relative
+			overflow: hidden
+			background: linear-gradient(0deg, $c3, rgba($c2,0))
+			border: 1px solid rgba($c3, .2)
+			border-width: 0 1px
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 1px
+				width: 300%
+				height: 3px
+				background: linear-gradient(90deg, $y2, $y1, $y3, $y1, $y2)
+				animation: highlightAni 3s linear infinite 
 
 	.nav_link
 		display: block
@@ -119,12 +144,11 @@ a
 		font-size: 1.125em
 		color: #fff
 		&:hover
-			background-color: rgba($c1, .5)
+			background: linear-gradient(0deg, rgba(#000, .1), $c3 10%, rgba($c2,0))
 			text-decoration: none
 
 .cta_wrap
 	border-radius: 3rem
-	overflow: hidden
 
 .primary_cta
 	position: relative
@@ -133,8 +157,8 @@ a
 		position: relative
 		z-index: 3
 		border-radius: 3rem
-		padding: .25em 1.5em .6em
-		background: linear-gradient(110deg, rgba($c1,0), $c1, $c2, $c3 60%, $c3 73%, $y3 73%, $y2 80%, $y1 90%, #fff)
+		padding: .25em 2em .6em
+		background: linear-gradient(110deg, rgba($c1,0), $c1, $c2, $c3 60%, $c3 70%, $y3 70%, $y2 80%, $y1 90%, #fff)
 		color: #fff
 		font-weight: 700
 		font-size: 2em
@@ -145,6 +169,7 @@ a
 		z-index: 0
 		top: 0
 		left: 0
+		border-radius: 3rem
 		width: 40%
 		height: 100%
 		background: linear-gradient(120deg, rgba($c1,0), $c1)
@@ -236,22 +261,14 @@ a
 	b
 		color: $c3
 
-	+.cta_wrap
-		margin-top: 30px
-
 .sc_agenda
 	position: relative
 	overflow: hidden
 	background: linear-gradient(rgba(#dff0ff, 1), rgba(#dff0ff, .8)), url('img/bg.png') center bottom/contain no-repeat fixed
-	// background: url('img/bg.png') center bottom/cover fixed
-	.patten
-		position: absolute
-		right: 0
-		bottom: 0
-		width: 20vw
-		height: 20vw
-		transform-origin: right bottom
-		transform: rotate(45deg)
+	.cta_wrap
+		max-width: 304px
+		margin: 10px auto 0
+		overflow: visible
 
 .ag_table
 	font-size: 1.2em
@@ -275,21 +292,15 @@ a
 		color: $c2
 	.td_topic
 		flex: 1 1 100%
-		display: inline-flex
-		align-items: center
-	.tpc
-		flex: 1 1 100%
-		padding-right: 1em
 	.toggle
-		flex: 0 0 auto
-		background-color: $c1
-		padding: .4em .8em .5em
+		display: inline-block
+		margin-bottom: 6px
+		background-color: $c3
+		padding: .2em .6em
 		color: #fff
 		border-radius: 4px
 		font-size: 0.9em
-		cursor: pointer
-		&:hover
-			background-color: $c4
+	.tpc
 	.td_speaker
 		flex: 0 0 33%
 		.k
@@ -424,16 +435,22 @@ a
 	>div
 		flex: 1
 	.map
+		padding: 20px
+		padding-right: 0
+		background-color: $y1
 		.wrap
 			position: relative
-			padding-top: 56.25%
+			padding-top: 66.67%
 			iframe
 				position: absolute
 				left: 0
 				top: 0
 				width: 100%
 				height: 100%
+				border-radius: 10px
+
 	.wording
+		padding: 20px
 		display: flex
 		flex-direction: column
 		justify-content: center
@@ -444,11 +461,11 @@ a
 			color: #fff
 			font-size: 1.25em
 		.pos
-			font-size: 2.5em
+			font-size: 2.25vw
 			font-weight: 700
 			color: $c4
 		.addr
-			font-size: 1.75em
+			font-size: 1.8vw
 			color: $c3
 			line-height: 1.1
 	.timer
@@ -460,12 +477,12 @@ a
 		justify-content: center
 		align-items: center
 		background: linear-gradient($c4, rgba($c4, .8)), url("img/positionbg.jpg") center
-		.wrap
-			font-size: 1.5em
-			letter-spacing: -4px
 		.tit
 			margin-bottom: 10px
 			font-size: 1.25em
+		.wrap
+			font-size: 1.5vw
+			letter-spacing: -4px
 		.tb
 			position: relative
 			z-index: 2
@@ -513,7 +530,6 @@ a
 			&::after
 				content: 'sec'
 
-
 .cpy_tip
 	padding-top: 72px
 	text-align: center
@@ -545,38 +561,17 @@ a
 			margin: 15px
 			height: 60px
 
-.modal-content
-	border-width: 0
-
-.modal-header
-	border-bottom-width: 0
-	padding-left: 2rem
-	line-height: 1
-	.h5
-		color: $c1
-		font-weight: 700
-	button.close
-		font-size: 1.5rem
-		color: #000
-		opacity: 1
-
-.modal-body
-	padding: 1.25rem 2rem 1.75rem
-	border-top: 1px solid rgba(#000, 0.2)
-	font-size: 1rem
-	line-height: 1.5
-	ul,
-	ol
-		padding-left: 1.7rem
-		margin-bottom: 0
-		padding-top: .2rem
-		padding-bottom: .2rem
-	li
-		padding: .2rem 0
 
 @media (min-width: 768px)
 
 @media (max-width: 767px)
+	@keyframes highlightAni
+		0%
+			bottom: 0
+		50%
+			bottom: -200%
+		100%
+			bottom: 0
 	.fix_aside
 		right: .5rem
 		display: flex
@@ -644,7 +639,17 @@ a
 			display: block
 
 		.nav_item
+			&.highlight
+				border-width: 0
+				background: linear-gradient(90deg, $c3, rgba($c2,0))
+				&::after
+					bottom: 0
+					width: 3px
+					height: 300%
+					background: linear-gradient(0deg, $y2, $y1, $y3, $y1, $y2)
 		.nav_link
+			&:hover
+				background: linear-gradient(90deg, rgba(#000, .1), $c3 10%, rgba($c2,0))
 	.g_kv
 		margin-top: 68px
 	.main_sc
@@ -655,10 +660,15 @@ a
 		.main_sc
 	.intr_cnt
 		font-size: 1rem
-		+.cta_wrap
-			margin: 30px auto 0
-			max-width: 272px
 	
+	.sc_agenda
+		.cta_wrap
+			text-align: center
+			max-width: 304px
+			margin-top: 20px
+			div
+				font-size: 1.75em
+
 	.ag_table
 		font-size: 1em
 		.tr
@@ -690,10 +700,13 @@ a
 
 	.pos_cnt
 		.map
+			padding: 20px
+			padding-bottom: 15px
 			.wrap
 				padding-top: 90%
 		.wording
-			padding: 30px
+			padding: 20px
+			padding-top: 0
 			.pos
 				font-size: 2em
 			.addr
