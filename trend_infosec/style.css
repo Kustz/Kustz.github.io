@@ -96,6 +96,8 @@ a {
 
 .kv {
   position: relative;
+}
+.kv .desktop {
   padding-top: 30%;
   background: url("img/kvbg.png") center/cover;
 }
@@ -122,6 +124,7 @@ a {
 
 .g_main {
   padding: 60px 30px;
+  font-size: 1.25em;
 }
 .g_main sup {
   color: #8e8e8e;
@@ -130,19 +133,14 @@ a {
   border: 1px solid #ac7736;
   margin: 0 -30px 1em;
   padding: 2em;
-  font-size: 1.25em;
   text-align: center;
   color: #ac7736;
-}
-.g_main .intro .tit {
-  line-height: 1.1;
+  line-height: 1.6;
 }
 .g_main .intro .sub {
-  line-height: 1.75;
-  margin-top: 1em;
+  margin-top: 0.6em;
 }
 .g_main .parag {
-  font-size: 1.25em;
   line-height: 1.65;
 }
 .g_main .parag b {
@@ -150,22 +148,21 @@ a {
   font-weight: 700;
 }
 .g_main .remark {
-  margin: 30px -10px;
-  padding: 1.5em 3em;
+  margin: 30px 0;
+  padding: 1.25em 2.5em;
   background-color: #f7f7f7;
 }
 .g_main .remark div {
   color: #8e8e8e;
   font-style: italic;
   line-height: 1.7;
-  font-size: 1.125em;
+  font-size: 1rem;
 }
 .g_main .remark b {
   color: #000;
 }
 .g_main .qualifications {
-  padding: 0 2em;
-  font-size: 1.25em;
+  padding: 0 2.5em;
 }
 .g_main .qualifications .tit b {
   color: #ac7736;
@@ -176,13 +173,13 @@ a {
 .g_main .qualifications .ways .item {
   position: relative;
   margin-top: 0.5em;
-  padding-left: 1.5em;
+  padding-left: 1.4em;
   line-height: 1.2;
 }
 .g_main .qualifications .ways .item::before {
   content: "";
   position: absolute;
-  left: 0.75em;
+  left: 0.6em;
   top: 50%;
   width: 10px;
   height: 10px;
@@ -196,7 +193,7 @@ a {
 }
 .g_main .table {
   border: 2px solid #ac7736;
-  font-size: 1.125em;
+  font-size: 1rem;
 }
 .g_main .table .tr {
   display: -webkit-box;
@@ -216,71 +213,110 @@ a {
 .g_main .table .tr.tr_foot {
   border-bottom: 0 solid #ac7736;
 }
-.g_main .table .tr .td {
-  padding: 0.75em;
+.g_main .table .td {
+  padding: 1em 0.75em;
 }
-.g_main .table .tr .td_time {
+.g_main .table .td_time {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 140px;
           flex: 0 0 140px;
   text-align: center;
 }
-.g_main .table .tr .td_time .date {
+.g_main .table .td_time .date {
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.1;
   color: #de006f;
 }
-.g_main .table .tr .td_content {
+.g_main .table .td_content {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 620px;
           flex: 0 0 620px;
 }
-.g_main .table .tr .td_content .title {
+.g_main .table .td_content .title {
   font-size: 1.25em;
   font-weight: 700;
   color: #5f00bf;
 }
-.g_main .table .tr .td_content .cnt {
+.g_main .table .td_content .cnt {
   margin-top: 0.25em;
+  font-size: 1.125em;
 }
-.g_main .table .tr .td_content .cnt ol {
+.g_main .table .td_content .cnt ol {
   padding-left: 1.4em;
+  margin-bottom: 0;
 }
-.g_main .table .tr .td_speaker .name {
+.g_main .table .td_speaker .name {
   line-height: 1.3;
   font-weight: 500;
   color: #0a26b3;
+  font-size: 1.125em;
 }
-.g_main .table .tr .td_speaker .p {
-  margin-top: 10px;
+.g_main .table .td_speaker .p {
+  margin-top: 4px;
+  color: #8e8e8e;
 }
 .g_main .tips {
+  margin-top: 1em;
+  font-size: 0.875em;
   color: #8e8e8e;
 }
 .g_main .tips div {
-  padding: 0.125em 0;
+  padding: 0.125em 1.5em;
 }
 
 .g_footer {
   position: relative;
-  padding-top: 6.25%;
   background: url("img/footerbg.png") center/cover;
   text-align: center;
   color: #fff;
 }
 .g_footer div {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: 2;
-  width: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  padding: 2em;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
   .g_first {
     background-image: url("img/mkvbg.png");
+  }
+
+  .g_main {
+    padding: 40px 25px;
+    font-size: 1.125em;
+  }
+  .g_main .intro {
+    margin: 0 -10px 1em;
+    padding: 1.5em 2em;
+  }
+  .g_main .intro .sub br {
+    display: none;
+  }
+  .g_main .remark {
+    padding: 1.25em 1.5em;
+  }
+  .g_main .qualifications {
+    padding: 0 1.5em;
+  }
+  .g_main .table .tr {
+    display: block;
+    padding: 1em;
+  }
+  .g_main .table .tr.tr_head {
+    display: none;
+  }
+  .g_main .table .td {
+    padding: 0.25em 0;
+  }
+  .g_main .table .td_time .date,
+.g_main .table .td_time .time {
+    display: inline-block;
+    padding: 0 0.25rem;
+  }
+  .g_main .table .td_speaker {
+    margin-top: 8px;
+  }
+  .g_main .table .td_speaker .p {
+    margin-top: 4px;
   }
 }
