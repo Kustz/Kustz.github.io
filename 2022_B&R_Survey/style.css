@@ -5,40 +5,17 @@ html {
 
 body {
   font-family: "Noto Sans TC", Microsoft Jhenghei, "微軟正黑體", sans-serif;
+  background: radial-gradient(circle, rgba(0, 179, 54, 0.5) 2px, transparent 2px) 0 0/10px 10px fixed;
 }
 
 .full_wrap {
-  background: radial-gradient(circle, rgba(0, 179, 54, 0.2) 1px, transparent 1px) 0 0/6px 6px, url("img/bg.png") center/cover fixed;
+  background: linear-gradient(135deg, rgba(250, 254, 244, 0), #fafef4 10%, #fafef4 60%, rgba(250, 254, 244, 0));
 }
 
 .g_kv {
   position: relative;
-  background-color: #fff;
-}
-
-.kvbg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.kvbg .dot,
-.kvbg .cover {
-  width: 100%;
-  height: 100%;
-}
-.kvbg .dot {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: radial-gradient(circle, rgba(0, 179, 54, 0.5) 1px, transparent 1px) 0 0/10px 10px;
-}
-.kvbg .cover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0), #fff 15%, #fff 85%, rgba(255, 255, 255, 0));
+  background: -webkit-gradient(linear, right top, left top, from(#56beb4), color-stop(#93ea20), to(rgba(147, 234, 32, 0))) 0 0/100% 3vh no-repeat;
+  background: linear-gradient(-90deg, #56beb4, #93ea20, rgba(147, 234, 32, 0)) 0 0/100% 3vh no-repeat;
 }
 
 .kv_desktop {
@@ -102,24 +79,48 @@ body {
 .kv_desktop .kvtit .kvt2::after {
   content: "";
   position: absolute;
-  right: -2%;
+  right: 0;
   bottom: 0;
-  width: 98%;
-  height: 70px;
+  width: 75%;
+  height: 60px;
   background: radial-gradient(circle, rgba(147, 234, 32, 0.5) 2px, transparent 2px) 0 0/10px 10px;
 }
 .kv_desktop .kvpic {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  margin: 10vh 0;
+  margin: 12vh 0 8vh;
   width: 47.9166666667%;
+}
+.kv_desktop::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 10vw;
+  height: 3vh;
+  background: -webkit-gradient(linear, left top, right top, from(#56beb4), color-stop(#93ea20), to(rgba(147, 234, 32, 0)));
+  background: linear-gradient(90deg, #56beb4, #93ea20, rgba(147, 234, 32, 0));
 }
 
 .main {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, rgba(200, 243, 144, 0.1)));
-  background: linear-gradient(#fff, rgba(200, 243, 144, 0.1) 50%);
+  position: relative;
+  padding-top: 30px;
   padding-bottom: 60px;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(120deg, rgba(250, 254, 244, 0), #fafef4 15%), radial-gradient(circle, rgba(0, 179, 54, 0.5) 2px, transparent 2px) 0 0/10px 10px;
+}
+.main > div {
+  position: relative;
+  z-index: 1;
 }
 
 .intro_wrap {
@@ -463,6 +464,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .full_wrap {
+    background: linear-gradient(135deg, rgba(250, 254, 244, 0), #fafef4 4%, #fafef4 92%, rgba(250, 254, 244, 0));
+  }
+
   .kv_desktop {
     padding: 20% 5% 15%;
   }
@@ -488,7 +493,7 @@ body {
   }
   .kv_desktop .kvtit .kvt2 {
     margin-top: 2vh;
-    font-size: 10vw;
+    font-size: 12.8vw;
   }
   .kv_desktop .kvtit .kvt2::after {
     right: 0;
@@ -498,7 +503,7 @@ body {
     background: radial-gradient(circle, rgba(147, 234, 32, 0.25) 2px, transparent 2px) 0 0/8px 8px;
   }
   .kv_desktop .kvpic {
-    margin: 0;
+    margin: 20px 0;
     width: 100%;
   }
 
