@@ -363,9 +363,10 @@ a {
 }
 
 .sc_cta {
-  margin: 60px 0;
+  margin-top: 60px;
   padding: 60px 0;
   background-color: #eaffd0;
+  background: linear-gradient(135deg, #fff, rgba(234, 255, 208, 0.2) 20%, #eaffd0);
 }
 .sc_cta .cta {
   text-align: center;
@@ -433,20 +434,16 @@ a {
 
 .sc_gift {
   position: relative;
+  padding-top: 60px;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 .sc_gift .pattern {
   position: absolute;
 }
-.sc_gift .pattern.p1 {
-  left: 0;
-  bottom: 0;
-  width: 33%;
-  height: 120px;
-}
 .sc_gift .pattern.p2 {
   right: 0;
-  top: -20px;
+  top: 20px;
   width: 20%;
   height: 150px;
 }
@@ -526,7 +523,9 @@ a {
 }
 
 .sc_qa {
+  padding-top: 60px;
   padding-bottom: 80px;
+  background: linear-gradient(135deg, #fff, rgba(147, 235, 32, 0.1) 20%, rgba(0, 93, 73, 0.2));
 }
 .sc_qa .sc_cnt {
   padding: 0 40px;
@@ -595,7 +594,7 @@ a {
 .g_footer .sc_company .pattern.p1 {
   position: absolute;
   left: -44px;
-  bottom: -20px;
+  top: -18px;
   width: 16%;
   height: 120px;
 }
@@ -666,7 +665,7 @@ a {
 .g_footer .sc_logos .pattern.p1 {
   position: absolute;
   left: -44px;
-  top: -18px;
+  bottom: -20px;
   width: 16%;
   height: 120px;
   background: radial-gradient(circle, #0b4d87 3px, transparent 4px) -8px -9px/27px 27px repeat;
@@ -716,31 +715,22 @@ a {
   .kv {
     position: relative;
   }
-  .kv .logo {
-    left: 5.9895833333%;
-    width: 25%;
-  }
-  .kv .tit {
-    padding-left: 5.9895833333%;
-    margin-top: 45px;
-    font-size: 1.5rem;
-  }
-  .kv .tit .t1 {
-    width: 6em;
-    font-size: 2.25em;
-    line-height: 1.25;
-  }
-  .kv .tit .t1 .d-inline-block:nth-child(1) {
-    padding-right: 0;
-  }
   .kv .date {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 9%;
+    bottom: 25vw;
+    margin-top: 0;
     border-radius: 0;
-    font-size: 1.675rem;
+    font-size: 1.5rem;
     background-color: #005d49;
     color: #fff;
+  }
+  .kv .date span {
+    display: block;
+  }
+  .kv .date span:first-child {
+    border-right-width: 0;
+    padding-bottom: 0.2em;
   }
 
   .counter {
@@ -807,6 +797,7 @@ a {
   }
 
   .sc_gift {
+    padding-top: 40px;
     padding-bottom: 20px;
   }
   .sc_gift .sc_cnt {
@@ -816,16 +807,11 @@ a {
     position: absolute;
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
-  }
-  .sc_gift .pattern.p1 {
-    left: -36px;
-    bottom: -36px;
-    width: 50%;
-    height: 160px;
+    -webkit-transform-origin: right top;
+            transform-origin: right top;
   }
   .sc_gift .pattern.p2 {
-    right: -40px;
-    top: -70px;
+    top: 10px;
     width: 40%;
     height: 200px;
   }
@@ -889,12 +875,15 @@ a {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
   }
+  .g_footer .sc_logos .pattern.p1 {
+    bottom: -34px;
+  }
   .g_footer .sc_company {
     padding-left: 30px;
     padding-right: 30px;
   }
   .g_footer .sc_company .pattern.p1 {
-    bottom: -34px;
+    top: -34px;
   }
   .g_footer .sc_company .container {
     padding-left: 0;
@@ -915,9 +904,6 @@ a {
   .g_footer .sc_company .company_tit .nam {
     margin-left: 0;
     margin-top: 10px;
-  }
-  .g_footer .sc_logos .pattern.p1 {
-    top: -34px;
   }
 
   .modal-header {
