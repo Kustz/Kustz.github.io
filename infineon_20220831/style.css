@@ -380,17 +380,11 @@ a {
   background: url("img/slice2.svg") left bottom no-repeat;
   background-color: #ae357f;
 }
-.tpc_day.day1 .d_title .day {
-  color: #ae357f;
-}
 .tpc_day.day1 .table .tr_soft {
   color: #ae357f;
 }
 .tpc_day.day2 {
   background-color: #005BAC;
-}
-.tpc_day.day2 .d_title .day {
-  color: #005BAC;
 }
 .tpc_day.day2 .table .tr_soft {
   color: #005BAC;
@@ -418,18 +412,9 @@ a {
   margin-right: 1em;
   padding-right: 1em;
 }
-.tpc_day .d_title .date {
-  margin-right: 0.5em;
-}
 .tpc_day .d_title .day {
-  border-radius: 50%;
-  width: 1.8em;
-  height: 1.8em;
-  line-height: 1.8em;
-  background-color: #fff;
   text-align: center;
-  font-weight: 700;
-  font-size: 0.5em;
+  font-size: em;
 }
 .tpc_day .d_agenda {
   margin: 20px 0 60px;
