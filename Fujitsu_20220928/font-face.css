@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: FujitsuSans;
+    src: url(//www.fujitsu.com/fontv5/FujitsuSansRegular.eot);
+    src: url(//www.fujitsu.com/fontv5/FujitsuSansRegular.eot) format("embedded-opentype"),url(//www.fujitsu.com/fontv5/FujitsuSansRegular.woff) format("woff"),url(//www.fujitsu.com/fontv5/FujitsuSansRegular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: FujitsuSansBold;
+    src: url(//www.fujitsu.com/fontv5/FujitsuSansMedium.eot);
+    src: url(//www.fujitsu.com/fontv5/FujitsuSansMedium.eot) format("embedded-opentype"),url(//www.fujitsu.com/fontv5/FujitsuSansMedium.woff) format("woff"),url(//www.fujitsu.com/fontv5/FujitsuSansMedium.ttf) format("truetype")
+}
