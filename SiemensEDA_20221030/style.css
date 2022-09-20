@@ -1301,8 +1301,8 @@ body {
 
 .gift_cnt .item .img img {
   border-radius: 10px;
-  max-width: 450px;
-  padding: 0 100px;
+  max-width: 350px;
+  padding: 0 50px;
   display: block;
   background-color: #fff;
 }
@@ -1330,34 +1330,6 @@ body {
 
 .gift_cnt .item .text {
   font-size: 1rem;
-}
-
-.sc_location {
-  background-color: rgba(0, 0, 28, 0.9);
-}
-
-.location_cnt .loc_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.location_cnt .loc_top .loc {
-  color: #009999;
-  font-size: 1.5em;
-  margin: 0 .5em 10px;
-}
-
-.location_cnt .loc_top .addr {
-  margin: 0 .5em 10px;
-  color: #fff;
 }
 
 .sc_detail {
@@ -1494,6 +1466,7 @@ body {
     font-size: 18px;
   }
   .gift_cnt .items {
+    padding-top: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1504,8 +1477,11 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  .gift_cnt .item {
+    margin-bottom: 30px
+  }
   .gift_cnt .item .img img {
-    max-width: 100%;
+    max-width: 280px;
     padding: 0;
   }
 }
