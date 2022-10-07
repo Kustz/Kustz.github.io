@@ -122,10 +122,9 @@ a {
   position: absolute;
   right: 0;
   top: 0;
+  width: 33.75%;
   height: 100%;
-}
-.g_kv .graphic img {
-  height: 100%;
+  background: url("img/kvgraphic.png") right center/cover;
 }
 
 .slider-for .slick-track {
