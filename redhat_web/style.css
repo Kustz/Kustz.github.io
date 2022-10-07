@@ -75,7 +75,15 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  padding-left: 10px;
+}
+.header_wrap .day_now .days {
+  padding: 10px;
+  display: block;
+}
+.header_wrap .day_now .days:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: inherit;
 }
 .header_wrap .day_now .day_item {
   display: none;
@@ -410,6 +418,12 @@ a {
 }
 .sps_categ .item a {
   display: block;
+  opacity: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.sps_categ .item a:hover {
+  opacity: 0.5;
 }
 .sps_categ .item img {
   width: 100%;
