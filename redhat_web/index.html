@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="style.css?v=1071025">
+    <link rel="stylesheet" href="style.css?v=1091037">
   </head>
   <body>
     <div class="g_fixed fix_aside"><a class="fx_item js_page_scroll" href="#top">
@@ -31,7 +31,7 @@
       <div class="header_wrap">
         <div class="head_left">
           <div class="menu_trigger d-lg-none">
-            <div class="menu_btn" data-toggle="collapse" data-target="#navbar">
+            <div class="menu_btn collapsed" data-toggle="collapse" data-target="#navbar">
               <div class="icon"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -54,9 +54,18 @@
       </div>
     </div>
     <div class="g_kv" id="top">
-      <div class="logo" data-aos="fade-up" data-aos-duration="1000"><img class="w-100" src="img/kvlogo.png"></div>
+      <div class="logo" id="aos0" data-aos="fade-up" data-aos-duration="1000"><img class="w-100" src="img/kvlogo.png"></div>
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><img class="w-100" src="img/kvtit.png"></div>
       <div class="graphic"></div>
+      <div class="timer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800" data-aos-anchor="#aos0">
+        <div class="tit">金融業 (11/8)</div>
+        <div class="time_box">
+          <div class="tb d"><span>00</span></div>
+          <div class="tb h"><span>00</span></div>
+          <div class="tb m"><span>00</span></div>
+          <div class="tb s"><span>00</span></div>
+        </div>
+      </div>
     </div>
     <div class="g_main">
       <div class="sec_intro">
@@ -124,7 +133,7 @@
                     <div class="tm">13:30~13:35</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">opening</div>
+                    <div class="tp">歡迎致詞</div>
                   </div>
                   <div class="td td_spk">
                     <div class="spk_item">
@@ -184,7 +193,7 @@
                     <div class="tm">15:00~15:20</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">Break Time</div>
+                    <div class="tp">茶歇</div>
                   </div>
                 </div>
                 <div class="tr">
@@ -247,7 +256,7 @@
                     <div class="tm">13:30~13:35</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">opening</div>
+                    <div class="tp">歡迎致詞</div>
                   </div>
                   <div class="td td_spk">
                     <div class="spk_item">
@@ -262,7 +271,7 @@
                     <div class="tm">13:35~14:00</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">TBC</div>
+                    <div class="tp">邀約中</div>
                   </div>
                   <div class="td td_spk">
                     <div class="spk_item">
@@ -307,7 +316,7 @@
                     <div class="tm">15:00~15:20</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">Break Time</div>
+                    <div class="tp">茶歇</div>
                   </div>
                 </div>
                 <div class="tr">
@@ -370,7 +379,7 @@
                     <div class="tm">13:30~13:35</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">opening</div>
+                    <div class="tp">歡迎致詞</div>
                   </div>
                   <div class="td td_spk">
                     <div class="spk_item">
@@ -430,7 +439,7 @@
                     <div class="tm">15:00~15:20</div>
                   </div>
                   <div class="td td_topic">
-                    <div class="tp">Break Time</div>
+                    <div class="tp">茶歇</div>
                   </div>
                 </div>
                 <div class="tr">
@@ -570,6 +579,13 @@
                   <div class="info"><span> Red Hat</span><span>資深解決方案架構師</span></div>
                 </div>
                 <div class="spk_item">
+                  <div class="pic"><img class="w-100" src="img/spk/moca.jpg"></div>
+                  <div class="name">
+                    <div>黃敏俊</div>
+                  </div>
+                  <div class="info"><span>戴爾科技集團</span><span>資深系統顧問</span></div>
+                </div>
+                <div class="spk_item">
                   <div class="pic"><img class="w-100" src="img/spk/owen.jpg"></div>
                   <div class="name">
                     <div>曹家榮</div>
@@ -583,9 +599,6 @@
       </div>
       <div class="sec_sponsor" id="company">
         <div class="container">
-          <div class="sec_title">
-            <div class="tit h1">公司簡介</div>
-          </div>
           <div class="sponsor_cnt">
             <div class="d-block d-lg-flex">
               <div class="sps_categ">
@@ -614,11 +627,11 @@
           <div class="giveaway_cnt d-block d-lg-flex">
             <div class="gift_categ">
               <div class="tag">問卷禮</div>
-              <div class="text">當日活動結束後完成問卷填寫即可獲得！</div>
+              <div class="text">完成問卷填寫即可獲得，活動結束後以郵件寄出。</div>
               <div class="items d-block d-lg-flex">
                 <div class="item">
                   <div class="pic"><img class="w-100" src="img/gift1.jpg"></div>
-                  <div class="name">7-ELEVEN 百元禮卷</div>
+                  <div class="name">MOS早餐電子券 <small>（乙張）</small></div>
                 </div>
               </div>
             </div>
@@ -727,6 +740,7 @@
       		slidesToScroll: 1,
       		arrows: false,
       		fade: true,
+      		adaptiveHeight: true,
       		accessibility: false,
       		draggable: false,
       		swipe: false
@@ -802,10 +816,44 @@
       			$aniDuration = Math.abs($tarTop-$scrollTopNow)*.6 > 1200 ? 1200 : (Math.abs($tarTop-$scrollTopNow)*.6);
       		bScroll($tarTop, $aniDuration);
       		e.preventDefault();
-      		
       
       	});
       
+      	setInterval(function() {
+      		// 設置倒數計時: 結束時間 - 當前時間
+      		// 當前時間
+      		let nowTime = new Date();
+      		// 設置結束時間
+      		//- var endTime = new Date();
+      		//- endTime.setFullYear(2021); // 設定 年，4位數字
+      		//- endTime.setMonth(11); // 月，陣列索引值 0-11
+      		//- endTime.setDate(16); // 日，正負整數
+      		//- endTime.setHours(13); // 時 0-23
+      		//- endTime.setMinutes(0); // 分
+      		//- endTime.setSeconds(0); // 秒
+      		//- var endTime2 = new Date(2021,11,16,13,0,0); // 西元年，月(0-11)，日，時，分，秒
+      		var endTime3 = new Date("2022-11-08T13:00:00.000+08:00"); // "西元年-月-日T時:分:秒.毫秒 時區(+/-)"
+      		// 倒數計時: 差值
+      		var offsetTime = (endTime3 - nowTime) / 1000; // ** 以秒為單位
+      		var sec = parseInt(offsetTime % 60); // 秒
+      		var min = parseInt((offsetTime / 60) % 60); // 分 ex: 90秒
+      		var hr = parseInt((offsetTime / 60 / 60) % 24); // 時
+      		var day = parseInt(offsetTime / 24 / 60 / 60); // 時
+      		if(endTime3 > nowTime) {
+      			if(sec<10) {
+      				sec = "0"+sec;
+      			}
+      			//- console.log(day, hr, min, sec);
+      			$('.tb.d span').text(day);
+      			$('.tb.h span').text(hr);
+      			$('.tb.m span').text(min);
+      			$('.tb.s span').text(sec);
+      		}
+      	}, 1000);
+      
+      	$('.menu_trigger').clikc(function(){
+      		$(this).toggleClass('is_open');
+      	})
       
       })
     </script>
