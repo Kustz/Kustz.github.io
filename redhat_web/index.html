@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="style.css?v=1091037">
+    <link rel="stylesheet" href="style.css?v=10112133">
   </head>
   <body>
     <div class="g_fixed fix_aside"><a class="fx_item js_page_scroll" href="#top">
@@ -763,21 +763,46 @@
       	//- 	]
       	//- });
       
+      	let when_SlickGoTo = function(d){
+      		$('.slick').slick('slickGoTo', d);
+      		$('.sec_date .date_item').removeClass('is_current').eq(d).addClass('is_current');
+      		$('.days .day_item').removeClass('is_active').eq(d).addClass('is_active');
+      	}
+      
       	$('#goToD1').click(function(){
-      		$('.slick').slick('slickGoTo', 0);
-      		$('.sec_date .date_item').removeClass('is_current').eq(0).addClass('is_current');
-      		$('.days .day_item').removeClass('is_active').eq(0).addClass('is_active');
+      		when_SlickGoTo(0);
+      		location.hash = "#nov08";
       	})
       	$('#goToD2').click(function(){
-      		$('.slick').slick('slickGoTo', 1);
-      		$('.sec_date .date_item').removeClass('is_current').eq(1).addClass('is_current');
-      		$('.days .day_item').removeClass('is_active').eq(1).addClass('is_active');
+      		when_SlickGoTo(1);
+      		location.hash = "#nov10";
+      		//- $('.slick').slick('slickGoTo', 1);
+      		//- $('.sec_date .date_item').removeClass('is_current').eq(1).addClass('is_current');
+      		//- $('.days .day_item').removeClass('is_active').eq(1).addClass('is_active');
       	})
       	$('#goToD3').click(function(){
-      		$('.slick').slick('slickGoTo', 2);
-      		$('.sec_date .date_item').removeClass('is_current').eq(2).addClass('is_current');
-      		$('.days .day_item').removeClass('is_active').eq(2).addClass('is_active');
+      		when_SlickGoTo(2);
+      		location.hash = "#nov15";
+      		//- $('.slick').slick('slickGoTo', 2);
+      		//- $('.sec_date .date_item').removeClass('is_current').eq(2).addClass('is_current');
+      		//- $('.days .day_item').removeClass('is_active').eq(2).addClass('is_active');
       	})
+      
+      
+      	function renderByUrl(url) {
+      		console.log("目前路徑為:", url);
+      		//路徑對應頁面內容
+      		if (url === "" || url === "#nov8") {
+      			when_SlickGoTo(0);
+      		} else if (url === "#nov10") {
+      			when_SlickGoTo(1);
+      		} else if (url === "#nov15") {
+      			when_SlickGoTo(2);
+      		}
+      	}
+      	renderByUrl(location.hash);
+      
+      
       
       	let scrollVal = $(this).scrollTop();
       
@@ -851,7 +876,7 @@
       		}
       	}, 1000);
       
-      	$('.menu_trigger').clikc(function(){
+      	$('.menu_trigger').click(function(){
       		$(this).toggleClass('is_open');
       	})
       
