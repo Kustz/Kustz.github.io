@@ -203,7 +203,7 @@ a {
   content: "sec";
 }
 
-.slider-for .slick-track {
+.slick-slider {
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
