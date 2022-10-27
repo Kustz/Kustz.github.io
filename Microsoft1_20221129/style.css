@@ -69,6 +69,23 @@ a {
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+@-webkit-keyframes underline {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes underline {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
 .header_wrap {
   padding: 0 1.25rem;
   display: -webkit-box;
@@ -108,12 +125,15 @@ a {
 .header_wrap .sign_item .nav_link::after {
   content: "";
   position: absolute;
-  left: -50%;
-  bottom: 0;
+  left: 0;
+  top: 0;
+  border-radius: 2px;
   width: 200%;
-  height: 3px;
+  height: 4px;
   background: -webkit-gradient(linear, left top, right top, from(#2aceff), to(#b90055));
   background: linear-gradient(90deg, #2aceff, #b90055);
+  -webkit-animation: underline 1.5s linear 0s infinite alternate;
+          animation: underline 1.5s linear 0s infinite alternate;
 }
 
 .g_kv {
@@ -218,7 +238,7 @@ a {
   line-height: 1;
   text-align: center;
   font-weight: 400;
-  color: #b90055;
+  color: #d646bc;
 }
 .g_kv .timer .tb span {
   position: absolute;
@@ -395,7 +415,7 @@ a {
           flex: 0 0 17%;
   padding: 10px 16px;
   text-align: center;
-  color: #b90055;
+  color: #2aceff;
 }
 .ag_table .td_topic {
   -webkit-box-flex: 1;
