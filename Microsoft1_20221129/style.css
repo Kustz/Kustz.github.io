@@ -428,6 +428,9 @@ a {
       -ms-flex: 0 0 32%;
           flex: 0 0 32%;
 }
+.ag_table .td_spk .spk:nth-child(n+2) {
+  margin-top: 14px;
+}
 .ag_table .td_spk .name {
   font-weight: 700;
 }
