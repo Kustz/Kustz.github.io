@@ -149,23 +149,23 @@ a {
   position: absolute;
   left: 4vw;
   top: calc(3vw + 60px);
-  width: 13.0208333333%;
+  width: 10.4166666667%;
 }
 .g_kv .main {
   position: absolute;
   width: 100%;
-  top: 25.9259259259%;
+  top: 29.6296296296%;
 }
 .g_kv .main img {
   display: block;
   margin: 0 auto;
-  width: 80.2083333333%;
+  width: 72.9166666667%;
 }
 .g_kv .cnt {
   position: absolute;
-  left: 11.4583333333%;
-  top: 44.4444444444%;
-  width: 22.3958333333%;
+  left: 13.5416666667%;
+  top: 46.2962962963%;
+  width: 17.7083333333%;
   text-align: center;
 }
 .g_kv .cnt img {
@@ -199,40 +199,40 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.33vw;
+  font-size: 1.2vw;
 }
 .g_kv .timer .tb {
   position: relative;
   z-index: 2;
-  border-radius: 6px 6px 0 0;
+  border-radius: 6px;
   display: inline-block;
   width: 3em;
-  height: 4em;
+  height: 3em;
   padding-bottom: 1.5em;
   letter-spacing: normal;
   margin-left: 2px;
 }
 .g_kv .timer .tb:nth-child(1) {
   margin-left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #1369b9), to(rgba(19, 105, 185, 0)));
-  background: linear-gradient(#1369b9 80%, rgba(19, 105, 185, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#1369b9), to(#031344));
+  background: linear-gradient(#1369b9, #031344);
 }
 .g_kv .timer .tb:nth-child(2) {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #13b4ec), to(rgba(19, 180, 236, 0)));
-  background: linear-gradient(#13b4ec 80%, rgba(19, 180, 236, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#13b4ec), to(#030b5c));
+  background: linear-gradient(#13b4ec, #030b5c);
 }
 .g_kv .timer .tb:nth-child(3) {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #1369b9), to(rgba(19, 105, 185, 0)));
-  background: linear-gradient(#1369b9 80%, rgba(19, 105, 185, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#1369b9), to(#031344));
+  background: linear-gradient(#1369b9, #031344);
 }
 .g_kv .timer .tb:nth-child(4) {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #13b4ec), to(rgba(19, 180, 236, 0)));
-  background: linear-gradient(#13b4ec 80%, rgba(19, 180, 236, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#13b4ec), to(#030b5c));
+  background: linear-gradient(#13b4ec, #030b5c);
 }
 .g_kv .timer .tb::after {
   position: absolute;
   left: 0;
-  bottom: 1.15em;
+  bottom: 0.33em;
   width: 100%;
   line-height: 1;
   text-align: center;
@@ -243,7 +243,7 @@ a {
 .g_kv .timer .tb span {
   position: absolute;
   left: 50%;
-  top: calc(50% - 0.38em);
+  top: calc(50% - 0.25em);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-weight: 300;
@@ -364,7 +364,7 @@ a {
   color: #000;
 }
 .sec_intro .cta_row {
-  margin-top: 1em;
+  padding-top: 1em;
   font-size: 1.5rem;
 }
 .sec_intro .cta_row .cta {
@@ -679,7 +679,7 @@ a {
           flex: 0 0 50%;
 }
 .gift_categ.cat1 .pic img {
-  max-width: 600px;
+  max-width: 450px;
 }
 .gift_categ.cat2 {
   -webkit-box-flex: 0;
@@ -687,10 +687,10 @@ a {
           flex: 0 0 50%;
 }
 .gift_categ.cat2 .pic {
-  padding-top: 33%;
+  padding-top: 28%;
 }
 .gift_categ.cat2 .pic img {
-  max-width: 300px;
+  max-width: 225px;
 }
 .gift_categ .text {
   margin-bottom: 24px;
@@ -953,7 +953,7 @@ a {
 
   .gift_categ.cat1 .pic img {
     margin: 15px 0;
-    max-width: 240px;
+    max-width: 200px;
   }
   .gift_categ.cat2 {
     margin-top: 30px;
@@ -962,7 +962,7 @@ a {
     padding-top: 0;
   }
   .gift_categ.cat2 .pic img {
-    max-width: 240px;
+    max-width: 200px;
   }
   .gift_categ .item {
     padding: 10px 0;
