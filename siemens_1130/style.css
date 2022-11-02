@@ -695,6 +695,10 @@ a {
 .gift_categ .gift_item {
   padding: 0 10px;
 }
+.gift_categ .pic {
+  border-radius: 20px;
+  overflow: hidden;
+}
 .gift_categ .name {
   margin-top: 0.5em;
   font-size: 1.5em;
