@@ -147,7 +147,7 @@ a {
   padding: 60px 0;
   background: linear-gradient(80deg, #3d019e, #6500e6 55%, #4aafff, rgba(74, 175, 255, 0) 96%);
   font-size: 1.6666666667vw;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .counter.counterTriAnied .item {
   opacity: 1;
@@ -170,18 +170,15 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 .counter .item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-  padding-right: 2.5em;
-  margin-bottom: 1em;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+  padding: 0 1.5em;
   opacity: 0;
   -webkit-transform: translate3d(0, 100px, 0);
           transform: translate3d(0, 100px, 0);
@@ -191,15 +188,14 @@ a {
   transition-property: opacity, transform, -webkit-transform;
   -webkit-transition-duration: 1200ms;
           transition-duration: 1200ms;
+  text-align: center;
 }
-.counter .item:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-  margin-bottom: 0.2em;
+.counter .item:last-child .l2 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .counter .l1 {
-  font-size: 4em;
+  font-size: 5em;
   line-height: 1;
   font-family: "Ubuntu", "Noto Sans TC", sans-serif;
   color: #93ea20;
@@ -212,10 +208,11 @@ a {
   font-size: 0.5em;
 }
 .counter .l2 {
+  padding: 0.65em 0;
   display: inline-block;
   line-height: 1.2;
-  font-size: 1em;
-  max-width: 19em;
+  font-size: 1.2em;
+  max-width: 16em;
   color: #fff;
 }
 
@@ -765,7 +762,7 @@ a {
 }
 .g_footer .sc_company {
   position: relative;
-  background-color: #002d33;
+  background-color: #003f23;
   padding: 80px 0;
   overflow: hidden;
 }
@@ -786,7 +783,7 @@ a {
   border-radius: 20px;
   border: 1px solid #fff;
   padding: 45px 60px;
-  background-color: #002d33;
+  background-color: #003f23;
 }
 .g_footer .sc_company .parag_wrap::after {
   content: "";
@@ -819,7 +816,7 @@ a {
   padding: 0 10px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #002d33;
+  background-color: #003f23;
 }
 .g_footer .sc_company .company_tit .ti,
 .g_footer .sc_company .company_tit .nam {
