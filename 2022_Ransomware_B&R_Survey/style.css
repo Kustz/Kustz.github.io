@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans TC", Microsoft Jhenghei, "微軟正黑體", sans-serif;
+  font-family: "Ubuntu", "Noto Sans TC", Microsoft Jhenghei, "微軟正黑體", sans-serif;
   color: #000d54;
 }
 
@@ -72,7 +72,7 @@ body {
   z-index: 3;
 }
 
-.main {
+.sec_main {
   position: relative;
   border-radius: 2vw;
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
@@ -80,11 +80,11 @@ body {
   margin: 0 auto;
   max-width: 95vw;
   padding-top: 60px;
-  padding-bottom: 4vw;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.9)), color-stop(75%, #fff));
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), #fff 75%);
+  padding-bottom: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.67)), color-stop(25%, #fff), color-stop(75%, #fff), to(rgba(255, 255, 255, 0.67)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.67), #fff 25%, #fff 75%, rgba(255, 255, 255, 0.67));
 }
-.main > div {
+.sec_main > div {
   position: relative;
   z-index: 1;
 }
@@ -95,11 +95,12 @@ body {
   padding-bottom: 0;
 }
 .intro_wrap .strong {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
-  color: #124354;
+  line-height: 1.2;
+  color: #00b236;
 }
 .intro_wrap .parag {
   font-size: 1.25em;
@@ -113,7 +114,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 60px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px auto 0;
   max-width: 960px;
 }
 
@@ -128,25 +132,26 @@ body {
   position: absolute;
   top: -20px;
   left: -15px;
-  z-index: 2;
+  z-index: 1;
   width: 50px;
   height: 50px;
-  background: radial-gradient(circle, #00b336 1px, transparent 1px) 0 0/10px 10px;
+  background: radial-gradient(circle, #66ccff 1px, transparent 1px) 0 0/10px 10px;
 }
 .gift_content .gift {
   position: relative;
-  padding: 20px 26px 26px 20px;
-  margin-top: 15px;
-  background-color: #edfff2;
+  z-index: 2;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  background-color: #021246;
+  color: #66ccff;
 }
-.gift_content .gift::before {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: -6px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #00b336;
+.gift_content .gift:last-child {
+  margin-top: 15px;
+}
+.gift_content .gift .gt_categ {
+  padding: 8px 20px;
+  border-bottom: 1px solid currentColor;
+  font-size: 1.25em;
 }
 .gift_content .gift .gt_head {
   display: -webkit-box;
@@ -158,17 +163,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 16px 30px 10px;
 }
-.gift_content .gift .categ {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  border-radius: 4px;
-  padding: 0.4em 1.2em;
-  font-size: 1.125em;
-  background-color: #3a5acb;
+.gift_content .gift .tit {
+  vertical-align: middle;
+  line-height: 1.2;
+  font-size: 1.25em;
   color: #fff;
-  line-height: 1.1;
+}
+.gift_content .gift .tit b {
+  display: inline-block;
 }
 .gift_content .gift .count {
   -webkit-box-flex: 0;
@@ -183,24 +187,14 @@ body {
   background-color: #fff;
 }
 .gift_content .gift .gt_body {
+  padding: 10px 30px 20px;
   position: relative;
   font-size: 1.25em;
 }
-.gift_content .gift .gt_body .tit {
-  margin: 10px 0;
-  vertical-align: middle;
-  line-height: 1.2;
-  font-size: 1.125em;
-  color: #000d54;
-}
-.gift_content .gift .gt_body .tit b {
-  display: inline-block;
-}
-.gift_content .gift .gt_body .tip {
+.gift_content .gift .tip {
   max-width: 25em;
   font-size: 0.8em;
   line-height: 1.4;
-  color: #898989;
 }
 .gift_content .gift .sub {
   color: #93ea20;
@@ -212,17 +206,22 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  max-width: 400px;
-  padding: 15px 0;
-  padding-left: 20px;
+  max-width: 415px;
+  padding-left: 15px;
 }
 .gift_pic .pic {
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .gift_pic .pic img {
   position: relative;
   z-index: 3;
   width: 100%;
+}
+
+.sec_table {
+  margin-top: 60px;
 }
 
 .table_wrap {
@@ -231,18 +230,31 @@ body {
   max-width: 960px;
   width: 100%;
   overflow: hidden;
-  border: 1px solid #00b336;
-  background-color: #edfff2;
+  border-radius: 20px;
+  border: 2px solid #66ccff;
+  background-color: #021246;
 }
 
-.table_content {
-  margin: 6px;
-  background-color: #fff;
+.table_head {
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid #66ccff;
+  padding: 8px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.table_head span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #66ccff;
+  margin-right: 5px;
 }
 
 .form_wrap {
   padding-top: 45px;
   padding-bottom: 45px;
+  color: #fff;
 }
 .form_wrap .btn {
   background-color: transparent;
@@ -258,7 +270,7 @@ body {
   padding: 5px 7px 7px;
   line-height: 1;
   border-radius: 4px;
-  background-color: #3a5acb;
+  background-color: #e64103;
   color: #fff;
   font-size: 14px;
 }
@@ -266,7 +278,10 @@ body {
   padding-left: 1.2rem;
 }
 .form_wrap label {
-  color: #155c75;
+  color: #66ccff;
+}
+.form_wrap .form-control + small {
+  color: #66ccff;
 }
 .form_wrap .form-check-label {
   -webkit-box-flex: 1;
@@ -301,9 +316,8 @@ body {
   font-size: 1.675rem;
   font-weight: 700;
   line-height: 1;
-  background: linear-gradient(120deg, #3a5acb, #000d54) 0 0/200% 100%;
+  background: linear-gradient(120deg, #66ccff, #3a5acb, #001794) 0 0/200% 100%;
   color: #fff;
-  font-family: "Ubuntu", "Noto Sans TC", sans-serif;
   -webkit-transition: background 300ms;
   transition: background 300ms;
 }
@@ -321,7 +335,10 @@ body {
   letter-spacing: 0.5rem;
 }
 .form_wrap .cta .bttn:active {
-  background: #00655c;
+  background: #00b236;
+}
+.form_wrap .agreement_text {
+  color: #66ccff;
 }
 
 .form_tit {
@@ -330,12 +347,12 @@ body {
 .form_tit h2 {
   font-weight: 700;
   margin-bottom: 0;
-  color: #00655c;
+  color: #fff;
 }
 .form_tit span {
   display: block;
   margin: 10px 0 30px;
-  color: #1789bd;
+  color: #66ccff;
 }
 
 .form_p1, .form_p2 {
@@ -348,12 +365,15 @@ body {
 }
 
 .form_p2 {
-  border-top: 6px solid #edfff2;
+  border-top: 2px solid #66ccff;
   padding-top: 40px;
+}
+.form_p2 label {
+  color: #fff;
 }
 
 .policy_wrap {
-  border-top: 6px solid #edfff2;
+  border-top: 2px solid #66ccff;
   padding: 30px;
 }
 
@@ -375,24 +395,26 @@ body {
 .pt_left {
   float: left;
   text-align: center;
+  color: #fff;
 }
 
 .pt_right {
   float: right;
 }
 .pt_right a {
-  color: #00b388;
+  color: #66ccff;
 }
 .pt_right a:hover {
-  color: #1789bd;
+  color: #e64103;
 }
 
 .policy_box {
   clear: both;
+  border-radius: 8px;
   padding: 10px;
   height: 150px;
   overflow: hidden;
-  background-color: #edfff2;
+  background-color: #fff;
 }
 
 .pb_tit {
@@ -431,7 +453,7 @@ body {
     position: relative;
     z-index: 2;
   }
-  .main {
+  .sec_main {
     border-radius: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -444,28 +466,28 @@ body {
     font-size: 1rem;
   }
   .gift_wrap {
-    padding: 0 30px;
-    margin: 30px 0;
+    margin-top: 0;
+    padding: 0 20px 40px;
   }
   .gift_pic {
+    margin-top: 15px;
     padding-left: 0;
   }
   .gift_pic .pic {
     padding: 0;
   }
-  .table_wrap {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-width: 1px 0;
+  .sec_table {
+    margin-top: 0;
+    padding: 40px 10px;
   }
   .table_content {
     margin: 0;
     border-width: 1px 0;
-    padding: 20px 0;
+    padding: 30px 0;
   }
   .form_wrap {
+    padding: 0;
     border-radius: 0;
-    padding: 30px 20px;
   }
   .form_wrap .form-check-inline {
     display: -webkit-box;
@@ -491,16 +513,26 @@ body {
             flex: 0 1 100%;
     line-height: 1.2;
   }
+  .form_wrap .cta .bttn {
+    margin-bottom: 30px;
+  }
   .form_tit h2 {
     max-width: 10em;
     margin: 0 auto;
   }
   .form_p1, .form_p2 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form_p1 {
+    padding-bottom: 20px;
+  }
+  .form_p2 {
+    padding-top: 20px;
   }
   .policy_wrap {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 0;
   }
 }
