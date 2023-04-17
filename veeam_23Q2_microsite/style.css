@@ -1167,13 +1167,11 @@ a {
 }
 
 .sec1_bk {
-  padding: 40px 0;
+  padding: 50px 0;
   background-color: #fff;
-}
-
-.intro_cnt {
   overflow: hidden;
 }
+
 .intro_cnt .text {
   padding: 0 2rem;
   font-size: 1.25rem;
@@ -1183,7 +1181,7 @@ a {
   color: #16a939;
 }
 .intro_cnt .data {
-  padding: 0 2rem;
+  padding: 10px 2rem 0;
 }
 .intro_cnt .data .items {
   -webkit-box-pack: justify;
