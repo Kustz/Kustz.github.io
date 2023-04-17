@@ -2057,6 +2057,11 @@ a {
   left: 6px;
 }
 
+.sc_event .container-fluid {
+  margin: 0 auto;
+  max-width: 1630px;
+  padding: 0 5px;
+}
 .sc_event .col_wrap {
   padding: 10px;
 }
@@ -2155,6 +2160,12 @@ a {
   opacity: 1;
 }
 
+.sc_others .container-fluid {
+  margin: 0 auto;
+  max-width: 1630px;
+  padding: 0 5px;
+}
+
 .row_others .item {
   display: block;
   border-radius: 8px;
@@ -2183,7 +2194,7 @@ a {
 .row_others .news_wrap,
 .row_others .article_wrap,
 .row_others .blog_wrap {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .row_others .news_wrap .item {
   border-color: #005f4b;
