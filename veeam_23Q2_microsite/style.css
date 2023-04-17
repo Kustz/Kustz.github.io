@@ -2330,11 +2330,6 @@ a {
   width: 100%;
 }
 
-@media (max-width: 1400px) {
-  .sc_event .col_wrap:first-child .evt_item .text_block .stit {
-    font-size: 1em;
-  }
-}
 @media (min-width: 768px) {
   .g_whitebk .wbk_items .item_wrap,
 .g_whitebk .wbk_bn_items .item_wrap {
