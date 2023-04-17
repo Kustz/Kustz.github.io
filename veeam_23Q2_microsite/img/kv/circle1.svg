@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 896 896">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#_未命名漸層_37);
+        isolation: isolate;
+      }
+    </style>
+    <linearGradient id="_未命名漸層_37" data-name="未命名漸層 37" x1="-2734.49" y1="4404.2" x2="-2262.05" y2="4044.28" gradientTransform="translate(-2.89 5511.92) rotate(36.49) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#0b34d4" stop-opacity="0"/>
+      <stop offset=".29" stop-color="#0b34d4" stop-opacity=".02"/>
+      <stop offset=".4" stop-color="#0b34d4" stop-opacity=".09"/>
+      <stop offset=".52" stop-color="#0b34d4" stop-opacity=".19"/>
+      <stop offset=".64" stop-color="#0b34d4" stop-opacity=".34"/>
+      <stop offset=".76" stop-color="#0b34d4" stop-opacity=".53"/>
+      <stop offset=".89" stop-color="#0b34d4" stop-opacity=".77"/>
+      <stop offset="1" stop-color="#0b34d4"/>
+    </linearGradient>
+  </defs>
+  <g id="_圖層_2-2" data-name="圖層 2">
+    <g>
+      <rect class="cls-1" width="896" height="896"/>
+      <path class="cls-2" d="m862.19,296.19c83.84,228.75-33.63,482.16-262.39,566-228.75,83.84-482.16-33.64-566-262.39C-50.04,371.05,67.44,117.64,296.19,33.81c228.75-83.84,482.16,33.63,566,262.39Z"/>
+    </g>
+  </g>
+</svg>
