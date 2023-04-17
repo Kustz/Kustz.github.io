@@ -1020,7 +1020,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  font-size: 1vw;
+  font-size: min(1vw, 1.2rem);
 }
 .key_visual .kv__title .t1 {
   color: #fff;
