@@ -1201,8 +1201,8 @@ a {
 }
 .intro_cnt .data .chart {
   position: relative;
-  border-radius: 40px;
-  padding: 40px;
+  border-radius: 50%;
+  padding: 80px;
   overflow: hidden;
   border: 1px solid #271e88;
 }
@@ -1237,12 +1237,15 @@ a {
   color: #271e88;
 }
 .intro_cnt .data .num b {
-  font-size: 1.65em;
+  font-size: 2.5em;
+}
+.intro_cnt .data .num span {
+  font-size: 1.5em;
 }
 .intro_cnt .data .txt {
   padding-left: 0.875rem;
   line-height: 1.2;
-  font-size: 1.125em;
+  font-size: 1.25em;
   color: #271e88;
 }
 
