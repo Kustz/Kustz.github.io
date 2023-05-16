@@ -1,0 +1,498 @@
+doctype html
+html(lang="zh-Hant-TW")
+	-
+		const varObj = {
+				'title': '守護雲端資料 強化數位韌性',
+				'name': 'Veeam_20230608',
+				'sign': 'https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AC0612-0',
+				'descr': 'Veeam 與DIGITIMES於2023年6月8日攜手舉辦「守護雲端資料 強化數位韌性」線上研討會。會中邀請到Veeam台灣區總經理林志方與DIGITIMES董事長黃欽勇，兩位重磅講師共談「資料保護」的重要性及企業應具備的思維與策略，助攻企業抵禦勒索軟體威脅，強化企業數位韌性，打造無限競爭力。'
+			}
+
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(property="og:title", content= varObj.title)
+		meta(property="og:type", content="article")
+		meta(property="og:url", content= "https://www.digitimes.com.tw/seminar/"+varObj.name+"/")
+		meta(property="og:image", content= "https://www.digitimes.com.tw/seminar/"+varObj.name+"/img/webtitle.jpg")
+		meta(property="og:site_name", content="DIGITIMES")
+		meta(property="og:description", content=varObj.descr)
+		//[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]
+
+		title= varObj.title
+
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous")
+		
+		//- AOS
+		link(rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+		
+		//- link(rel="stylesheet" href="lib/normalize.css")
+		- const d = new Date(), _date = ""+(d.getMonth()+1)+d.getDate()+d.getHours()+d.getMinutes();
+
+		link(rel='stylesheet' href='style.css?v='+_date)
+
+	body
+		.g_fixed.fix_aside
+			a.fx_item.is_primary.js_page_scroll(href=varObj.sign, target="_blank")
+				.in_wrap.txt
+					span 立即報名
+			a.fx_item.js_page_scroll(href="#top")
+				.in_wrap.ic
+					.ic_top
+
+		//- .g_header
+			.header_wrap
+				.menu_trigger.d-lg-none
+					button.menu_btn(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation")
+						span.icon(class="navbar-toggler-icon")
+				.nav_area.d-lg-block(class="collapse navbar-collapse justify-content-center align-items-center" id="navbarToggler")
+					.nav_content
+						.nav_cnt
+							each a in secObj
+								.nav_item
+									a.nav_link.js_page_scroll(href='#'+a.en)= a.zh
+		.g_first#top
+			.key_visual.d-none.d-md-block
+				.kv__wrapper
+					.kv__square
+						.square.sq1(data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" data-aos-anchor="#top")
+							img(src="img/kv/kv_sq1.png")
+						.square.sq2(data-aos="fade-left" data-aos-duration="650" data-aos-delay="200" data-aos-anchor="#top")
+							img(src="img/kv/kv_sq2.png")
+						.square.sq3(data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-anchor="#top")
+							img(src="img/kv/kv_sq3.png")
+						.square.sq4(data-aos="fade-right" data-aos-duration="400" data-aos-delay="200" data-aos-anchor="#top")
+							img(src="img/kv/kv_sq4.png")
+						.square.sq5(data-aos="fade-down" data-aos-duration="500" data-aos-delay="200" data-aos-anchor="#top")
+							img(src="img/kv/kv_sq5.png")
+						
+					.kv__logo
+						img.logo_v(src="img/kv/logo_veeam.svg")
+						.divide
+						img.logo_d(src="img/kv/logo_digitimes.svg")
+
+					.kv__title
+						.t1(data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" data-aos-anchor="#top")
+							img(src="img/kv/kv_tit.png")
+							//- div 守護雲端資料 強化數位韌性
+						.t2(data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" data-aos-anchor="#top")
+							img(src="img/kv/kv_sub.png")
+							//- div 6.08 Thu. 14:00 線上研討會
+
+			.key_visual_mobile.d-md-none
+				img.w-100(src="img/kv/kv_m.png")
+				
+		.g_main
+			section.sc_intro
+				.container
+					.sec_cnts
+						.parag
+							p#aos1(data-aos="fade-up", data-aos-delay="0", data-aos-duration="800")
+								| 近年勒索軟體攻擊越演越烈，令許多企業猝不及防，也讓資料保護一事受到嚴峻考驗。若能做好備份，即可建立資料保護的最後防線，將災損減至最低。
+							p(data-aos="fade-up", data-aos-delay="600", data-aos-duration="800", data-aos-anchor="#aos1")
+								| 有鑑於此，國際資料管理領域領導者&ensp;
+								b.gc Veeam&ensp;
+								| 與&ensp;
+								b.gc DIGITIMES&ensp;
+								| 於 2023年6月8日(四) 攜手舉辦「守護雲端資料 強化數位韌性」線上研討會。會中邀請到Veeam台灣區總經理林志方，與DIGITIMES董事長黃欽勇，兩位重磅講師共談「資料保護」的重要性及企業應具備的思維與策略，助攻企業抵禦勒索軟體威脅，強化企業數位韌性，打造無限競爭力！
+						
+						
+						//- .quote
+							.quo_item
+								.cnt
+									.quo
+									.txt 數位韌性和混合雲的關聯性
+							.quo_item
+								.cnt
+									.quo
+									.txt 資料保護 + 雲服務 = 數位應變力
+							.quo_item
+								.cnt
+									.quo
+									.txt 做好準備！帶您遨遊雲端世界
+			section.sc_part1
+				.container
+					.sec_cnts
+						.sc_title#aos2(data-aos="fade-up", data-aos-delay="0", data-aos-duration="800")
+							.tit 您不可錯過的
+						.items.d-block.d-md-flex
+							.item(data-aos="fade-up", data-aos-delay="300", data-aos-duration="800", data-aos-anchor="#aos2")
+								.pic
+									img.icon(src="img/icons/icon_1.svg")
+								.txt 深入了解V12產品優勢
+							//- .item(data-aos="fade-up", data-aos-delay="600", data-aos-duration="800", data-aos-anchor="#aos2")
+								.pic
+									img.icon(src="img/icons/icon_2.svg")
+								.txt AWS、Microsoft Azure 與 Google Cloud 全新版本
+							.item(data-aos="fade-up", data-aos-delay="900", data-aos-duration="800", data-aos-anchor="#aos2")
+								.pic
+									img.icon(src="img/icons/icon_2.svg")
+								.txt 雲端資料保護趨勢
+							.item(data-aos="fade-up", data-aos-delay="1200", data-aos-duration="800", data-aos-anchor="#aos2")
+								.pic
+									img.icon(src="img/icons/icon_4.svg")
+								.txt 專家對談
+
+						.cta_wrap
+							.bttns
+								a.bttn.main_b(href=varObj.sign, target="_blank")
+									.bttn_inner 立即線上報名
+			
+			section.sc_part2#aos3
+				.container
+					.sec_cnts
+						//- .sc_title
+							.tit 全新 <strong>Veeam Data Platform</strong> 資料平台
+						.items
+							.item.it1
+								.txt(data-aos="fade-up", data-aos-delay="300", data-aos-duration="800", data-aos-anchor="#aos3")
+									.t Data Security <span>資料安全</span>
+									.p 多層次安全性<br>可確保資料始終受到保護
+							.item.it2
+								.txt(data-aos="fade-up", data-aos-delay="600", data-aos-duration="800", data-aos-anchor="#aos3")
+									.t Data Recovery <span>資料復原</span>
+									.p 不論何時何地<br>都能將所需資料完全復原至所需狀態
+							.item.it3
+								.txt(data-aos="fade-up", data-aos-delay="900", data-aos-duration="800", data-aos-anchor="#aos3")
+									.t Data Freedom <span>資料自由</span>
+									.p 隨時隨地保護所有資料<br>完全不須綁定
+			
+			section.sc_agenda
+				.container
+					.sc_cnts
+						.sc_title
+							.tit 活動議程
+						.table_wrap
+							.tr.soft
+								.td.time
+									.td__tm 14:00 - 14:30
+								.td.topic
+									.td__tpc 來賓報到
+							.tr
+								.td.time
+									.td__tm 14:30 - 14:40
+								.td.topic
+									.td__tpc 歡迎致詞
+								.td.speaker
+									.td__spk 
+										.spk_job Veeam 台灣區總經理
+										.spk_name
+											strong 林志方
+											span Jeff Lin
+							.tr.line
+								.td.time
+									.td__tm 14:40 - 15:10
+								.td.topic
+									.td__tpc 2023 雲端資料保護趨勢 & Veeam Data Platform
+								.td.speaker
+									.td__spk 
+										.spk_job Veeam 台灣區資深技術顧問
+										.spk_name
+											strong 呂柏鋐
+											span Tony Lu
+							.tr.soft
+								.td.time
+									.td__tm 15:10 - 15:20
+								.td.topic
+									.td__tpc 中場休息
+							.tr
+								.td.time
+									.td__tm 15:20 - 15:50
+								.td.topic
+									.td__tpc 
+										.point 專家對談
+										div 守護雲端資料 強化數位韌性
+								.td.speaker
+									.td__spk 
+										.spk_job Veeam 台灣區總經理
+										.spk_name
+											strong 林志方
+											span Jeff Lin
+									.td__spk 
+										.spk_job DIGITIMES 董事長 暨 電子時報社長
+										.spk_name
+											strong 黃欽勇
+											span Colley Hwang
+							.tr.soft
+								.td.time
+									.td__tm 15:50 - 16:00
+								.td.topic
+									.td__tpc Q&A
+
+			section.sc_speaker
+				.sqs
+					.sq1
+						img(src="img/kv/kv_sq1.png")
+					.sq2
+						img(src="img/kv/kv_sq3.png")
+				.container
+					.sec_cnts
+						.sc_title
+							.tit 講師陣容
+						.items.d-block.d-md-flex
+							.spk_item
+								.photo
+									img(src="img/speaker/jeff.jpg")
+								.text
+									.name
+										span.zh 林志方
+										span.en Jeff Lin
+									.tit
+										div Veeam
+										div 台灣區總經理
+							.spk_item
+								.photo
+									img(src="img/speaker/colley.jpg")
+								.text
+									.name
+										span.zh 黃欽勇
+										span.en Colley Hwang
+									.tit
+										div DIGITIMES 董事長
+										div 暨 電子時報社長
+							.spk_item
+								.photo
+									img(src="img/speaker/tony.jpg")
+								.text
+									.name
+										span.zh 呂柏鋐
+										span.en Tony Lu
+									.tit
+										div Veeam
+										div 台灣區資深技術顧問
+							
+							//- .spk_item
+								.photo
+									img(src="img/speaker/ivy.jpg")
+									.job 主持人
+								.text
+									.name
+										span.zh 柯嘉妤
+										span.en Ivy Ko
+									.tit
+										div Veeam Software
+										div 台灣區通路暨策略聯盟副總
+			//- section.sc_cta
+				.cta
+					a.bttn.btn_main(href=varObj.sign, target="_blank")
+						.bttn_inwrap
+							span 可以參加，
+							b 立即報名
+					a.bttn.btn_sup(href=varObj.sign, target="_blank")
+						.bttn_inwrap
+							span 無法參加，
+							b 請寄送簡報給我
+
+
+			section.sc_gift
+				.pattern.p2
+				.container
+					.sec_cnts
+						.sc_title
+							.tit 活動好禮
+						.items.d-block.d-md-flex
+							
+							.gft_item.gft2
+								.wrapper
+									.categ
+										| 全程勤學禮
+										span.c 3名
+									.text
+										.name
+											div Veeam露營不鏽鋼杯四件組
+										.detail 凡全程參與議程，並於線上聊天室中提出議程相關問題，即可獲得勤學禮抽獎資格。
+									.pic
+										img(src="img/gift/cup.jpg")
+									.tip 高達15W的無線快速充電優化，可方便地為您的 iPhone、AirPods、 Apple Watch 充電。
+							
+							.gft_item.gft4
+								.wrapper
+									.categ
+										| 問卷填寫禮
+										span.c 3名
+									.text
+										.name
+											div V12限量超柔軟雲朵靠枕
+										.detail 凡全程參與議程，並完成線上問卷填寫者，即可獲得V12限量超柔軟雲朵抱枕抽獎資格。
+									.pic
+										img(src="img/gift/v12.jpg")
+
+							.gft_item.gft3
+								.wrapper
+									.categ
+										| 幸運抽獎禮
+										span.c 3名
+									.text
+										.name
+											div Veeam高級冰酒石小酌禮盒
+										.detail 凡全程參與議程，並完成填寫問卷，還有機會抽中Veeam限量訂製的高級Veeam高級冰酒石小酌禮盒。
+									.pic
+										img(src="img/gift/box.jpg")
+									.tip Veeam高級冰酒石小酌木製禮盒包含高級冰酒石、冰杯、冰酒石夾。
+							
+		.g_footer
+			//- .container
+				.logo_items
+					.logo
+						a(href="https://www.veeam.com/tc" target="_blank")
+							img(src="img/logo_veeam.svg", alt="veeam")
+					.logo
+						a(href="https://www.cisco.com/c/zh_tw/index.html" target="_blank") 
+							img(src="img/logo_cisco.svg", alt="cisco")
+
+			.sc_company
+				.pattern.p1
+				.container
+					.parag_wrap
+						.company_tit
+							.ti about
+							.nam
+								img.img-fluid(src="img/logo_veeam_white.svg")
+						.parag
+							| Veeam 是提供現代化資料保護的備份、復原、和資料管理解決方案的市場領導者。Veeam為雲端、虛擬、實體、軟體即服務(SaaS)和Kubernetes環境提供單一平台。
+							br
+							| Veeam在全球擁有超過400,000家客戶，其中包括82％的財富500強企業和69％的全球2,000強企業。Veeam的全球生態系涵蓋超過 70,000 個通路合作夥伴，並在超過30個國家設有辦公室。
+							br
+							| 若需了解詳情，請造訪 <a href='https://www.veeam.com/tc' target='_blank'>https://www.veeam.com/tc</a>，或上 Twitter 關注 Veeam：<a href='https://twitter.com/Veeam' target='_blank'>@veeam</a>
+			//- .sc_logos
+				//- .pattern.p1
+				.container
+					.logos
+						a.item(href="https://www.veeam.com/tc-tw" target="_blank")
+							img(src="img/footer_veeam.png" alt="veeam")
+		//- .ag_modals
+			.ag_modal.modal.fade(id='md_'+i, tabindex='-1' role='dialog' aria-labelledby='modal_item' aria-hidden='true')
+				.modal-dialog.modal-lg.modal-dialog-centered(role='document')
+					.modal-content
+						.modal-header
+							button.close(type='button' data-dismiss='modal' aria-label='Close')
+								span(aria-hidden='true') ×
+						.modal-body
+
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T' crossorigin='anonymous')
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script.
+			AOS.init({
+				once: true
+			});
+
+		//- script.
+			function animate(obj, initVal, lastVal, duration) {
+				let startTime = null;
+				// 取得現在時間戳 (currentTime)
+				let currentTime = Date.now();
+				// 傳送現在時間至step function
+				const step = (currentTime) => {
+					// 指派開始時間
+					if (!startTime) {
+						startTime = currentTime ;
+					}
+
+					// 計算顯示數值
+					const progress = Math.min((currentTime - startTime) / duration, 1);
+
+					// 用progress計算顯示內容
+					obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+					// 檢查是否是最後的數值
+					if (progress < 1) {
+						window.requestAnimationFrame(step);
+					}
+					else{
+						window.cancelAnimationFrame(window.requestAnimationFrame(step));
+					}
+				};
+
+				// 開始顯示動畫
+				window.requestAnimationFrame(step);
+			}
+
+			// 取得要進行數字動畫的網頁元素 (利用ID搜尋)
+			let text1 = document.getElementById('ct1');
+			let text2 = document.getElementById('ct2');
+			let text3 = document.getElementById('ct3');
+			
+		script.
+			$(function(){
+
+				let scrollVal = $(this).scrollTop();
+
+				//- $('[data-toggle="tooltip"]').tooltip();
+
+				let checkScroll = ()=>{
+					if(scrollVal>($(window).height()/6)) {
+						$('.fix_aside').addClass('is_active');
+						$('.g_header').addClass('is_active');
+					}else{
+						$('.fix_aside').removeClass('is_active');
+						$('.g_header').removeClass('is_active');
+					}
+				};
+
+				checkScroll();
+
+				let counterTri = true;
+
+				$(window).scroll(()=>{
+					scrollVal = $(this).scrollTop()
+					checkScroll();
+
+					//- if(scrollVal >= $('#aos2').offset().top - ($(window).innerHeight()/2) && counterTri) {
+					//- 	counterTri = false;
+					//- 	$('.counter').addClass('counterTriAnied');
+					//- 	//- console.log(counterTri)
+					//- 	setTimeout(() =>  {
+					//- 		animate(text1, 0, 92, 2000);
+					//- 	}, 200)
+					//- 	setTimeout(() =>  {
+					//- 		animate(text2, 0, 85, 2000);
+					//- 	}, 600)
+					//- 	setTimeout(() =>  {
+					//- 		animate(text3, 0, 81, 2000);
+					//- 	}, 1000)
+					//- }
+				})
+
+				var $scrollTopNow = 0,
+					$body = $("html, body");
+
+				function bScroll(tarTop, aniDuration) {
+					$body.animate({
+						scrollTop: tarTop
+					}, aniDuration);
+				}
+
+				$('.js_page_scroll').on('click', function(e) {
+					$scrollTopNow = $('html, body').scrollTop();
+					var $tar = $(this),
+						$tarTop = $($tar.attr('href')).offset().top-60,
+						$aniDuration = Math.abs($tarTop-$scrollTopNow)*.6 > 1200 ? 1200 : (Math.abs($tarTop-$scrollTopNow)*.6);
+					bScroll($tarTop, $aniDuration);
+					e.preventDefault();
+					
+					if($(window).width()<=768){
+						$('.nav_area').collapse('hide');
+						console.log($tarTop, $aniDuration)
+					}
+				});
+
+				//- $('.modal_open').on('click', ()=>{
+				//- 	stopVideo();
+				//- })
+
+				//- $('.ag_modal').on('hidden.bs.modal', function (e) {
+				//- 	$('.youtube-video').each(function(){
+				//- 		this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+				//- 	})
+				//- })
+
+
+			})
