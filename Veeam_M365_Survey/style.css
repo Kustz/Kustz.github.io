@@ -86,7 +86,7 @@ body {
 
 .gift_wrap {
   border-radius: 10px;
-  max-width: 1080px;
+  max-width: 1020px;
   margin: 0 auto;
   padding: 30px;
   padding-right: 0;
@@ -103,17 +103,17 @@ body {
 }
 .gift_wrap .pic {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 400px;
-          flex: 0 1 400px;
+      -ms-flex: 0 1 440px;
+          flex: 0 1 440px;
   margin: 0 auto;
 }
 .gift_wrap .pic img {
-  width: 400px;
+  width: 100%;
 }
 .gift_wrap .gift {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(100% - 400px);
-          flex: 0 1 calc(100% - 400px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   overflow: hidden;
   font-size: 1.2em;
   overflow: hidden;
