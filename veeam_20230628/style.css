@@ -724,7 +724,8 @@ a {
     margin-left: 10px;
   }
   .g_main .sc_title {
-    font-size: 1.875em;
+    font-size: 1.75em;
+    margin-bottom: 30px;
   }
   .sc_intro {
     padding-top: 40px;
@@ -750,12 +751,9 @@ a {
     margin-bottom: 0;
   }
   .sc_part1 .item .pic {
-    width: 60%;
+    width: 80%;
     padding: 10% 10%;
     margin: 0 auto;
-  }
-  .sc_part1 .item .pic .icon {
-    width: 60%;
   }
   .sc_part1 .item .txt {
     margin-top: 15px;
@@ -769,6 +767,9 @@ a {
   }
   .sc_speaker .spk_item .photo {
     max-width: 240px;
+  }
+  .sc_speaker .spk_item .text {
+    font-size: 1.2em;
   }
   .sc_speaker .spk_item:nth-child(2)::before {
     top: 35px;
