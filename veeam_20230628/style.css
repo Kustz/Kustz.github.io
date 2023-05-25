@@ -707,6 +707,9 @@ a {
   }
 }
 @media (max-width: 767px) {
+  :root {
+    --sc_pdd: 40px;
+  }
   html {
     font-size: 16px;
   }
@@ -736,9 +739,6 @@ a {
   }
   .sc_intro .pic {
     max-width: 100%;
-  }
-  .sc_part1 {
-    padding-bottom: 0;
   }
   .sc_part1 .sc_title strong {
     display: block;
