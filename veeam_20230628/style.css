@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Tahoma", "Ubuntu", "Noto Sans TC", sans-serif;
+  font-family: "Tahoma", "Noto Sans TC", sans-serif;
   overflow-x: hidden;
   color: #031624;
 }
@@ -196,11 +196,12 @@ a {
   font-size: 1vw;
 }
 .key_visual .kv__title .t1 {
-  color: #fff;
   font-size: min(4.4em, 128px);
   line-height: 1.3;
+  color: #004550;
+}
+.key_visual .kv__title .t1 b {
   font-weight: 700;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
 }
 .key_visual .kv__title .t2 {
   margin-top: 1.5vw;
@@ -300,7 +301,7 @@ a {
 .sc_part1 .item .pic {
   position: relative;
   padding: 25% 10%;
-  background: url(img/icons/dots.png) center/contain no-repeat;
+  background: url(img/icons/dots2.png) center/contain no-repeat;
 }
 .sc_part1 .item .pic .icon {
   width: 40%;
