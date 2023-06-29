@@ -1006,6 +1006,9 @@ a {
   .gft_item .name {
     font-size: 1.2em;
   }
+  .gft_item .name span {
+    display: block;
+  }
   .gft_item:last-child {
     margin-bottom: 0;
   }
