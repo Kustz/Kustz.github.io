@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 896 896">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_30);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+    <linearGradient id="_未命名漸層_30" data-name="未命名漸層 30" x1="-339.33" y1="3599.7" x2="245.39" y2="3726.66" gradientTransform="translate(-621.43 3921.85) rotate(20.34) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#21cfde" stop-opacity="0"/>
+      <stop offset=".35" stop-color="#21cfde" stop-opacity="0"/>
+      <stop offset=".49" stop-color="#21cfde" stop-opacity=".04"/>
+      <stop offset=".6" stop-color="#21cfde" stop-opacity=".1"/>
+      <stop offset=".68" stop-color="#21cfde" stop-opacity=".17"/>
+      <stop offset=".75" stop-color="#21cfde" stop-opacity=".28"/>
+      <stop offset=".82" stop-color="#21cfde" stop-opacity=".4"/>
+      <stop offset=".88" stop-color="#21cfde" stop-opacity=".55"/>
+      <stop offset=".93" stop-color="#21cfde" stop-opacity=".72"/>
+      <stop offset=".98" stop-color="#21cfde" stop-opacity=".91"/>
+      <stop offset="1" stop-color="#21cfde"/>
+    </linearGradient>
+  </defs>
+  <g id="_圖層_2-2" data-name="圖層 2">
+    <g>
+      <rect class="cls-2" width="896" height="896"/>
+      <circle class="cls-1" cx="448" cy="448" r="441.14" transform="translate(-185.57 448) rotate(-45)"/>
+    </g>
+  </g>
+</svg>
