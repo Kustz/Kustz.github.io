@@ -23,7 +23,7 @@ body {
   position: absolute;
 }
 .full_wrap .bg .bgcnt.bc1 {
-  left: 0;
+  right: 0;
   top: 0;
   z-index: 5;
   width: 100%;
@@ -39,7 +39,7 @@ body {
   background: url("img/SVG/bgcnt2.svg") right center/cover no-repeat;
 }
 .full_wrap .bg .bgcnt.bc3 {
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 2;
   width: 100%;
@@ -75,7 +75,7 @@ body {
   font-size: 1.675em;
   font-weight: 500;
   line-height: 1;
-  background: linear-gradient(120deg, #f4e891, #00b336 20%, #005f4b, #93ea20, #06fed1) 0 0/200% 100%;
+  background: linear-gradient(120deg, #fff, #4ddb87, #00d15f, #4ddb87, #fff) 0 0/200% 100%;
   color: #fff;
   font-family: "Ubuntu", "Noto Sans TC", sans-serif;
   -webkit-transition: background 300ms;
@@ -96,7 +96,7 @@ body {
   letter-spacing: 0.25em;
 }
 .cta .bttn:active {
-  background: #00655c;
+  background: #3d019e;
 }
 
 .g_kv {
@@ -105,31 +105,31 @@ body {
   background: linear-gradient(rgba(61, 1, 158, 0) 50%, rgba(61, 1, 158, 0.5));
   z-index: 2;
 }
-.g_kv .kv_desktop {
+.g_kv .kv {
   position: relative;
   height: 100vh;
 }
-.g_kv .kv_desktop img {
+.g_kv .kv img {
   display: block;
   max-width: 100%;
 }
-.g_kv .kv_desktop .kvlogo,
-.g_kv .kv_desktop .kvtit,
-.g_kv .kv_desktop .kvpic {
+.g_kv .kv .kvlogo,
+.g_kv .kv .kvtit,
+.g_kv .kv .kvpic {
   position: absolute;
   display: block;
 }
-.g_kv .kv_desktop .kvlogo {
+.g_kv .kv .kvlogo {
   left: 8.3333333333%;
   top: 9.2592592593%;
   width: 16.6666666667%;
 }
-.g_kv .kv_desktop .kvtit {
+.g_kv .kv .kvtit {
   left: 10%;
   top: 28%;
   width: 60%;
 }
-.g_kv .kv_desktop .kvpic {
+.g_kv .kv .kvpic {
   right: 5%;
   width: 36%;
   top: 50%;
@@ -242,7 +242,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #00655c;
+  background: linear-gradient(135deg, #4ddb87 15%, #00d15f 15%, #00d15f 85%, #4ddb87 85%);
   color: #fff;
   border-radius: 6px;
 }
@@ -472,17 +472,22 @@ body {
 
 @media (max-width: 767px) {
   .full_wrap .bg .bgcnt.bc1 {
-    width: 125%;
-    padding-top: 100%;
+    right: -30%;
+    width: 200%;
+    padding-top: 160%;
   }
   .full_wrap .bg .bgcnt.bc2 {
-    top: 52vw;
-    width: 100%;
-    padding-top: 100%;
+    top: 60vw;
+    width: 150%;
+    padding-top: 150%;
   }
   .full_wrap .bg .bgcnt.bc3 {
-    width: 120%;
-    padding-top: 120%;
+    width: 150%;
+    padding-top: 150%;
+  }
+  .g_kv {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(61, 1, 158, 0)), to(rgba(61, 1, 158, 0.7)));
+    background: linear-gradient(rgba(61, 1, 158, 0) 50%, rgba(61, 1, 158, 0.7));
   }
   .g_kv .kv_desktop {
     height: 60vh;
@@ -519,8 +524,8 @@ body {
     background: url("img/SVG/bgcnt3.svg") right bottom no-repeat;
   }
   .main_content {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 1, 158, 0.5)), color-stop(25%, rgba(61, 1, 158, 0.8)), color-stop(40%, rgba(61, 1, 158, 0.8)));
-    background: linear-gradient(rgba(61, 1, 158, 0.5), rgba(61, 1, 158, 0.8) 25%, rgba(61, 1, 158, 0.8) 40%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 1, 158, 0.7)), color-stop(20%, rgba(61, 1, 158, 0.9)), color-stop(40%, rgba(61, 1, 158, 0.9)));
+    background: linear-gradient(rgba(61, 1, 158, 0.7), rgba(61, 1, 158, 0.9) 20%, rgba(61, 1, 158, 0.9) 40%);
   }
   .intro_wrap {
     padding: 40px 30px 0;
@@ -546,9 +551,9 @@ body {
     padding-left: 1rem;
   }
   .gift_wrap .pic {
-    padding-left: 30px;
+    padding-left: 60px;
     padding-top: 30px;
-    padding-right: 0;
+    padding-right: 20px;
   }
   .gift_wrap .pic img {
     width: 100%;

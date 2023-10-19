@@ -352,8 +352,8 @@ a {
 }
 .key_visual .kv__logo {
   position: absolute;
-  left: 5.5%;
-  top: 0;
+  left: 5.5vw;
+  top: 5vw;
   z-index: 10;
   width: 13.5%;
 }
@@ -1633,7 +1633,7 @@ a {
   vertical-align: middle;
 }
 .line_wrap .logo img {
-  height: 40px;
+  height: 50px;
 }
 .line_wrap .text {
   margin-left: 1rem;
