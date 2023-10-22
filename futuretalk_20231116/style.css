@@ -89,6 +89,7 @@ body {
   top: 0;
   z-index: 98;
   width: 100%;
+  background-color: rgba(2, 0, 109, 0);
 }
 .g_header.is_active {
   position: fixed;
@@ -277,7 +278,7 @@ body {
 }
 .g_kv .desktop .content {
   position: relative;
-  height: 56.25vw;
+  height: min(100vh, 56.26vw);
   background: url("img/mainbg.png") center/cover;
 }
 .g_kv .desktop .kv,
@@ -309,6 +310,13 @@ body {
 .g_kv .desktop .main {
   z-index: 1;
   background-image: url("img/kv_z5.png");
+}
+.g_kv .desktop .logo {
+  position: absolute;
+  width: 27.6041666667%;
+  left: 6.6666666667%;
+  bottom: 4.1666666667vh;
+  z-index: 2;
 }
 .g_kv .desktop .timer {
   position: absolute;
@@ -930,7 +938,6 @@ body {
   margin: 0 auto;
   max-width: 212px;
   background: #e4f5ff url("img/ui/speech.svg") center/120px no-repeat;
-  cursor: pointer;
   overflow: hidden;
 }
 .spk_item .pic img {
