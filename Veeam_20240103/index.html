@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="深入了解 Veeam Data Platform V12.1 的資訊安全機制">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.digitimes.com.tw/seminar/Veeam_20240103/">
+    <meta property="og:image" content="https://www.digitimes.com.tw/seminar/Veeam_20240103/img/webtitle.jpg">
+    <meta property="og:site_name" content="DIGITIMES">
+    <meta property="og:description" content="全球排名第一的資料保護和勒索軟體復原供應商Veeam於2024年1月3日(三) 舉辦「深入了解 Veeam Data Platform V12.1 的資訊安全機制」線上研討會，以強大的資料韌性，協助您的業務維持正常營運，抵抗勒索軟體攻擊。">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]
+    
+    -->
+    <title>深入了解 Veeam Data Platform V12.1 的資訊安全機制</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&amp;family=Source+Sans+3:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="style.css?v=1130730">
+  </head>
+  <body>
+    <div class="g_fixed fix_aside"><a class="fx_item is_primary js_page_scroll" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=056AC1206-0" target="_blank">
+        <div class="in_wrap txt"><span>立即報名</span></div></a><a class="fx_item js_page_scroll" href="#top">
+        <div class="in_wrap ic">
+          <div class="ic_top"></div>
+        </div></a></div>
+    <div class="g_first" id="top">
+      <div class="key_visual d-none d-md-block"><img class="kv__logo" src="img/kvlogo.png">
+        <div class="kv__title">
+          <div class="t0" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" data-aos-anchor="#top"><img src="img/kvtit0.png"></div>
+          <div class="t1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" data-aos-anchor="#top"><img src="img/kvtit.png"></div>
+          <div class="kv__date" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900" data-aos-anchor="#top"><img src="img/kvsub.png"></div>
+        </div>
+        <div class="kv__main" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="100"><img class="kv__main__pic" src="img/kvpic.png"></div>
+      </div>
+      <div class="d-block d-md-none"><img class="img-fluid" src="img/mkv.png">
+        <div class="kv__main"><img class="img-fluid" src="img/kvpic.png"></div>
+      </div>
+    </div>
+    <div class="g_main">
+      <section class="sc_part1">
+        <div class="container">
+          <div class="sec_cnts">
+            <div class="sc_title" id="aos2" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+              <div class="tit">Veeam如何確保企業營運的三大方針</div>
+              <div class="tip">Veeam Data Platform 12.1強大的韌性，讓您的業務正常營運</div>
+            </div>
+            <div class="items d-block d-md-flex">
+              <div class="item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-anchor="#aos2">
+                <div class="pic">
+                  <div class="wrap"><img class="icon" src="img/data-security.svg"></div>
+                </div>
+                <div class="txt">
+                  <div class="t">資料安全</div>
+                  <div class="ul">
+                    <div class="li">直接到物件儲存</div>
+                    <div class="li">安全存取</div>
+                    <div class="li">Azure 不可變性</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" data-aos-anchor="#aos2">
+                <div class="pic">
+                  <div class="wrap"><img class="icon" src="img/data-recovery.svg"></div>
+                </div>
+                <div class="txt">
+                  <div class="t">資料恢復</div>
+                  <div class="ul">
+                    <div class="li">快速回應網路攻擊</div>
+                    <div class="li">企業級管理</div>
+                    <div class="li">可靠且優質 RPO 的備援即服務</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item" data-aos="fade-up" data-aos-delay="900" data-aos-duration="800" data-aos-anchor="#aos2">
+                <div class="pic">
+                  <div class="wrap"><img class="icon" src="img/data-freedom.svg"></div>
+                </div>
+                <div class="txt">
+                  <div class="t">資料自主</div>
+                  <div class="ul">
+                    <div class="li">擴展的雲端備份</div>
+                    <div class="li">雲端恢復協作</div>
+                    <div class="li">多雲可見度</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sc_part2">
+        <div class="container">
+          <div class="sec_cnts">
+            <div class="sc_title" id="aos3" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+              <div class="tit">您需要資料韌性的原因</div>
+            </div>
+            <div class="items d-block d-lg-flex">
+              <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" data-aos-anchor="#aos3">
+                <div class="chart ch1" id="chart1" style="--h-stats-chart-value:0">
+                  <div class="num"><b id="chart1num">85</b><span>%</span></div>
+                </div>
+                <div class="txt">的公司在去年遭遇過至少一次勒索軟體攻擊</div>
+              </div>
+              <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" data-aos-anchor="#aos3">
+                <div class="chart ch2" id="chart2" style="--h-stats-chart-value:0">
+                  <div class="num"><b id="chart2num">82</b><span>%</span></div>
+                </div>
+                <div class="txt">的企業在營運中斷後使用手動還原來恢復資料</div>
+              </div>
+              <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900" data-aos-anchor="#aos3">
+                <div class="chart ch3" id="chart3" style="--h-stats-chart-value:0">
+                  <div class="num"><b id="chart3num">25</b><span>%</span></div>
+                </div>
+                <div class="txt">的公司支付了贖金後並未找回其數據</div>
+              </div>
+            </div>
+            <div class="tip" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200" data-aos-anchor="#aos3">
+              <div>**資料來源：<span>《2023 年 Veeam 資料保護報告》</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sc_part3">
+        <div class="container">
+          <div class="sec_cnts d-block d-md-flex">
+            <div class="cnt_point">
+              <div class="sc_title" id="aos4" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+                <div class="tit">議程重點</div>
+              </div>
+              <div class="items d-block d-md-flex">
+                <div class="pit_item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" data-aos-anchor="#aos4">
+                  <div class="pic"><img src="img/pic1.png"></div>
+                  <div class="text">了解勒索軟體攻擊程序</div>
+                </div>
+                <div class="pit_item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" data-aos-anchor="#aos4">
+                  <div class="pic"><img src="img/pic2.png"></div>
+                  <div class="text">備份環境的安全性</div>
+                </div>
+                <div class="pit_item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900" data-aos-anchor="#aos4">
+                  <div class="pic"><img src="img/pic3.png"></div>
+                  <div class="text">威脅檢測與惡意攻擊後的恢復</div>
+                </div>
+              </div>
+            </div>
+            <div class="cnt_speaker" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200" data-aos-anchor="#aos4">
+              <div class="sc_title">
+                <div class="tit">講師</div>
+              </div>
+              <div class="items d-block d-md-flex">
+                <div class="spk_item">
+                  <div class="photo"><img src="img/spk_tony.jpg"></div>
+                  <div class="text">
+                    <div class="name"><span class="zh">呂柏鋐</span><span class="en">Tony Lu</span></div>
+                    <div class="tit">
+                      <div>Veeam </div>
+                      <div>台灣區資深技術顧問</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sc_cta">
+        <div class="cta"><a class="bttn btn_main" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=056AC1206-0" target="_blank">
+            <div class="bttn_inwrap"><span>可以參加，</span><b>立即報名</b></div></a><a class="bttn btn_sup" href="https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=056AC1206-0" target="_blank">
+            <div class="bttn_inwrap"><span>無法參加，</span><b>請寄送簡報給我</b></div></a></div>
+      </section>
+      <section class="sc_gift">
+        <div class="pattern p1"></div>
+        <div class="pattern p2"></div>
+        <div class="container">
+          <div class="sec_cnts">
+            <div class="items d-block d-md-flex">
+              <div class="gft_item gft1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <div class="categ_wrapper">
+                  <div class="categ">幸運抽獎禮<span class="c">3名</span></div>
+                </div>
+                <div class="wrapper">
+                  <div class="text">
+                    <div class="name">
+                      <div>V12限量超柔軟雲朵靠枕</div>
+                    </div>
+                    <div class="detail">凡全程參與議程，並完成填寫問卷，即可獲得V12限量超柔軟雲朵抱枕抽獎資格。</div>
+                  </div>
+                  <div class="pic"><img src="img/gift_v12.png"></div>
+                  <div class="tip">高達15W的無線快速充電優化，可方便地為您的 iPhone、AirPods、 Apple Watch 充電。</div>
+                </div>
+              </div>
+              <div class="gft_item gft2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="categ_wrapper">
+                  <div class="categ">問卷填寫禮<span class="c">前100名</span></div>
+                </div>
+                <div class="wrapper">
+                  <div class="text">
+                    <div class="name"><span>兩大超商二選一</span><span>100元購物金</span></div>
+                    <div class="detail">凡全程參與議程，並完成線上問卷填寫者，即可獲得Veeam精心準備的兩大超商2選一100元購物金，讓Veeam為您的日常生活應援！</div>
+                  </div>
+                  <div class="pic"><img src="img/gift_100.jpg"></div>
+                  <div class="tip">兩大品牌 7-11、全家 擇一使用。選定後須全額度於單一品牌兌換使用</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="g_footer">
+      <div class="sc_company">
+        <div class="container">
+          <div class="parag_wrap">
+            <div class="company_tit">
+              <div class="ti">about</div>
+              <div class="nam"><img class="img-fluid" src="img/Veeam-logo-white-SPOT.png"></div>
+            </div>
+            <div class="parag">Veeam 是全球排名第一的資料保護和勒索軟體復原供應商，透過資料安全、資料復原和資料自由為組織的混合雲提供彈性。Veeam Data Platform為雲端、虛擬、實體、SaaS 和 Kubernetes 環境提供單一管理平台解決方案，讓企業的應用程式和資料受到安全的保護，以便能夠保持營運正常運作。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      	once: true
+      });
+      
+    </script>
+    <script>
+      $(function(){
+      
+      	let scrollVal = $(this).scrollTop();
+      
+      	//- $('[data-toggle="tooltip"]').tooltip();
+      
+      	let checkScroll = ()=>{
+      		if(scrollVal>($(window).height()/6)) {
+      			$('.fix_aside').addClass('is_active');
+      			$('.g_header').addClass('is_active');
+      		}else{
+      			$('.fix_aside').removeClass('is_active');
+      			$('.g_header').removeClass('is_active');
+      		}
+      	};
+      
+      	checkScroll();
+      
+      	let counterTri = true;
+      
+      	$(window).scroll(()=>{
+      		scrollVal = $(this).scrollTop()
+      		checkScroll();
+      
+      		//- if(scrollVal >= $('#aos2').offset().top - ($(window).innerHeight()/2) && counterTri) {
+      		//- 	counterTri = false;
+      		//- 	$('.counter').addClass('counterTriAnied');
+      		//- 	//- console.log(counterTri)
+      		//- 	setTimeout(() =>  {
+      		//- 		animate(text1, 0, 92, 2000);
+      		//- 	}, 200)
+      		//- 	setTimeout(() =>  {
+      		//- 		animate(text2, 0, 85, 2000);
+      		//- 	}, 600)
+      		//- 	setTimeout(() =>  {
+      		//- 		animate(text3, 0, 81, 2000);
+      		//- 	}, 1000)
+      		//- }
+      	})
+      
+      	var $scrollTopNow = 0,
+      		$body = $("html, body");
+      
+      	function bScroll(tarTop, aniDuration) {
+      		$body.animate({
+      			scrollTop: tarTop
+      		}, aniDuration);
+      	}
+      
+      	$('.js_page_scroll').on('click', function(e) {
+      		$scrollTopNow = $('html, body').scrollTop();
+      		var $tar = $(this),
+      			$tarTop = $($tar.attr('href')).offset().top-60,
+      			$aniDuration = Math.abs($tarTop-$scrollTopNow)*.6 > 1200 ? 1200 : (Math.abs($tarTop-$scrollTopNow)*.6);
+      		bScroll($tarTop, $aniDuration);
+      		e.preventDefault();
+      		
+      		if($(window).width()<=768){
+      			$('.nav_area').collapse('hide');
+      			console.log($tarTop, $aniDuration)
+      		}
+      	});
+      
+      	var chart1 = document.getElementById("chart1"),
+      		chart2 = document.getElementById("chart2"),
+      		chart3 = document.getElementById("chart3"),
+      		chart1num = document.getElementById("chart1num"),
+      		chart2num = document.getElementById("chart2num"),
+      		chart3num = document.getElementById("chart3num");
+      
+      	var a = 0, b = 0, c = 0;
+      
+      	function step1() {
+      		a+=1;
+      		chart1.style = "--h-stats-chart-value:" + a;
+      		chart1num.innerHTML = "" + a;
+      		if (a < 85) {
+      			//- console.log(a);
+      			window.requestAnimationFrame(step1);
+      		}
+      	}
+      	function step2() {
+      		b+=1;
+      		chart2.style = "--h-stats-chart-value:" + b;
+      		chart2num.innerHTML = "" + b;
+      		if (b < 82) {
+      			//- console.log(b);
+      			window.requestAnimationFrame(step2);
+      		}
+      	}
+      	function step3() {
+      		c+=1;
+      		chart3.style = "--h-stats-chart-value:" + c;
+      		chart3num.innerHTML = "" + c;
+      		if (c < 25) {
+      			//- console.log(c);
+      			window.requestAnimationFrame(step3);
+      		}
+      	}
+      	window.requestAnimationFrame(step1);
+      	window.requestAnimationFrame(step2);
+      	window.requestAnimationFrame(step3);
+      
+      	//- $('.modal_open').on('click', ()=>{
+      	//- 	stopVideo();
+      	//- })
+      
+      	//- $('.ag_modal').on('hidden.bs.modal', function (e) {
+      	//- 	$('.youtube-video').each(function(){
+      	//- 		this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+      	//- 	})
+      	//- })
+      
+      
+      })
+    </script>
+  </body>
+</html>
