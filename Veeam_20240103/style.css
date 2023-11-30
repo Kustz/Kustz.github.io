@@ -402,23 +402,31 @@ a {
 }
 
 .sc_part3 {
-  position: relative;
-  padding-top: var(--sc_pdd);
-  padding-bottom: calc(1.25 * var(--sc_pdd));
-  overflow: hidden;
+  background: radial-gradient(circle, var(--v_gree2) 2px, transparent 3px) 0 0 repeat;
+  background-size: 24px 24px;
+}
+.sc_part3 .container {
+  padding: 0;
 }
 .sc_part3 .sc_title {
   margin-bottom: 1.5rem;
+}
+.sc_part3 .sec_cnts .cnt_point,
+.sc_part3 .sec_cnts .cnt_speaker {
+  padding: calc(0.5 * var(--sc_pdd)) 20px;
 }
 .sc_part3 .sec_cnts .cnt_point {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 75%;
           flex: 0 1 75%;
+  background-color: #fff;
 }
 .sc_part3 .sec_cnts .cnt_speaker {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--v_pur)), to(var(--v_blu2)));
+  background: linear-gradient(0deg, var(--v_pur), var(--v_blu2));
 }
 
 .cnt_point .pic {
@@ -454,6 +462,8 @@ a {
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 .cnt_speaker .spk_item img {
   max-width: 100%;
@@ -485,16 +495,17 @@ a {
 }
 .cnt_speaker .spk_item .name {
   line-height: 1;
-  color: var(--v_blu1);
-  font-size: 1.3em;
+  color: var(--v_yel);
+  font-size: 1.25em;
   font-weight: 700;
 }
 .cnt_speaker .spk_item .name .en {
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 .cnt_speaker .spk_item .tit {
-  margin-top: 0.5em;
+  margin-top: 6px;
   line-height: 1.3;
+  color: #fff;
 }
 
 .sc_cta {
@@ -554,20 +565,20 @@ a {
   position: absolute;
 }
 .sc_gift .pattern.p1 {
-  left: 10%;
+  left: 15%;
   bottom: 0;
   width: 20%;
   height: 10vw;
-  background: radial-gradient(circle, var(--v_gree2) 2px, transparent 3px) -3px -3px repeat;
-  background-size: 27px 27px;
+  background: radial-gradient(circle, var(--v_gree2) 2px, transparent 3px) 0 0 repeat;
+  background-size: 24px 24px;
 }
 .sc_gift .pattern.p2 {
-  right: 0;
+  right: 15%;
   top: 5px;
-  width: 20%;
-  height: 150px;
-  background: radial-gradient(circle, var(--v_gree1) 2px, transparent 3px) -3px -3px repeat;
-  background-size: 27px 27px;
+  width: 10vw;
+  height: 10vw;
+  background: radial-gradient(circle, var(--v_blu2) 2px, transparent 3px) 0 0 repeat;
+  background-size: 24px 24px;
 }
 .sc_gift .container {
   position: relative;
@@ -703,7 +714,7 @@ a {
 }
 
 .g_footer {
-  background: var(--v_gree3) url("img/security_bg.png") right center/cover no-repeat;
+  background: url("img/security_bg.png") right center/cover no-repeat, linear-gradient(45deg, #00D15F 50%, #007F49);
 }
 .g_footer .sc_company {
   position: relative;
@@ -722,12 +733,12 @@ a {
   padding: 30px 50px 40px;
   width: 80%;
   margin: 0 auto;
-  background-color: var(--v_gree3);
 }
 .g_footer .sc_company .parag_wrap .parag {
   position: relative;
   z-index: 2;
   color: #fff;
+  line-height: 1.8;
 }
 .g_footer .sc_company .parag_wrap .parag a {
   color: var(--v_blu2);
@@ -750,7 +761,7 @@ a {
   border-radius: 20px;
   padding: 4px 12px;
   border: 1px solid currentColor;
-  color: var(--v_gree2);
+  color: #fff;
 }
 .g_footer .sc_company .company_tit .nam {
   margin-left: 6px;
@@ -808,6 +819,17 @@ a {
   }
   .sc_part2 .item {
     margin-bottom: 3rem;
+  }
+  .sc_part3 {
+    padding: 20px 20px 40px;
+    background: #fff;
+  }
+  .sc_part3 .sec_cnts .cnt_point {
+    padding: 20px 0;
+  }
+  .sc_part3 .sec_cnts .cnt_speaker {
+    padding: 40px 0;
+    border-radius: 30px;
   }
   .cnt_point .pic {
     text-align: center;
