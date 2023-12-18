@@ -304,7 +304,7 @@ body {
 }
 
 .faq_rows {
-  margin: 1.5rem auto 0;
+  margin: 2rem auto 0;
   max-width: 40em;
   width: 100%;
 }
@@ -364,6 +364,16 @@ body {
 .faq__content .ct__other a img {
   margin-left: 4px;
   width: 0.875em;
+}
+
+.faq__btn {
+  margin-top: 2rem;
+}
+.faq__btn .primary_btn {
+  margin: 0 auto;
+  width: 8em;
+  padding: 0.75em 1em;
+  font-size: 1.25rem;
 }
 
 .video_rows {
