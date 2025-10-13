@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.57 34.57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #183464;
+      }
+
+      .cls-2 {
+        fill: #1e92cd;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #231815;
+        stroke-miterlimit: 10;
+        stroke-width: .93px;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g>
+      <g>
+        <rect class="cls-1" x="24.05" y="13.32" width="3.9" height="15.07" rx=".29" ry=".29"/>
+        <rect class="cls-1" x="7.38" y="21.54" width="3.9" height="6.85" rx=".29" ry=".29" transform="translate(18.67 49.93) rotate(180)"/>
+        <rect class="cls-1" x="12.92" y="19.28" width="3.9" height="9.12" rx=".29" ry=".29" transform="translate(29.73 47.67) rotate(180)"/>
+        <rect class="cls-1" x="18.49" y="15.82" width="3.9" height="12.57" rx=".29" ry=".29" transform="translate(40.88 44.21) rotate(180)"/>
+        <path class="cls-2" d="M21.67,6.88l6.15-.71c.15-.02.21.09.13.21l-3.45,5.14c-.11.16-.36.23-.42.12l-.87-1.43L6.75,19.25c-.15.08-.23-.04-.09-.14l15.54-10.54-.83-1.36c-.07-.11.11-.3.3-.32Z"/>
+      </g>
+      <rect class="cls-3" x=".47" y=".47" width="33.63" height="33.63" rx="8.41" ry="8.41"/>
+    </g>
+  </g>
+</svg>
