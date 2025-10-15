@@ -361,6 +361,21 @@ body {
 				text-align: center;
 }
 
+.list_parag {
+				position: relative;
+				text-indent: 1em;
+				line-height: 1.5;
+}
+.list_parag::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0.8em;
+				width: 0.5em;
+				height: 1px;
+				background-color: var(--main2);
+}
+
 .bottom_wrap {
 				position: relative;
 				margin-top: 2em;
@@ -701,21 +716,6 @@ body {
 				width: 16em;
 				-webkit-transform: translate(-50%, -50%);
 				        transform: translate(-50%, -50%);
-}
-
-.list_parag {
-				position: relative;
-				text-indent: 1em;
-				line-height: 1.5;
-}
-.list_parag::before {
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 0.8em;
-				width: 0.5em;
-				height: 1px;
-				background-color: var(--pageColor);
 }
 
 #EN_style {

@@ -361,6 +361,21 @@ body {
 				text-align: center;
 }
 
+.list_parag {
+				position: relative;
+				text-indent: 1em;
+				line-height: 1.5;
+}
+.list_parag::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0.8em;
+				width: 0.5em;
+				height: 1px;
+				background-color: var(--main2);
+}
+
 .bottom_wrap {
 				position: relative;
 				margin-top: 2em;
@@ -643,21 +658,6 @@ body {
 }
 .g_headbanner .banner_bg {
 				background: url("../img/bg/bg_04_Scenic_Spot_Management.webp") center 30%/cover;
-}
-
-.list_parag {
-				position: relative;
-				text-indent: 1em;
-				line-height: 1.5;
-}
-.list_parag::before {
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 0.8em;
-				width: 0.5em;
-				height: 1px;
-				background-color: var(--pageColor);
 }
 
 .article_container .bdb_style {

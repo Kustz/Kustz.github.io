@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
-				--pageColor: #38b2d6;
-				--secondTitle: #00afec;
+				--pageColor: #01383c;
+				--secondTitle: #359da2;
 }
 
 :root {
@@ -361,6 +361,21 @@ body {
 				text-align: center;
 }
 
+.list_parag {
+				position: relative;
+				text-indent: 1em;
+				line-height: 1.5;
+}
+.list_parag::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0.8em;
+				width: 0.5em;
+				height: 1px;
+				background-color: var(--main2);
+}
+
 .bottom_wrap {
 				position: relative;
 				margin-top: 2em;
@@ -640,14 +655,12 @@ body {
 }
 .g_headbanner {
 				position: relative;
+				height: 20vh;
 }
 .g_headbanner .banner_bg {
-				background: url("../img/bg/bg_Outlook.webp") center 30%/cover;
+				background: url("../img/bg/bg_Outlook.webp") center 0%/cover;
 }
 
-.article_container h3 {
-				color: var(--secondTitle);
-}
 .article_container h4 {
 				font-size: 1.25em;
 				color: var(--secondTitle);
