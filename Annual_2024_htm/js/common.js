@@ -1,5 +1,10 @@
 AOS.init({
-	once: true
+	once: true,
+	duration: 600,
+	disable: function() {
+		var maxWidth = 768;
+		return window.innerWidth < maxWidth;
+	}
 });
 
 $(function(){
@@ -15,11 +20,11 @@ $(function(){
 	let scrollVal = $(this).scrollTop();
 
 	let checkScroll = ()=>{
-		if(scrollVal>($(window).height()/8)) {
-			$('.g_header').addClass('is_shrink');
-		}else{
-			$('.g_header').removeClass('is_shrink');
-		}
+		// if(scrollVal>($(window).height()/8)) {
+		// 	$('.g_header').addClass('is_shrink');
+		// }else{
+		// 	$('.g_header').removeClass('is_shrink');
+		// }
 		if(scrollVal>($(window).height())) {
 			$('.fixed_btn').addClass('is_show');
 		}else{
@@ -58,5 +63,12 @@ $(function(){
 		bScroll(0, 100);
 		e.preventDefault();
 	});
+
+	$('.aside_trigger').on('click', function(e) {
+		$('.g_aside').addClass('m_show');
+	})
+	$('.aside_close').on('click', function(e) {
+		$('.g_aside').removeClass('m_show');
+	})
 
 })

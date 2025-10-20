@@ -337,6 +337,38 @@ body {
 				background: linear-gradient(180deg, #fff, transparent);
 }
 
+.full_image_w_another {
+				position: relative;
+				margin-top: 2em;
+				padding-top: 2em;
+}
+.full_image_w_another .full,
+.full_image_w_another .another {
+				border-radius: 0.4em;
+				overflow: hidden;
+				margin: 0;
+}
+.full_image_w_another .full {
+				position: relative;
+}
+.full_image_w_another .full .white_gradient {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(transparent));
+				background: linear-gradient(180deg, #fff, transparent);
+}
+.full_image_w_another .another {
+				position: absolute;
+				left: 5%;
+				top: 0;
+				width: 40%;
+				z-index: 1;
+				overflow: hidden;
+				border: 1px solid #fff;
+}
+
 .illustrate_w_dialog {
 				position: relative;
 				margin-bottom: 1.5em;
@@ -538,12 +570,39 @@ body {
 				}
 }
 @media (max-width: 767px) {
+				body {
+								padding-left: 0;
+								padding-top: 80px;
+				}
 				.container {
 								padding-left: 30px;
 								padding-right: 30px;
 				}
 				.g_headbanner {
 								height: 20vh;
+				}
+				.g_headbanner .d-flex.justify-content-between.align-items-center {
+								-webkit-box-orient: vertical;
+								-webkit-box-direction: normal;
+								    -ms-flex-direction: column;
+								        flex-direction: column;
+				}
+				.g_headbanner .page_title {
+								font-size: 2rem;
+								text-align: center;
+				}
+				.g_headbanner .page_title .en {
+								font-size: 0.625em;
+								margin-top: 0;
+				}
+				.g_headbanner .sub_title {
+								margin-top: 10px;
+								font-size: 2.25rem;
+								line-height: 1;
+				}
+				.g_headbanner .sub_title .en {
+								font-size: 1.625rem;
+								text-align: center;
 				}
 				.main__top {
 								padding-bottom: 0;
@@ -561,7 +620,8 @@ body {
 								        align-items: flex-end;
 				}
 				.function_row .crumb_cpns {
-								margin-top: 2em;
+								margin-top: 1em;
+								margin-bottom: 1em;
 								-webkit-box-ordinal-group: 3;
 								    -ms-flex-order: 2;
 								        order: 2;
@@ -669,18 +729,52 @@ body {
 				line-height: 1.5;
 }
 
-.markting_taiwan_part + .markting_taiwan_part {
-				margin-top: 2em;
+.markting_taiwan_part .area_tit,
+.promote_actives_part .area_tit {
+				margin-bottom: 1rem;
 }
-.markting_taiwan_part .area_tit {
-				margin-bottom: 0.5rem;
-}
-.markting_taiwan_part .area_tit span {
+.markting_taiwan_part .area_tit span,
+.promote_actives_part .area_tit span {
 				display: inline-block;
 				background-color: var(--secondTitle);
 				color: #fff;
 				padding: 0.5rem 1rem;
 				border-radius: 3em;
+}
+.markting_taiwan_part .area_name,
+.promote_actives_part .area_name {
+				margin-bottom: 0.5em;
+}
+.markting_taiwan_part .area_para,
+.promote_actives_part .area_para {
+				line-height: 1.5;
+				margin-bottom: 1em;
+}
+.markting_taiwan_part .area_para .unit,
+.promote_actives_part .area_para .unit {
+				padding: 0.25em 0;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				gap: 0.5em;
+}
+.markting_taiwan_part .area_para b,
+.promote_actives_part .area_para b {
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 2.5em;
+				        flex: 0 0 2.5em;
+				color: var(--pageColor);
+				display: inline-block;
+				text-align: right;
+}
+.markting_taiwan_part .area_para span,
+.promote_actives_part .area_para span {
+				line-height: 1.3;
+				padding-right: 0.5em;
+}
+
+.markting_taiwan_part + .markting_taiwan_part {
+				margin-top: 2em;
 }
 .markting_taiwan_part .area_items {
 				display: -webkit-box;
@@ -694,9 +788,6 @@ body {
 				    -ms-flex: 0 0 50%;
 				        flex: 0 0 50%;
 }
-.markting_taiwan_part .area_name {
-				margin-bottom: 0.5rem;
-}
 .markting_taiwan_part .area_name span {
 				display: inline-block;
 				border: 1px solid var(--secondTitle);
@@ -704,23 +795,7 @@ body {
 				padding: 0.5rem 1rem;
 				border-radius: 3em;
 }
-.markting_taiwan_part .area_para {
-				padding-left: 1em;
-				padding-right: 1em;
-				line-height: 1.5;
-				margin-bottom: 1em;
-}
 
-.promote_actives_part .area_tit {
-				margin-bottom: 1rem;
-}
-.promote_actives_part .area_tit span {
-				display: inline-block;
-				background-color: var(--secondTitle);
-				color: #fff;
-				padding: 0.5rem 1rem;
-				border-radius: 3em;
-}
 .promote_actives_part .area_item {
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -736,6 +811,7 @@ body {
 				-webkit-box-flex: 0;
 				    -ms-flex: 0 0 50%;
 				        flex: 0 0 50%;
+				padding-left: 0.5em;
 }
 .promote_actives_part .area_item .it_img img {
 				border-radius: 0.5em;
@@ -762,17 +838,6 @@ body {
 				color: var(--secondTitle);
 				font-size: 1.125em;
 }
-.promote_actives_part .area_para {
-				margin-top: 0.5em;
-				padding-right: 1em;
-				line-height: 1.5;
-}
-.promote_actives_part .area_para b {
-				color: var(--pageColor);
-				display: inline-block;
-				width: 2.5em;
-				text-align: right;
-}
 
 .location_spot .date {
 				padding-top: 0.5em;
@@ -780,6 +845,29 @@ body {
 				color: var(--secondTitle);
 }
 
+@media (max-width: 767px) {
+				.markting_taiwan_part .area_item {
+								-webkit-box-flex: 0;
+								    -ms-flex: 0 0 100%;
+								        flex: 0 0 100%;
+				}
+				.promote_actives_part .area_item {
+								-webkit-box-orient: vertical;
+								-webkit-box-direction: normal;
+								    -ms-flex-direction: column;
+								        flex-direction: column;
+								margin-bottom: 2em;
+				}
+				.promote_actives_part .area_item .it_img {
+								-webkit-box-flex: 0;
+								    -ms-flex: 0 0 100%;
+								        flex: 0 0 100%;
+								padding-left: 0;
+				}
+				.promote_actives_part .area_item .it_img img {
+								border-radius: 0.5em;
+				}
+}
 #EN_style {
 				font-size: 14px;
 }

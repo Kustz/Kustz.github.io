@@ -145,15 +145,14 @@ a, a:hover {
 				        align-items: center;
 				border-radius: 2em;
 				padding: 0 2em;
-				background: -webkit-gradient(linear, left bottom, left top, from(var(--gold3)), color-stop(var(--gold2)), to(var(--gold1)));
-				background: linear-gradient(0deg, var(--gold3), var(--gold2), var(--gold1));
+				background: linear-gradient(-70deg, rgba(149, 179, 65, 0.8), rgba(248, 197, 29, 0.82) 20%, rgba(243, 150, 26, 0.84) 80%);
 				font-size: 1.3125em;
 				line-height: 1;
 				color: #fff;
 				-webkit-transition: all 300ms;
 				transition: all 300ms;
 }
-.m_btn .txt {
+.m_btn .word {
 				padding: 1em 0;
 }
 .m_btn .arr {
@@ -193,6 +192,9 @@ a, a:hover {
 				-webkit-transition: all 250ms;
 				transition: all 250ms;
 				max-width: 150px;
+}
+.g_header .hdr__logo .main_logo {
+				margin-top: 1vw;
 }
 .g_header .header_wrap {
 				-webkit-box-flex: 1;
@@ -551,41 +553,74 @@ a, a:hover {
 								font-size: 14px;
 				}
 				.g_header {
+								width: 100vw;
 								height: 80px;
-				}
-				.g_header.is_shrink {
-								height: 65px;
-				}
-				.g_header.is_shrink .hdr__logo {
-								-webkit-box-flex: 0;
-								    -ms-flex: 0 0 18%;
-								        flex: 0 0 18%;
+								padding-top: 0;
+								-webkit-box-align: center;
+								    -ms-flex-align: center;
+								        align-items: center;
+								-webkit-animation: none;
+								        animation: none;
+								background: linear-gradient(-70deg, rgba(149, 179, 65, 0.9), rgba(248, 197, 29, 0.92) 20%, rgba(243, 150, 26, 0.94) 80%);
 				}
 				.g_header .header_wrap {
+								-webkit-box-orient: horizontal;
+								-webkit-box-direction: normal;
+								    -ms-flex-direction: row;
+								        flex-direction: row;
+								-webkit-box-align: center;
+								    -ms-flex-align: center;
+								        align-items: center;
 								padding-left: calc(1.5rem - 8px);
 				}
 				.g_header .hdr__logo {
 								margin-left: 8px;
+								margin-right: 8px;
 								-webkit-box-flex: 0;
-								    -ms-flex: 0 0 25%;
-								        flex: 0 0 25%;
+								    -ms-flex: 0 0 150px;
+								        flex: 0 0 150px;
+				}
+				.g_header .hdr__logo .main_logo {
+								margin-top: 4px;
 				}
 				.g_header .nav_area {
-								position: absolute;
+								position: fixed;
 								left: 0;
-								top: 100%;
-								width: 100%;
+								top: 0;
+								z-index: 101;
+								width: 100vw;
 				}
 				.g_header .nav__cnt {
-								display: -webkit-inline-box;
-								display: -ms-inline-flexbox;
-								display: inline-flex;
+								height: 100vh;
+								display: -webkit-box;
+								display: -ms-flexbox;
+								display: flex;
 								-webkit-box-orient: vertical;
 								-webkit-box-direction: normal;
 								    -ms-flex-direction: column;
 								        flex-direction: column;
-								padding: 1em 0;
-								background-color: var(--hd_blue0);
+								-webkit-box-pack: center;
+								    -ms-flex-pack: center;
+								        justify-content: center;
+								padding: 1em 2em;
+								margin: 0;
+								background: -webkit-gradient(linear, left top, left bottom, from(rgba(149, 179, 65, 0.9)), color-stop(80%, rgba(243, 150, 26, 0.94)), to(rgba(253, 213, 82, 0.96)));
+								background: linear-gradient(180deg, rgba(149, 179, 65, 0.9), rgba(243, 150, 26, 0.94) 80%, rgba(253, 213, 82, 0.96));
+				}
+				.g_header .m_nav_close {
+								position: absolute;
+								right: 3rem;
+								top: 4rem;
+								width: 50px;
+								height: 50px;
+								font-size: 3em;
+								-webkit-transition: opacity 200ms;
+								transition: opacity 200ms;
+								line-height: 1;
+								color: #fff;
+				}
+				.g_header .m_nav_close:hover {
+								opacity: 0.6;
 				}
 				.g_header .nav__item:hover .dd_menu {
 								padding: 0;
@@ -596,22 +631,26 @@ a, a:hover {
 				}
 				.g_header .nav__link {
 								border-radius: 0;
-								padding: 1em 2em 1em calc(2em - 8px);
+								padding: 1em 2em;
+								font-size: 1.25em;
+								text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.33);
 				}
 				.g_header .dd_menu {
-								left: calc(100% - 8px);
+								left: calc(100% - 1.5rem);
 								top: 50%;
-								-webkit-transform: translate(0, -50%);
-								        transform: translate(0, -50%);
+								-webkit-transform: translate(-100%, -50%);
+								        transform: translate(-100%, -50%);
 								max-height: none;
 								max-width: 0;
+								font-size: 1.25em;
 				}
 				.g_header .dd_menu .dd_menu__link {
-								padding: 1em;
+								padding: 0.75em 1em;
 								white-space: nowrap;
 								text-align: left;
 				}
 				.g_header .other_area {
+								display: block;
 								-webkit-box-flex: 1;
 								    -ms-flex: 1;
 								        flex: 1;
@@ -645,5 +684,8 @@ a, a:hover {
 				}
 				.g_header .menu_trigger .icon::after {
 								top: 10px;
+				}
+				.g_footer .logo img {
+								margin: 0;
 				}
 }

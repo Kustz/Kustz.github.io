@@ -337,6 +337,38 @@ body {
 				background: linear-gradient(180deg, #fff, transparent);
 }
 
+.full_image_w_another {
+				position: relative;
+				margin-top: 2em;
+				padding-top: 2em;
+}
+.full_image_w_another .full,
+.full_image_w_another .another {
+				border-radius: 0.4em;
+				overflow: hidden;
+				margin: 0;
+}
+.full_image_w_another .full {
+				position: relative;
+}
+.full_image_w_another .full .white_gradient {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(transparent));
+				background: linear-gradient(180deg, #fff, transparent);
+}
+.full_image_w_another .another {
+				position: absolute;
+				left: 5%;
+				top: 0;
+				width: 40%;
+				z-index: 1;
+				overflow: hidden;
+				border: 1px solid #fff;
+}
+
 .illustrate_w_dialog {
 				position: relative;
 				margin-bottom: 1.5em;
@@ -538,12 +570,39 @@ body {
 				}
 }
 @media (max-width: 767px) {
+				body {
+								padding-left: 0;
+								padding-top: 80px;
+				}
 				.container {
 								padding-left: 30px;
 								padding-right: 30px;
 				}
 				.g_headbanner {
 								height: 20vh;
+				}
+				.g_headbanner .d-flex.justify-content-between.align-items-center {
+								-webkit-box-orient: vertical;
+								-webkit-box-direction: normal;
+								    -ms-flex-direction: column;
+								        flex-direction: column;
+				}
+				.g_headbanner .page_title {
+								font-size: 2rem;
+								text-align: center;
+				}
+				.g_headbanner .page_title .en {
+								font-size: 0.625em;
+								margin-top: 0;
+				}
+				.g_headbanner .sub_title {
+								margin-top: 10px;
+								font-size: 2.25rem;
+								line-height: 1;
+				}
+				.g_headbanner .sub_title .en {
+								font-size: 1.625rem;
+								text-align: center;
 				}
 				.main__top {
 								padding-bottom: 0;
@@ -561,7 +620,8 @@ body {
 								        align-items: flex-end;
 				}
 				.function_row .crumb_cpns {
-								margin-top: 2em;
+								margin-top: 1em;
+								margin-bottom: 1em;
 								-webkit-box-ordinal-group: 3;
 								    -ms-flex-order: 2;
 								        order: 2;
@@ -662,6 +722,10 @@ body {
 
 .article_container h3 {
 				color: var(--secondTitle);
+}
+.article_container h4 {
+				color: var(--main2);
+				font-size: 1.25em;
 }
 
 .figcaption_o_left_bottom {
