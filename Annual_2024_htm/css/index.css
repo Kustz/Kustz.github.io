@@ -393,16 +393,28 @@ body {
 				width: 15em;
 }
 #EN_style .g_header .nav__item.ni6 .dd_menu {
-				width: 17em;
-}
-#EN_style .g_header .nav__item.ni7 .dd_menu {
 				width: 12em;
 }
+#EN_style .g_header .nav__item.ni7 .dd_menu {
+				width: 15em;
+}
+#EN_style .g_header .nav__item.ni8 .dd_menu {
+				width: 18em;
+}
 #EN_style .g_header .nav__item.ni9 .dd_menu {
+				width: 15em;
+}
+#EN_style .g_header .nav__item.ni10 .dd_menu {
+				width: 16em;
+}
+#EN_style .g_header .nav__item.ni12 .dd_menu {
 				width: 19em;
 }
 #EN_style .g_headbanner .page_title {
 				font-size: 2.75rem;
+}
+#EN_style .g_headbanner .sub_title .en {
+				font-size: 3rem;
 }
 #EN_style .article_container p,
 #EN_style .article_container ul li,
@@ -415,7 +427,7 @@ body {
 }
 #EN_style .g_aside {
 				font-size: 1rem;
-				left: calc(100% - 27em - 2vw);
+				left: calc(100% - 23em - 2vw);
 }
 #EN_style .g_aside .decaration_top {
 				font-size: 1.5em;
@@ -424,17 +436,17 @@ body {
 				font-size: 1.5em;
 }
 #EN_style .g_aside .side_items {
-				padding: 3em;
+				padding: 3em 2.5em;
 }
 #EN_style .g_aside .side__item.is_xl .picture_wrap {
-				height: 12em;
+				height: 10em;
 }
 #EN_style .g_aside .side__item.is_md .picture_wrap {
-				height: 6em;
+				height: 5em;
 }
 #EN_style .g_aside .side__item.is_sm .icon_wrap {
-				width: 10em;
-				height: 9em;
+				width: 8em;
+				height: 7em;
 }
 #EN_style .g_aside .side__item.is_sm .icon_wrap img {
 				width: 100%;
@@ -443,11 +455,11 @@ body {
 				   object-fit: center;
 }
 #EN_style .g_aside .side__item.is_sm .txt {
-				width: 10em;
+				width: 8em;
 				margin-top: 0.25em;
 }
 #EN_style .g_aside .side__item.is_xs {
-				width: 11em;
+				width: 10em;
 }
 #EN_style .g_aside .side__item.is_xs .in_wrap {
 				padding: 1em;
@@ -601,7 +613,14 @@ body {
 								        transform: translate(50%, -50%);
 				}
 				#EN_style .g_aside .side_items {
-								padding: 2em;
+								padding: 2em 1em;
+				}
+				#EN_style .g_aside .side__item.is_sm .icon_wrap {
+								width: 10em;
+								height: 8em;
+				}
+				#EN_style .g_aside .side__item.is_xs {
+								width: 12em;
 				}
 }
 @media (max-width: 767px) {
