@@ -435,6 +435,13 @@ body {
 #EN_style .g_aside .decaration_left {
 				font-size: 1.5em;
 }
+#EN_style .g_aside .decaration_left span {
+				height: 2.5em;
+}
+#EN_style .g_aside .decaration_left span span {
+				-webkit-transform: rotate(-90deg) translate(-20px, 12px);
+				        transform: rotate(-90deg) translate(-20px, 12px);
+}
 #EN_style .g_aside .side_items {
 				padding: 3em 2.5em;
 }
