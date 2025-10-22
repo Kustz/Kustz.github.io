@@ -713,8 +713,8 @@ body {
 								width: 179px;
 				}
 }
-.g_headbanner {
-				height: 0;
+.g_headbanner .banner_bg {
+				background: url("../img//mainbg.webp") center 80%/cover;
 }
 
 .g_main {
@@ -732,36 +732,55 @@ body {
 				margin: 0.5em 0;
 }
 .download_list a {
-				max-width: 20em;
-				padding: 0.5em 0;
+				position: relative;
+				max-width: 21em;
+				padding: 0.5em 1em 0.5em 0;
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
 				font-size: 1.25em;
+}
+.download_list a::before {
+				content: "";
+				position: absolute;
+				left: -1.65em;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(86, 149, 53, 0.2)), color-stop(50%, rgba(243, 150, 26, 0.5)), color-stop(rgb(247, 196, 120)), to(transparent));
+				background: linear-gradient(90deg, transparent, rgba(86, 149, 53, 0.2), rgba(243, 150, 26, 0.5) 50%, rgb(247, 196, 120), transparent);
+				opacity: 0;
+				-webkit-transition: opacity 200ms;
+				transition: opacity 200ms;
+}
+.download_list a:hover::before {
+				opacity: 0.5;
 }
 .download_list a:hover .text {
 				-webkit-transform: translateX(0.5em);
 				        transform: translateX(0.5em);
 }
 .download_list a:hover .text, .download_list a:hover i {
-				color: var(--ft_blue);
+				color: var(--main2);
 }
-.download_list .text {
+.download_list .text, .download_list i {
 				-webkit-transition: all 200ms;
 				transition: all 200ms;
+				color: #999;
+				position: relative;
+				z-index: 5;
+}
+.download_list .text {
 				-webkit-box-flex: 1;
 				    -ms-flex: 1 1 100%;
 				        flex: 1 1 100%;
 				padding-right: 1em;
-				color: #999;
+				line-height: 1.2;
 }
 .download_list i {
-				-webkit-transition: all 200ms;
-				transition: all 200ms;
 				-webkit-box-flex: 0;
 				    -ms-flex: 0 0 auto;
 				        flex: 0 0 auto;
-				color: #999;
 }
 
 .search_result_list {
